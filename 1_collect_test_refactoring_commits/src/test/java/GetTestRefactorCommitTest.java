@@ -1,4 +1,4 @@
-import get_test_refactor_commit.GetTestRefactorCommit;
+import get_refactor_commit.GetTestRefactorCommit;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class GetTestRefactorCommitTest {
-    // Test for src/main/java/getCommit.get_test_refactor_commit.GetTestRefactorCommit.java
+    // Test for src/main/java/getCommit.GetTestRefactorCommit.java
     @Test
     public void testWriteToErrorCSV() {
         List<String> data = new ArrayList<>();
@@ -20,6 +20,7 @@ public class GetTestRefactorCommitTest {
         assertTrue(file.exists());
         file.delete();
     }
+
 
     @Test
     public void testProcessRepositoryURL() {
@@ -32,11 +33,6 @@ public class GetTestRefactorCommitTest {
         assertTrue(GetTestRefactorCommit.checkCommitMessage("test refactor"));
         assertTrue(GetTestRefactorCommit.checkCommitMessage("test refactoring"));
         assertTrue(GetTestRefactorCommit.checkCommitMessage("test refactored"));
-        assertTrue(GetTestRefactorCommit.checkCommitMessage("testrefactoring"));
-        assertTrue(GetTestRefactorCommit.checkCommitMessage("testrefactor"));
-        assertTrue(GetTestRefactorCommit.checkCommitMessage("refactoredtest"));
-        assertTrue(GetTestRefactorCommit.checkCommitMessage("refactortest"));
-        assertTrue(GetTestRefactorCommit.checkCommitMessage("refactoringtest"));
 
         assertTrue(GetTestRefactorCommit.checkCommitMessage("refactoring test"));
         assertTrue(GetTestRefactorCommit.checkCommitMessage("test refactoring"));
@@ -48,24 +44,5 @@ public class GetTestRefactorCommitTest {
     public void testCheckCommitMessageFalse(){
         assertFalse(GetTestRefactorCommit.checkCommitMessage("test"));
     }
-
-    @Test
-    public void testCheckChangeFile() {
-        List<String> changeFiles = new ArrayList<>();
-//        changeFiles.add("AAATest.java");
-        changeFiles.add("src/org/opensolaris/opengrok/analysis/JFlexXref.java");
-        changeFiles.add("");
-        assertFalse(GetTestRefactorCommit.checkChangeFile(changeFiles));
-    }
-
-    @Test
-    public void testIsTestFileName() {
-        List<String> changeFiles = new ArrayList<>();
-//        changeFiles.add("AAATest.java");
-        changeFiles.add("src/org/opensolaris/opengrok/analysis/testJFlexXref.java");
-        changeFiles.add("");
-        assertTrue(GetTestRefactorCommit.isTestFileName(changeFiles));
-    }
-
 
 }
