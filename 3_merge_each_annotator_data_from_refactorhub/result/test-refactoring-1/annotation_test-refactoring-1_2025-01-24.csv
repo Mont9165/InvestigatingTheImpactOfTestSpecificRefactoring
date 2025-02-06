@@ -1,0 +1,278 @@
+Order Index,URL,Type Name,Description,Memo,Agreement,Annotator Name,File Path,Start Line (Before),End Line (Before),Start Line (After),End Line (After)
+53,https://github.com/C2SP/wycheproof/commit/ca5fdffb1ab659adbe474ff45b47cad6ed4aec11,Non-Refactoring,,,,niyaton,,,,,
+61,https://github.com/liferay/liferay-blade-cli/commit/36f1e3b1f75dfae3e3d5a7554872d2a8fa5e32b6,Non-Refactoring,もともとあったのを再利用できるように修正？,,,Yutaro-Kashiwa,,,,,
+61,https://github.com/liferay/liferay-blade-cli/commit/36f1e3b1f75dfae3e3d5a7554872d2a8fa5e32b6,Any Refactoring,Delegated Setup(Creation method)とfinder methodの統合？，他にもさまざまありそう,,,Mont9165,cli/src/test/java/com/liferay/blade/cli/command/ServerStartCommandTest.java,160.0,176.0,163.0,164.0
+62,https://github.com/jdbi/jdbi/commit/ddfe1c0e7b00de18deae1731144df01b13597ffd,Any Refactoring,Spring4に変更？,,,Yutaro-Kashiwa,,,,,
+62,https://github.com/jdbi/jdbi/commit/ddfe1c0e7b00de18deae1731144df01b13597ffd,Any Refactoring,spring4のバージョンアップによる変更,,,Mont9165,,,,,
+63,https://github.com/camunda/camunda/commit/bcac3afd956efe5e425fd87b4ae63cd64ea4d0b7,Non-Refactoring,Move Methodなので無視？テストケースをシンプルにしている,,,Mont9165,,,,,
+63,https://github.com/camunda/camunda/commit/bcac3afd956efe5e425fd87b4ae63cd64ea4d0b7,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+64,https://github.com/DataDog/java-dogstatsd-client/commit/dd154c51cec1bba55e2e051cb7e65999e9925b58,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+64,https://github.com/DataDog/java-dogstatsd-client/commit/dd154c51cec1bba55e2e051cb7e65999e9925b58,Delegated Setup,クラスを作って，その中に処理ごとのメソッドを作成,,,Mont9165,src/test/java/com/timgroup/statsd/StatsDClientTest.java,25.0,43.0,,
+65,https://github.com/confluence-publisher/confluence-publisher/commit/5a17d36af1459cae18bc582acd86711a782a7799,Non-Refactoring,Rename Methodぐらい,,,Mont9165,,,,,
+65,https://github.com/confluence-publisher/confluence-publisher/commit/5a17d36af1459cae18bc582acd86711a782a7799,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+66,https://github.com/apache/parquet-java/commit/051725362f48c5b6490a15ae5241967a81b523f9,Non-Refactoring,Rename Method,,,Mont9165,,,,,
+66,https://github.com/apache/parquet-java/commit/051725362f48c5b6490a15ae5241967a81b523f9,Non-Refactoring,General Refactoring,,,Yutaro-Kashiwa,,,,,
+67,https://github.com/jboss-modules/jboss-modules/commit/25bfcd2c6cbe67d2dc52485b3a3e3569bda93bb0,Non-Refactoring,引数を変えていて，非推奨のメソッドを使わないようにしているらしいが，その本体がないのでスキップ,,,Mont9165,,,,,
+67,https://github.com/jboss-modules/jboss-modules/commit/25bfcd2c6cbe67d2dc52485b3a3e3569bda93bb0,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+68,https://github.com/tronprotocol/java-tron/commit/781a5b03324a4c9845fdbfa1d176b3e57da304b5,Non-Refactoring,コメントアウト外したのと，空白の整理,,,Mont9165,,,,,
+68,https://github.com/tronprotocol/java-tron/commit/781a5b03324a4c9845fdbfa1d176b3e57da304b5,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+69,https://github.com/TeamNewPipe/NewPipe/commit/08949ee3475994cb32881651aec78614fa69e992,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+69,https://github.com/TeamNewPipe/NewPipe/commit/08949ee3475994cb32881651aec78614fa69e992,Non-Refactoring,一般のリファクタリング,,,Mont9165,,,,,
+70,https://github.com/errai/errai/commit/eab61af8bfc2ddfd5757e7a16cacab11fea7be78,Delegated Setup,,,,Mont9165,integration/src/test/java/org/jboss/errai/cdi/client/test/EventObserverIntegrationTest.java,18.0,66.0,19.0,27.0
+70,https://github.com/errai/errai/commit/eab61af8bfc2ddfd5757e7a16cacab11fea7be78,Non-Refactoring,普通のリファクタリング？,,,Yutaro-Kashiwa,,,,,
+70,https://github.com/errai/errai/commit/eab61af8bfc2ddfd5757e7a16cacab11fea7be78,Delegated Setup,,,,Mont9165,,,,20.0,29.0
+71,https://github.com/Tencent/TencentKona-17/commit/8452535d4937b26aa5318a8ca822acf5824be0c7,Non-Refactoring,テンプレートを使い出したから，ガラッと変わっている,,,Yutaro-Kashiwa,,,,,
+71,https://github.com/Tencent/TencentKona-17/commit/8452535d4937b26aa5318a8ca822acf5824be0c7,Non-Refactoring,Creation Methodはありそう．そのほかはリファクタリングではない,,,Mont9165,,,,,
+72,https://github.com/google/ExoPlayer/commit/cce79a70402a231ff1ae6924ea75d59c5680e7b4,Non-Refactoring,Rename,,,Yutaro-Kashiwa,,,,,
+72,https://github.com/google/ExoPlayer/commit/cce79a70402a231ff1ae6924ea75d59c5680e7b4,Non-Refactoring,Rename Variable,,,Mont9165,,,,,
+73,https://github.com/thoughtworks/HeartBeat/commit/961170ee1baaac445429f04f3d74c2fd333c7755,Parameterized Test,,,,Yutaro-Kashiwa,backend/src/test/java/heartbeat/service/report/GenerateReporterServiceTest.java,1139.0,1141.0,1335.0,1370.0
+73,https://github.com/thoughtworks/HeartBeat/commit/961170ee1baaac445429f04f3d74c2fd333c7755,Parameterized Test,,,,Mont9165,backend/src/test/java/heartbeat/service/report/GenerateReporterServiceTest.java,1135.0,1192.0,1335.0,1371.0
+74,https://github.com/groovy/groovy-core/commit/96355e7db94f6684d22c43e590d743c49a321258,Non-Refactoring,これは他のコミットで実施されたリファクタリングに対応するため，テストを調整,,,Mont9165,,,,,
+74,https://github.com/groovy/groovy-core/commit/96355e7db94f6684d22c43e590d743c49a321258,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+75,https://github.com/watson-developer-cloud/java-sdk/commit/30a2e0550280de3c518b5dca66fc3bf32509669d,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+75,https://github.com/watson-developer-cloud/java-sdk/commit/30a2e0550280de3c518b5dca66fc3bf32509669d,Non-Refactoring,,,,Mont9165,,,,,
+76,https://github.com/apache/paimon/commit/5adb553ad3d0146bcb4ffc10d87c88ca2a826a7f,Test Utility Method,,,,Yutaro-Kashiwa,paimon-core/src/test/java/org/apache/paimon/operation/FileStoreExpireDeleteDirTest.java,143.0,168.0,244.0,271.0
+76,https://github.com/apache/paimon/commit/5adb553ad3d0146bcb4ffc10d87c88ca2a826a7f,Delegated Setup,,,,Mont9165,paimon-core/src/test/java/org/apache/paimon/operation/FileStoreExpireDeleteDirTest.java,143.0,168.0,140.0,141.0
+77,https://github.com/jdbi/jdbi/commit/1c6380ba0d96681cc40388dd562b016bd496f739,Non-Refactoring,Rename Methodだけだと思うが，自動でやってそう,,,Mont9165,,,,,
+77,https://github.com/jdbi/jdbi/commit/1c6380ba0d96681cc40388dd562b016bd496f739,Any Refactoring,setUpやめるのはリファクタリング？,,,Yutaro-Kashiwa,,,,,
+78,https://github.com/openmainframeproject/cobol-check/commit/6064fd92e3158478e9fcbedb1fb3a8170ca94f4e,Non-Refactoring,Rename,,,Yutaro-Kashiwa,,,,,
+78,https://github.com/openmainframeproject/cobol-check/commit/6064fd92e3158478e9fcbedb1fb3a8170ca94f4e,Non-Refactoring,Rename variable,,,Mont9165,,,,,
+79,https://github.com/camunda/camunda/commit/a897401232f5e24d3cb0889c668acd5062297a84,Non-Refactoring,一般的なリファクタリング？,,,Yutaro-Kashiwa,,,,,
+79,https://github.com/camunda/camunda/commit/a897401232f5e24d3cb0889c668acd5062297a84,Non-Refactoring,Test Refactoringだと思うが，詳細がわからないためスキップ,,,Mont9165,,,,,
+80,https://github.com/camunda/camunda/commit/f6ad2a4fd64931e0ec6ed975df3f44d1c22450e1,Split Test Method,DeParameterizedテストでもある,,,Yutaro-Kashiwa,bpmn-model/src/test/java/io/camunda/zeebe/model/bpmn/validation/ZeebeValidationTest.java,41.0,62.0,28.0,65.0
+80,https://github.com/camunda/camunda/commit/f6ad2a4fd64931e0ec6ed975df3f44d1c22450e1,Any Refactoring,Junit5へのバージョンアップ,,,Mont9165,,,,,
+80,https://github.com/camunda/camunda/commit/f6ad2a4fd64931e0ec6ed975df3f44d1c22450e1,Testcase Class,,,,Mont9165,bpmn-model/src/test/java/io/camunda/zeebe/model/bpmn/validation/ZeebeValidationTest.java,41.0,62.0,1.0,66.0
+81,https://github.com/dreamhead/moco/commit/15285f6465b0aad791fc28dde9e6f3614cbd8818,Non-Refactoring,Custom Assertionを消している．,,,Mont9165,,,,,
+81,https://github.com/dreamhead/moco/commit/15285f6465b0aad791fc28dde9e6f3614cbd8818,Delegated Setup,,,,Mont9165,,,,330.0,334.0
+81,https://github.com/dreamhead/moco/commit/15285f6465b0aad791fc28dde9e6f3614cbd8818,Any Refactoring,ExtractMethodをやめるのは何かのテストリファクタリングか？,,,Yutaro-Kashiwa,,,,,
+82,https://github.com/camunda/camunda/commit/45e12319e3c911128dfe87a1f478e2e7225604de,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+82,https://github.com/camunda/camunda/commit/45e12319e3c911128dfe87a1f478e2e7225604de,Non-Refactoring,rename method,,,Mont9165,,,,,
+83,https://github.com/zebrunner/carina/commit/b9f356ce31bac1c9bddf567429a12170cdbd4be3,Non-Refactoring,Creation methodを使っているが，その中身はコミットにない,,,Mont9165,,,,,
+83,https://github.com/zebrunner/carina/commit/b9f356ce31bac1c9bddf567429a12170cdbd4be3,Non-Refactoring,すでにあるのはリファクタリングから外す？,,,Yutaro-Kashiwa,,,,,
+84,https://github.com/reposense/RepoSense/commit/019ab8ba1d3058e05f09d48f41d5ec51a9c40570,Non-Refactoring,失敗したテストを修正しているだけ,,,Mont9165,,,,,
+84,https://github.com/reposense/RepoSense/commit/019ab8ba1d3058e05f09d48f41d5ec51a9c40570,Split Test Method,,,,Yutaro-Kashiwa,src/test/java/reposense/git/GitLogTest.java,90.0,101.0,95.0,104.0
+85,https://github.com/sergueik/selenium_cdp/commit/91b4c93aa08f626e3392e2eb43c04d97c7e0b310,Split Test Method,,,,Yutaro-Kashiwa,src/test/java/com/github/sergueik/selenium/FramesDevToolsTest.java,53.0,91.0,52.0,115.0
+85,https://github.com/sergueik/selenium_cdp/commit/91b4c93aa08f626e3392e2eb43c04d97c7e0b310,Non-Refactoring,テストメソッド1を追加してるだけ,,,Mont9165,,,,,
+86,https://github.com/junit-team/junit4/commit/5976b1d40ef41cecafd9769dd8776a6e6610d0c5,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+86,https://github.com/junit-team/junit4/commit/5976b1d40ef41cecafd9769dd8776a6e6610d0c5,Non-Refactoring,リファクタリングな気もするが，Delegated Methodか判断がつかない,,,Mont9165,,,,,
+87,https://github.com/apache/hertzbeat/commit/f72cfa0dd80063f44d953dc6ab2023fad07dab87,Shared Fixture,,,,Mont9165,,,,16.0,20.0
+87,https://github.com/apache/hertzbeat/commit/f72cfa0dd80063f44d953dc6ab2023fad07dab87,Any Refactoring,NUMBER_OF_THREADSはテストリファクタリングか？,,,Yutaro-Kashiwa,,,,,
+88,https://github.com/raydac/java-binary-block-parser/commit/3faacb797dd6e99a0e9d6ccf1e72baf45a4abed5,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+88,https://github.com/raydac/java-binary-block-parser/commit/3faacb797dd6e99a0e9d6ccf1e72baf45a4abed5,Any Refactoring,アノテーションの位置を変えただけ？,,,Mont9165,,,,,
+89,https://github.com/camunda/camunda/commit/8f4daa06b1ed806f9d2e14f0ea286bebd64771a1,Non-Refactoring,ラムダ式の使用と他のメソッドを使用,,,Mont9165,,,,,
+89,https://github.com/camunda/camunda/commit/8f4daa06b1ed806f9d2e14f0ea286bebd64771a1,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+90,https://github.com/b3dgs/lionengine/commit/649a57eca8fc3e0ca0b86fd6b7c0f2941e8bd234,Inline Setup,AudioFactoryTestとUtilConversionTestにSplitもあるが，データがデカくてChange Divisionできない,,,Yutaro-Kashiwa,lionengine-core/src/test/java/com/b3dgs/lionengine/ConfigTest.java,61.0,63.0,57.0,63.0
+90,https://github.com/b3dgs/lionengine/commit/649a57eca8fc3e0ca0b86fd6b7c0f2941e8bd234,Split Test Method,テストメソッドの分割,,,Mont9165,lionengine-core/src/test/java/com/b3dgs/lionengine/audio/AudioFactoryTest.java,94.0,110.0,92.0,106.0
+91,https://github.com/AICP/frameworks_base/commit/93702abf6e9a87079e81c46c82d8c3954a426759,Any Refactoring,Fixutureにしているんだけど，他とシェアしていない,,,Yutaro-Kashiwa,,,,,
+91,https://github.com/AICP/frameworks_base/commit/93702abf6e9a87079e81c46c82d8c3954a426759,Shared Fixture,,,,Mont9165,,,,95.0,98.0
+91,https://github.com/AICP/frameworks_base/commit/93702abf6e9a87079e81c46c82d8c3954a426759,Custom Assertion,,,,Mont9165,packages/Shell/tests/src/com/android/shell/BugreportReceiverTest.java,149.0,150.0,325.0,328.0
+91,https://github.com/AICP/frameworks_base/commit/93702abf6e9a87079e81c46c82d8c3954a426759,Implicit Setup,,,,Mont9165,packages/Shell/tests/src/com/android/shell/BugreportReceiverTest.java,142.0,143.0,119.0,121.0
+91,https://github.com/AICP/frameworks_base/commit/93702abf6e9a87079e81c46c82d8c3954a426759,Implicit Setup,,,,Mont9165,packages/Shell/tests/src/com/android/shell/BugreportReceiverTest.java,123.0,125.0,226.0,230.0
+92,https://github.com/camunda/zeebe-process-test/commit/a626ee3f81b2043e54d5967c582e92a39aa340a8,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+92,https://github.com/camunda/zeebe-process-test/commit/a626ee3f81b2043e54d5967c582e92a39aa340a8,Any Refactoring,EMBEDDED_CLASSESとTESTCONTAINER_CLASSESをCLASSESに統合してる．,,,Mont9165,,,,,
+93,https://github.com/camunda/camunda/commit/92eba248021bbeaa7afc16c18e315da5e5d55d00,Any Refactoring,flaky testを避けるためにawaitを入れている，これはリファクタリングではない気がするけど分からない,,,Mont9165,,,,,
+93,https://github.com/camunda/camunda/commit/92eba248021bbeaa7afc16c18e315da5e5d55d00,Any Refactoring,型には当てはまらないけど重要,,,Yutaro-Kashiwa,,,,,
+94,https://github.com/arianne/stendhal/commit/6d30072ed40343b82d3056257171b8aeea755a72,Non-Refactoring,"すでに，user, charがあれば，それを消してから，再度データを作成するようにしている（Inline setup or 普通に処理の変更？）また，assertを追加している",,,Mont9165,,,,,
+94,https://github.com/arianne/stendhal/commit/6d30072ed40343b82d3056257171b8aeea755a72,Any Refactoring,名前わからないけどDBパターン,,,Yutaro-Kashiwa,,,,,
+95,https://github.com/apache/karaf/commit/100420f757c2bd6fe00a8d28c14a1388d665b8fe,Assert Throw,,,,Mont9165,event/src/test/java/org/apache/karaf/event/command/EventSendCommandTest.java,80.0,82.0,83.0,85.0
+95,https://github.com/apache/karaf/commit/100420f757c2bd6fe00a8d28c14a1388d665b8fe,Assert Throw,,,,Yutaro-Kashiwa,event/src/test/java/org/apache/karaf/event/command/EventSendCommandTest.java,87.0,90.0,88.0,94.0
+95,https://github.com/apache/karaf/commit/100420f757c2bd6fe00a8d28c14a1388d665b8fe,Assert Throw,,,,Yutaro-Kashiwa,event/src/test/java/org/apache/karaf/event/command/EventSendCommandTest.java,80.0,83.0,80.0,85.0
+96,https://github.com/apache/openjpa/commit/5b7c20eacb99d974a48fcb6bc585ef6fd9f671d5,Delegated Setup,,,,Yutaro-Kashiwa,,,,260.0,262.0
+96,https://github.com/apache/openjpa/commit/5b7c20eacb99d974a48fcb6bc585ef6fd9f671d5,Delegated Setup,Creation Methodを使って，ハードコードを消してる,,,Mont9165,,,,263.0,265.0
+96,https://github.com/apache/openjpa/commit/5b7c20eacb99d974a48fcb6bc585ef6fd9f671d5,Delegated Setup,,,,Yutaro-Kashiwa,,,,267.0,270.0
+97,https://github.com/commercetools/commercetools-sync-java/commit/da43fbb95db02ca35e447b9b8782c1ee46a174d0,Non-Refactoring,使用するメソッドを変更？,,,Mont9165,,,,,
+97,https://github.com/commercetools/commercetools-sync-java/commit/da43fbb95db02ca35e447b9b8782c1ee46a174d0,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+98,https://github.com/b3dgs/lionengine/commit/2f7245c77be2fb7cee0fdbf0b9ac09be1e0fbd49,Non-Refactoring,テストメソッド削除してるだけ,,,Mont9165,,,,,
+98,https://github.com/b3dgs/lionengine/commit/2f7245c77be2fb7cee0fdbf0b9ac09be1e0fbd49,Any Refactoring,assertThrowsNpe,,,Yutaro-Kashiwa,,,,,
+99,https://github.com/commercetools/commercetools-sync-java/commit/3f3cc8cf4212932fbdaf89844efd3b13ef61ea51,Non-Refactoring,Importを変更しただけ，あとassertionを追加してる,,,Mont9165,,,,,
+99,https://github.com/commercetools/commercetools-sync-java/commit/3f3cc8cf4212932fbdaf89844efd3b13ef61ea51,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+100,https://github.com/jMetal/jMetal/commit/50758e9b1ce75481dbb6f24abde08ec7ec66b346,Assert Throw,,,,Yutaro-Kashiwa,jmetal-core/src/test/java/org/uma/jmetal/operator/selection/BinaryTournamentSelectionTest.java,40.0,45.0,36.0,37.0
+100,https://github.com/jMetal/jMetal/commit/50758e9b1ce75481dbb6f24abde08ec7ec66b346,Assert Throw,,,,Mont9165,jmetal-core/src/test/java/org/uma/jmetal/operator/selection/BinaryTournamentSelectionTest.java,42.0,44.0,36.0,37.0
+101,https://github.com/kousen/java_latest/commit/a826f54461a97b6859605e8a528f321785ae5ac9,Assert All,Split Test methodもやってる,,,Mont9165,src/test/java/com/kousenit/dataorientedprogramming/UserServiceTest.java,16.0,19.0,17.0,22.0
+101,https://github.com/kousen/java_latest/commit/a826f54461a97b6859605e8a528f321785ae5ac9,Assert All,,,,Yutaro-Kashiwa,src/test/java/com/kousenit/dataorientedprogramming/UserServiceTest.java,16.0,19.0,17.0,23.0
+102,https://github.com/jenkinsci/workflow-durable-task-step-plugin/commit/537e864aae80f3dd49e37f5528f81980013743a1,Any Refactoring,119行目からのCreate MethodがDelegated Setupに当たる気もするが，コミット前後で処理が異なると感じた,,,Mont9165,,,,,
+102,https://github.com/jenkinsci/workflow-durable-task-step-plugin/commit/537e864aae80f3dd49e37f5528f81980013743a1,Delegated Setup,,,,Yutaro-Kashiwa,,,,726.0,748.0
+102,https://github.com/jenkinsci/workflow-durable-task-step-plugin/commit/537e864aae80f3dd49e37f5528f81980013743a1,Delegated Setup,,,,Yutaro-Kashiwa,,,,119.0,139.0
+102,https://github.com/jenkinsci/workflow-durable-task-step-plugin/commit/537e864aae80f3dd49e37f5528f81980013743a1,Delegated Setup,,,,Mont9165,src/test/java/org/jenkinsci/plugins/workflow/support/steps/ExecutorStepTest.java,700.0,719.0,126.0,145.0
+103,https://github.com/hyphanet/fred/commit/2e68720627ae6447ba12d712a9e6e4a123e66b95,Any Refactoring,TestIntegersのような新しくクラス作るやつを名前つけたい,,,Yutaro-Kashiwa,,,,,
+103,https://github.com/hyphanet/fred/commit/2e68720627ae6447ba12d712a9e6e4a123e66b95,Test Helper,,,,Mont9165,,,,114.0,197.0
+103,https://github.com/hyphanet/fred/commit/2e68720627ae6447ba12d712a9e6e4a123e66b95,Implicit Setup,,,,Mont9165,,,,45.0,58.0
+104,https://github.com/Yubico/yubikit-android/commit/df6326d29147b485207f305621d1afaf29935f0e,Parameterized Test,,,,Yutaro-Kashiwa,fido/src/test/java/com/yubico/yubikit/fido/CborTest.java,89.0,234.0,59.0,243.0
+104,https://github.com/Yubico/yubikit-android/commit/df6326d29147b485207f305621d1afaf29935f0e,Any Refactoring,@RunWith(Enclosed.class)を使用して，構造的にテストクラスを作成してる（JUnit実践入門にも載ってた）,,,Mont9165,,,,,
+105,https://github.com/locationtech/jts/commit/78feb6c98c332eb1d1c6da2c584bbc51aae47dc7,Any Refactoring,移動するやつはリファクタリングなんだっけ？,,,Yutaro-Kashiwa,,,,,
+105,https://github.com/locationtech/jts/commit/78feb6c98c332eb1d1c6da2c584bbc51aae47dc7,Testcase Class,,,,Mont9165,modules/core/src/test/java/org/locationtech/jts/operation/overlayng/OverlayNGTest.java,33.0,128.0,1.0,133.0
+106,https://github.com/camunda/camunda/commit/8ca8e32882bd2d456dda926ce2ab6559ded0bd73,Non-Refactoring,テストメソッドを削除，またIgnoreを追加,,,Mont9165,,,,,
+106,https://github.com/camunda/camunda/commit/8ca8e32882bd2d456dda926ce2ab6559ded0bd73,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+107,https://github.com/b3dgs/lionengine/commit/15c0bb0215a2b5827855ef29444a3f8185d3811b,Any Refactoring,JUnit5対応が混じっている,,,Yutaro-Kashiwa,,,,,
+107,https://github.com/b3dgs/lionengine/commit/15c0bb0215a2b5827855ef29444a3f8185d3811b,Any Refactoring,すべてJUnit4からJUnit5への移行（これをリファクタリングと言ってた，意外とバージョンアップもリファクタリングの一種なのかも,,,Mont9165,,,,,
+108,https://github.com/cassandre-tech/cassandre-trading-bot/commit/437cbf06ffd199922eae8c2ed092de93647461d5,Any Refactoring,非同期テストに変更,,,Yutaro-Kashiwa,,,,,
+108,https://github.com/cassandre-tech/cassandre-trading-bot/commit/437cbf06ffd199922eae8c2ed092de93647461d5,Non-Refactoring,sleep timeを60から90に変化させている．,,,Mont9165,,,,,
+109,https://github.com/blackducksoftware/detect/commit/327a4dfaba25c514460dc14a2fe33e12ad4649fa,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+109,https://github.com/blackducksoftware/detect/commit/327a4dfaba25c514460dc14a2fe33e12ad4649fa,Non-Refactoring,rename,,,Mont9165,,,,,
+110,https://github.com/Consensys/tessera/commit/de2696e6a8f9656d99399fb45063ff4f95cb63bc,Implicit Setup,,,,Yutaro-Kashiwa,,,,24.0,29.0
+110,https://github.com/Consensys/tessera/commit/de2696e6a8f9656d99399fb45063ff4f95cb63bc,Any Refactoring,このteardownはなんだ．,,,Yutaro-Kashiwa,,,,,
+110,https://github.com/Consensys/tessera/commit/de2696e6a8f9656d99399fb45063ff4f95cb63bc,Implicit Teardown,,,,Yutaro-Kashiwa,,,,31.0,34.0
+110,https://github.com/Consensys/tessera/commit/de2696e6a8f9656d99399fb45063ff4f95cb63bc,Any Refactoring,TemporaryFolderを使うように変更,,,Mont9165,,,,,
+110,https://github.com/Consensys/tessera/commit/de2696e6a8f9656d99399fb45063ff4f95cb63bc,Implicit Teardown,,,,Mont9165,,,,31.0,34.0
+110,https://github.com/Consensys/tessera/commit/de2696e6a8f9656d99399fb45063ff4f95cb63bc,Implicit Setup,,,,Mont9165,,,,26.0,29.0
+110,https://github.com/Consensys/tessera/commit/de2696e6a8f9656d99399fb45063ff4f95cb63bc,Automated Teardown,,,,Mont9165,,,,36.0,39.0
+111,https://github.com/FlowCI/flow-core-x/commit/3d87d7fd4dffcd91e3da170689c7577f2e393a81,Delegated Setup,,,,Yutaro-Kashiwa,,,,335.0,346.0
+111,https://github.com/FlowCI/flow-core-x/commit/3d87d7fd4dffcd91e3da170689c7577f2e393a81,Delegated Setup,,,,Mont9165,,,,335.0,346.0
+112,https://github.com/FasterXML/jackson-modules-java8/commit/8c3d032fb564148c39b5fdf1cdd6e314e6af1cb5,Any Refactoring,Custom Asssertionの削除,,,Mont9165,datetime/src/test/java/com/fasterxml/jackson/datatype/jsr310/deser/LocalDateTimeDeserTest.java,486.0,493.0,,
+112,https://github.com/FasterXML/jackson-modules-java8/commit/8c3d032fb564148c39b5fdf1cdd6e314e6af1cb5,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+112,https://github.com/FasterXML/jackson-modules-java8/commit/8c3d032fb564148c39b5fdf1cdd6e314e6af1cb5,Any Refactoring,Merge Test Method,,,Mont9165,datetime/src/test/java/com/fasterxml/jackson/datatype/jsr310/deser/LocalDateDeserTest.java,333.0,349.0,357.0,362.0
+113,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/fa78cb24126fb9d10fc7299210e835c4e2335577,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+113,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/fa78cb24126fb9d10fc7299210e835c4e2335577,Any Refactoring,,,,Mont9165,,,,154.0,162.0
+114,https://github.com/NitorCreations/nflow/commit/39a2a85f995c83c658c173898783217be849bf86,Custom Assertion,,,,Mont9165,nflow-tests/src/test/java/io/nflow/tests/AbstractNflowTest.java,199.0,201.0,202.0,205.0
+114,https://github.com/NitorCreations/nflow/commit/39a2a85f995c83c658c173898783217be849bf86,Non-Refactoring,ほかは普通のリファクタリング,,,Mont9165,,,,,
+114,https://github.com/NitorCreations/nflow/commit/39a2a85f995c83c658c173898783217be849bf86,Custom Assertion,,,,Yutaro-Kashiwa,,,,194.0,197.0
+115,https://github.com/thoughtworks/HeartBeat/commit/40de27abf7a31466788e25a2350a88216f687eb7,Non-Refactoring,ただの修正,,,Mont9165,,,,,
+115,https://github.com/thoughtworks/HeartBeat/commit/40de27abf7a31466788e25a2350a88216f687eb7,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+116,https://github.com/release-engineering/pom-manipulation-ext/commit/a6ea809c30ef967f46ff71b7ab71dab97e4b1475,Test Helper,,,,Mont9165,,,,174.0,194.0
+116,https://github.com/release-engineering/pom-manipulation-ext/commit/a6ea809c30ef967f46ff71b7ab71dab97e4b1475,Any Refactoring,こんな新しいクラスはどれに分類されるんや,,,Yutaro-Kashiwa,,,,,
+116,https://github.com/release-engineering/pom-manipulation-ext/commit/a6ea809c30ef967f46ff71b7ab71dab97e4b1475,Non-Refactoring,非推奨になることを明記，またメソッドを分けて，処理を呼び出すメソッドと処理本体のメソッドを分けている,,,Mont9165,,,,94.0,99.0
+117,https://github.com/C2SP/wycheproof/commit/9c334080213a46b5f59c50b43909c6121e6dcb2d,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+117,https://github.com/C2SP/wycheproof/commit/9c334080213a46b5f59c50b43909c6121e6dcb2d,Non-Refactoring,テストを追加したり，コメントを拡充してる,,,Mont9165,,,,,
+118,https://github.com/commercetools/commercetools-sync-java/commit/b9ac161df8dce50dcd65f093403013be0463cc3d,Non-Refactoring,TODOされたテストの追加，修飾子の変更,,,Mont9165,,,,,
+118,https://github.com/commercetools/commercetools-sync-java/commit/b9ac161df8dce50dcd65f093403013be0463cc3d,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+119,https://github.com/b3dgs/lionengine/commit/713e83096063d7b2c1f6fe2c9ce4469d84839efe,Any Refactoring,Junit4からJUnit5へのバージョンアップ，また依存性の削除,,,Mont9165,,,,,
+119,https://github.com/b3dgs/lionengine/commit/713e83096063d7b2c1f6fe2c9ce4469d84839efe,Non-Refactoring,,,,Mont9165,,,,,
+119,https://github.com/b3dgs/lionengine/commit/713e83096063d7b2c1f6fe2c9ce4469d84839efe,Any Refactoring,"            assertCause(() -> sc68.play(), IOException.class);
+",,,Yutaro-Kashiwa,,,,,
+119,https://github.com/b3dgs/lionengine/commit/713e83096063d7b2c1f6fe2c9ce4469d84839efe,Assert Throw,複数あるので注意,,,Yutaro-Kashiwa,lionengine-audio-adplug/src/test/java/com/b3dgs/lionengine/audio/adplug/AdPlugTest.java,138.0,140.0,138.0,139.0
+119,https://github.com/b3dgs/lionengine/commit/713e83096063d7b2c1f6fe2c9ce4469d84839efe,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+120,https://github.com/alexprut/design-patterns-java/commit/2e8833b47eec7ad31f46a55456cccb269528414c,Non-Refactoring,チュートリアルリポジトリなのでスキップ,,,Mont9165,,,,,
+120,https://github.com/alexprut/design-patterns-java/commit/2e8833b47eec7ad31f46a55456cccb269528414c,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+121,https://github.com/jcabi/jcabi-email/commit/7e7360f24b828bde1786f6ddd68ef1f48dffb223,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+121,https://github.com/jcabi/jcabi-email/commit/7e7360f24b828bde1786f6ddd68ef1f48dffb223,Any Refactoring,Mockitoを使わなくなっている,,,Mont9165,,,,,
+122,https://github.com/openjdk/lilliput/commit/310f1274067aa3473cdc6479842c50277e5d42f5,Any Refactoring,JarUtils.createJarFileはInline Fixtureか？それ以外も移動はしているClassLoaderTestとか,,,Yutaro-Kashiwa,,,,,
+122,https://github.com/openjdk/lilliput/commit/310f1274067aa3473cdc6479842c50277e5d42f5,Non-Refactoring,Remove unneeded automatic module testsと書いてあるため，リファクタリングではない？Shared Fixtureはあるかもしれない,,,Mont9165,,,,,
+123,https://github.com/blackducksoftware/detect/commit/686c8abc7792e4519311188771bced8748a4c824,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+123,https://github.com/blackducksoftware/detect/commit/686c8abc7792e4519311188771bced8748a4c824,Non-Refactoring,,,,Mont9165,,,,,
+124,https://github.com/bmwcarit/joynr/commit/71f278e80f7c03628230b8d5b16d3b4cf8154ebc,Custom Assertion,,,,Yutaro-Kashiwa,,,,154.0,168.0
+124,https://github.com/bmwcarit/joynr/commit/71f278e80f7c03628230b8d5b16d3b4cf8154ebc,Custom Assertion,,,,Yutaro-Kashiwa,,,,114.0,126.0
+124,https://github.com/bmwcarit/joynr/commit/71f278e80f7c03628230b8d5b16d3b4cf8154ebc,Custom Assertion,,,,Yutaro-Kashiwa,,,,267.0,268.0
+124,https://github.com/bmwcarit/joynr/commit/71f278e80f7c03628230b8d5b16d3b4cf8154ebc,Non-Refactoring,テストケースを追加してるのはリファクタリングではない？コミットメッセージでは，リファクタリングといってる,,,Mont9165,,,,,
+125,https://github.com/camunda/camunda/commit/ef1e5e6553e0695f468f644cb54dab6f8675f994,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+125,https://github.com/camunda/camunda/commit/ef1e5e6553e0695f468f644cb54dab6f8675f994,Non-Refactoring,rename,,,Mont9165,,,,,
+126,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/730abe93f6b064e8a9998a9324f3ccdfda869c01,Test Helper,,,,Mont9165,,,,327.0,372.0
+126,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/730abe93f6b064e8a9998a9324f3ccdfda869c01,Any Refactoring,"			assertEquals(rootValue, caBean.getTestBaseProperty());のところリファクタリングっていう？より細かい中身をテストし始めた",,,Yutaro-Kashiwa,,,,,
+126,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/730abe93f6b064e8a9998a9324f3ccdfda869c01,Any Refactoring,generateRandomTreeWithReferencesからStudyGeneratorに変えているけど，これは一般的なリファクタリングとすべきなのか？クラス化リファクタリングか？,,,Yutaro-Kashiwa,,,,,
+127,https://github.com/mangstadt/biweekly/commit/90e03b96a2197aa039e8b081b42ec44e12b3755e,Non-Refactoring,general refactoring,,,Mont9165,,,,,
+127,https://github.com/mangstadt/biweekly/commit/90e03b96a2197aa039e8b081b42ec44e12b3755e,Inline Setup,,,,Yutaro-Kashiwa,src/test/java/biweekly/util/TestUtils.java,201.0,203.0,218.0,221.0
+128,https://github.com/briar/briar/commit/913e5da2f51641eff463d0ee01ddefc61a5acf34,Custom Assertion,メソッド名はすごくCustom Assertionっぽい,,,Mont9165,,,,191.0,242.0
+128,https://github.com/briar/briar/commit/913e5da2f51641eff463d0ee01ddefc61a5acf34,Custom Assertion,,,,Yutaro-Kashiwa,bramble-core/src/test/java/org/briarproject/bramble/mailbox/ContactMailboxDownloadWorkerTest.java,72.0,76.0,220.0,225.0
+128,https://github.com/briar/briar/commit/913e5da2f51641eff463d0ee01ddefc61a5acf34,Custom Assertion,,,,Yutaro-Kashiwa,,,,209.0,218.0
+128,https://github.com/briar/briar/commit/913e5da2f51641eff463d0ee01ddefc61a5acf34,Custom Assertion,,,,Yutaro-Kashiwa,,,,265.0,269.0
+128,https://github.com/briar/briar/commit/913e5da2f51641eff463d0ee01ddefc61a5acf34,Creation Method,,,,Mont9165,bramble-core/src/test/java/org/briarproject/bramble/mailbox/ContactMailboxDownloadWorkerTest.java,93.0,96.0,216.0,221.0
+128,https://github.com/briar/briar/commit/913e5da2f51641eff463d0ee01ddefc61a5acf34,Custom Assertion,,,,Yutaro-Kashiwa,,,,236.0,242.0
+129,https://github.com/Tencent/TencentKona-11/commit/95434882fd90cedc75aece11196c71885e2fe102,Any Refactoring,getLLPComponentsのやつは，Inlineとdeligalateの組み合わせ．,,,Yutaro-Kashiwa,,,,,
+129,https://github.com/Tencent/TencentKona-11/commit/95434882fd90cedc75aece11196c71885e2fe102,Any Refactoring,printSkipMessageはただのExtract？,,,Yutaro-Kashiwa,,,,,
+129,https://github.com/Tencent/TencentKona-11/commit/95434882fd90cedc75aece11196c71885e2fe102,Inline Setup,,,,Mont9165,test/jdk/tools/launcher/Test7029048.java,65.0,66.0,74.0,75.0
+129,https://github.com/Tencent/TencentKona-11/commit/95434882fd90cedc75aece11196c71885e2fe102,Non-Refactoring,テストではなく，単なるExtract Methodと判断,,,Mont9165,,,,213.0,216.0
+130,https://github.com/Alluxio/alluxio/commit/5be8885c99fe58faed5a9eb276df0215413add90,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+130,https://github.com/Alluxio/alluxio/commit/5be8885c99fe58faed5a9eb276df0215413add90,Non-Refactoring,他のクラスから移動しているらしいが，元のクラスがないのでスキップ,,,Mont9165,,,,,
+131,https://github.com/C2SP/wycheproof/commit/ca5fdffb1ab659adbe474ff45b47cad6ed4aec11,Any Refactoring,testUpdateはDe-parameterize？,,,Yutaro-Kashiwa,,,,,
+131,https://github.com/C2SP/wycheproof/commit/ca5fdffb1ab659adbe474ff45b47cad6ed4aec11,Non-Refactoring,内容変わってそう,,,Mont9165,,,,,
+132,https://github.com/syndesisio/syndesis/commit/8022c76068e5ee8081348df8ea5cc8dd61168b81,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+132,https://github.com/syndesisio/syndesis/commit/8022c76068e5ee8081348df8ea5cc8dd61168b81,Non-Refactoring,resourceを返す必要がなくなったから消しただけ？,,,Mont9165,,,,,
+133,https://github.com/jenkinsci/subversion-plugin/commit/f3ed97565209b9c5a2ed65a5c0d687e2ac59c698,Non-Refactoring,,,,Mont9165,,,,,
+133,https://github.com/jenkinsci/subversion-plugin/commit/f3ed97565209b9c5a2ed65a5c0d687e2ac59c698,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+134,https://github.com/camunda/camunda/commit/57bfa5046b66cc6a2532d475b859fdb9a9ad8b65,Testcase Class,,,,Mont9165,bpmn-model/src/test/java/io/camunda/zeebe/model/bpmn/builder/ProcessBuilderTest.java,2140.0,2196.0,1.0,85.0
+134,https://github.com/camunda/camunda/commit/57bfa5046b66cc6a2532d475b859fdb9a9ad8b65,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+135,https://github.com/camunda/camunda/commit/6548859be81b8925da3cb2e507c1f1089b1ae40b,Non-Refactoring,順番入れ替えただけ？,,,Yutaro-Kashiwa,,,,,
+135,https://github.com/camunda/camunda/commit/6548859be81b8925da3cb2e507c1f1089b1ae40b,Any Refactoring,@Nestedの追加,,,Mont9165,,,,109.0,110.0
+135,https://github.com/camunda/camunda/commit/6548859be81b8925da3cb2e507c1f1089b1ae40b,Non-Refactoring,切れ端,,,Mont9165,,,,,
+136,https://github.com/europeana/corelib/commit/e1c672367345158988dd85c78a8a58ff2ceee20f,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+136,https://github.com/europeana/corelib/commit/e1c672367345158988dd85c78a8a58ff2ceee20f,Non-Refactoring,,,,Mont9165,,,,,
+137,https://github.com/AICP/frameworks_base/commit/669f02323f9c7298fdef79b44e1a512549d1411a,Any Refactoring,Flacky対策SharedLogTest,,,Yutaro-Kashiwa,,,,,
+137,https://github.com/AICP/frameworks_base/commit/669f02323f9c7298fdef79b44e1a512549d1411a,Any Refactoring,waitForIdleHandlerはTestUtilsに移動した？これは名前つけるんだっけ？,,,Yutaro-Kashiwa,,,,,
+137,https://github.com/AICP/frameworks_base/commit/669f02323f9c7298fdef79b44e1a512549d1411a,Test Helper,議論が必要なやつ,,,Mont9165,,,,1.0,55.0
+137,https://github.com/AICP/frameworks_base/commit/669f02323f9c7298fdef79b44e1a512549d1411a,Non-Refactoring,切れ端,,,Mont9165,,,,,
+138,https://github.com/jitsi/jitsi-meet-torture/commit/30cefac130c36abbaf6e80fee210a3f803304d3b,Non-Refactoring,新しいテスト内容を追加してそうなのでスキップ,,,Mont9165,,,,,
+138,https://github.com/jitsi/jitsi-meet-torture/commit/30cefac130c36abbaf6e80fee210a3f803304d3b,Any Refactoring,TestSuite化？,,,Yutaro-Kashiwa,,,,,
+139,https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/a7135829483e103268909b02e758db596c014cd5,Custom Assertion,,,,Mont9165,,,,322.0,328.0
+139,https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/a7135829483e103268909b02e758db596c014cd5,Delegated Setup,,,,Mont9165,,,,311.0,331.0
+139,https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/a7135829483e103268909b02e758db596c014cd5,Custom Assertion,,,,Yutaro-Kashiwa,,,,322.0,332.0
+139,https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/a7135829483e103268909b02e758db596c014cd5,Custom Assertion,,,,Yutaro-Kashiwa,,,,326.0,331.0
+140,https://github.com/junit-team/junit4/commit/66bfb24d328bd480e31c3834cfdfdca53173c62a,Any Refactoring,try/catchで処理を書き換えてる,,,Mont9165,,,,,
+140,https://github.com/junit-team/junit4/commit/66bfb24d328bd480e31c3834cfdfdca53173c62a,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+140,https://github.com/junit-team/junit4/commit/66bfb24d328bd480e31c3834cfdfdca53173c62a,Any Refactoring, thrown.expectをExceptに変えている．ただの変更漏れ？,,,Yutaro-Kashiwa,,,,,
+141,https://github.com/watson-developer-cloud/java-sdk/commit/2adb1669c3219dfa75ab3353e7aacc7d00ceb558,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+141,https://github.com/watson-developer-cloud/java-sdk/commit/2adb1669c3219dfa75ab3353e7aacc7d00ceb558,Non-Refactoring,assertion変わってる,,,Mont9165,,,,,
+142,https://github.com/ibi-group/datatools-server/commit/38c1b435ee98669010ad0381a1bdb58499be2fbf,Any Refactoring,Mock化なのか？,,,Yutaro-Kashiwa,,,,,
+142,https://github.com/ibi-group/datatools-server/commit/38c1b435ee98669010ad0381a1bdb58499be2fbf,Shared Fixture,共通されてないフィクスちゃ,,,Mont9165,,,,27.0,28.0
+143,https://github.com/Alluxio/alluxio/commit/1dcfa607d731e9ebab01229d4ad490714f8527b1,Inline Setup,,,,Yutaro-Kashiwa,core/server/src/test/java/alluxio/worker/netty/DataServerBlockWriteHandlerTest.java,50.0,51.0,132.0,133.0
+143,https://github.com/Alluxio/alluxio/commit/1dcfa607d731e9ebab01229d4ad490714f8527b1,Inline Setup,,,,Yutaro-Kashiwa,core/server/src/test/java/alluxio/worker/netty/DataServerUFSFileWriteHandlerTest.java,53.0,54.0,,
+143,https://github.com/Alluxio/alluxio/commit/1dcfa607d731e9ebab01229d4ad490714f8527b1,Any Refactoring,DataServerWriteHandlerTestにcheckWriteResponseとか移動している,,,Yutaro-Kashiwa,,,,,
+143,https://github.com/Alluxio/alluxio/commit/1dcfa607d731e9ebab01229d4ad490714f8527b1,Testcase Superclass,要議論,,,Mont9165,,,,1.0,137.0
+144,https://github.com/blackducksoftware/detect/commit/80351d34f08d28a75251312217667ad4cc4c989e,Non-Refactoring,新しいオブジェクトを追加してる,,,Mont9165,,,,,
+144,https://github.com/blackducksoftware/detect/commit/80351d34f08d28a75251312217667ad4cc4c989e,Non-Refactoring,Finalやめた,,,Yutaro-Kashiwa,,,,,
+145,https://github.com/elki-project/elki/commit/8ca0786702e7e886acdcbabeb8f37a63556361c6,Delegated Setup,2つあるので注意（Divisionできない）,,,Yutaro-Kashiwa,,,,95.0,99.0
+145,https://github.com/elki-project/elki/commit/8ca0786702e7e886acdcbabeb8f37a63556361c6,Non-Refactoring,違う処理をしてるような気がするがわからない,,,Mont9165,,,,,
+146,https://github.com/arx-deidentifier/arx/commit/71d77bb0c05ea3f072e9461626e4954c784c001f,Non-Refactoring,,,,Mont9165,,,,,
+146,https://github.com/arx-deidentifier/arx/commit/71d77bb0c05ea3f072e9461626e4954c784c001f,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+147,https://github.com/cassandre-tech/cassandre-trading-bot/commit/5a2885ab3fcde71b32b4fa0158e1c8103ff161c0,Non-Refactoring,切れ端,,,Mont9165,,,,,
+147,https://github.com/cassandre-tech/cassandre-trading-bot/commit/5a2885ab3fcde71b32b4fa0158e1c8103ff161c0,Any Refactoring,この移動はリファクタリングなのか,,,Yutaro-Kashiwa,,,,,
+147,https://github.com/cassandre-tech/cassandre-trading-bot/commit/5a2885ab3fcde71b32b4fa0158e1c8103ff161c0,Testcase Class,議論が必要，三つ新しいテストクラスを追加してる,,,Mont9165,,,,1.0,66.0
+148,https://github.com/zebrunner/carina/commit/cfff7c2753dc93b92fb8764ed77a667291ebeaec,Non-Refactoring,rename,,,Mont9165,,,,,
+148,https://github.com/zebrunner/carina/commit/cfff7c2753dc93b92fb8764ed77a667291ebeaec,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+149,https://github.com/errai/errai/commit/c9298966bc4a505c6db05a4678308c003048e9af,Custom Assertion,,,,Yutaro-Kashiwa,,,,47.0,58.0
+149,https://github.com/errai/errai/commit/c9298966bc4a505c6db05a4678308c003048e9af,Custom Assertion,,,,Mont9165,,,,47.0,58.0
+150,https://github.com/Taskana/taskana/commit/5c70c1a7bb1da4b306fa748506199836036d6b47,Non-Refactoring,なまえだけ,,,Yutaro-Kashiwa,,,,,
+150,https://github.com/Taskana/taskana/commit/5c70c1a7bb1da4b306fa748506199836036d6b47,Non-Refactoring,rename,,,Mont9165,,,,,
+151,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/cc81f4d8349cba20ec0a7ddd96e78e7cd4b0f467,Non-Refactoring,テストがとまるようにしているがリファクタリングではないかな,,,Yutaro-Kashiwa,,,,,
+151,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/cc81f4d8349cba20ec0a7ddd96e78e7cd4b0f467,Non-Refactoring,,,,Mont9165,,,,,
+152,https://github.com/pmd/pmd-eclipse-plugin/commit/89b00ec91630e2c63d6e3d48d717a43622d1ccaa,Suite Fixture Setup,これも議論が必要,,,Mont9165,,,,1.0,64.0
+152,https://github.com/pmd/pmd-eclipse-plugin/commit/89b00ec91630e2c63d6e3d48d717a43622d1ccaa,Any Refactoring,Superclassのリファクタリング！名前忘れた,,,Yutaro-Kashiwa,,,,,
+153,https://github.com/liferay/liferay-blade-cli/commit/5948f064b124a759aebffa66c49fea101451175c,Non-Refactoring,rename & move method,,,Mont9165,,,,,
+153,https://github.com/liferay/liferay-blade-cli/commit/5948f064b124a759aebffa66c49fea101451175c,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+154,https://github.com/camunda/camunda/commit/4f8f5d64673496725ec705c0f8198035793cb430,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+154,https://github.com/camunda/camunda/commit/4f8f5d64673496725ec705c0f8198035793cb430,Non-Refactoring,renameとテストメソッド一部が削除,,,Mont9165,,,,,
+155,https://github.com/ibi-group/datatools-server/commit/d28e0001c62ba47a89691634e7012d8e44c9716e,Implicit Teardown,,,,Yutaro-Kashiwa,,,,61.0,62.0
+155,https://github.com/ibi-group/datatools-server/commit/d28e0001c62ba47a89691634e7012d8e44c9716e,Any Refactoring,DBへの接続を一回だけにしてる気がする,,,Mont9165,,,,,
+155,https://github.com/ibi-group/datatools-server/commit/d28e0001c62ba47a89691634e7012d8e44c9716e,Shared Fixture,どのリファクタリングにすべきかわからん,,,Yutaro-Kashiwa,,,,30.0,32.0
+155,https://github.com/ibi-group/datatools-server/commit/d28e0001c62ba47a89691634e7012d8e44c9716e,Delegated Setup,Delegalate2つある．分割できない,,,Yutaro-Kashiwa,,,,136.0,141.0
+156,https://github.com/SpoonLabs/astor/commit/13c38565a932afc028f0325f6a0b6fac37588eaa,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+156,https://github.com/SpoonLabs/astor/commit/13c38565a932afc028f0325f6a0b6fac37588eaa,Non-Refactoring,,,,Mont9165,,,,,
+157,https://github.com/openjdk/lilliput/commit/7f80683cfeee3c069f48d5bce45fa92b2381b518,Any Refactoring,Performance Tuningはリファクタリングなんだっけ？,,,Yutaro-Kashiwa,,,,,
+157,https://github.com/openjdk/lilliput/commit/7f80683cfeee3c069f48d5bce45fa92b2381b518,Any Refactoring,パフォーマンス系のリファクタリングっぽい,,,Mont9165,,,,,
+158,https://github.com/zebrunner/carina-demo/commit/41ef144bbe85c477a0fa388755fcf3949ca05225,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+158,https://github.com/zebrunner/carina-demo/commit/41ef144bbe85c477a0fa388755fcf3949ca05225,Non-Refactoring,rename,,,Mont9165,,,,,
+159,https://github.com/commercetools/commercetools-sync-java/commit/a98d0e9bcc5963a1b4602070f08c99b728d5f0a9,Non-Refactoring,rename,,,Mont9165,,,,,
+159,https://github.com/commercetools/commercetools-sync-java/commit/a98d0e9bcc5963a1b4602070f08c99b728d5f0a9,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+160,https://github.com/javamelody/javamelody/commit/16135546b481f2cbf851b024de0e2f8af38892cf,Non-Refactoring,,,,Yutaro-Kashiwa,,,,,
+160,https://github.com/javamelody/javamelody/commit/16135546b481f2cbf851b024de0e2f8af38892cf,Non-Refactoring,,,,Mont9165,,,,,
+161,https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/de465f3bbf53be586512ba61fab982232d1ff7fc,Non-Refactoring,過剰なヘルパーメソッドの削除,,,Mont9165,src/test/java/com/google/jenkins/plugins/k8sengine/KubernetesEngineBuilderTest.java,554.0,624.0,,
+161,https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/de465f3bbf53be586512ba61fab982232d1ff7fc,Any Refactoring,Helperの分割はどうする？,,,Yutaro-Kashiwa,,,,,
+161,https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/de465f3bbf53be586512ba61fab982232d1ff7fc,Custom Assertion,,,,Mont9165,,,,574.0,585.0
+162,https://github.com/ftsrg/theta/commit/8e59264fbc850e14bbb455774d64e70b8dca2862,Parameterized Test,,,,Mont9165,,,,37.0,75.0
+162,https://github.com/ftsrg/theta/commit/8e59264fbc850e14bbb455774d64e70b8dca2862,Parameterized Test,,,,Yutaro-Kashiwa,hu.bme.mit.theta.core/src/test/java/hu/bme/mit/theta/core/utils/VarCollectorVisitorTest.java,1.0,77.0,1.0,77.0
+163,https://github.com/dita-ot/dita-ot/commit/ae6cb5a9a01751979ce12f1f76907dc0c51eedf7,Parameterized Test,,,,Mont9165,,,,162.0,185.0
+163,https://github.com/dita-ot/dita-ot/commit/ae6cb5a9a01751979ce12f1f76907dc0c51eedf7,Parameterized Test,,,,Yutaro-Kashiwa,src/test/java/org/dita/dost/reader/GenListModuleReaderTest.java,155.0,169.0,162.0,177.0
+163,https://github.com/dita-ot/dita-ot/commit/ae6cb5a9a01751979ce12f1f76907dc0c51eedf7,Parameterized Test,,,,Yutaro-Kashiwa,src/test/java/org/dita/dost/reader/GenListModuleReaderTest.java,125.0,141.0,125.0,153.0
+164,https://github.com/camunda/camunda/commit/950865c398aeba8faef3c1dd3b8f1d6978201ac1,Any Refactoring,VersionTest使っているのがポイントっぽい,,,Yutaro-Kashiwa,,,,,
+164,https://github.com/camunda/camunda/commit/950865c398aeba8faef3c1dd3b8f1d6978201ac1,Any Refactoring,＠Nestedを追加してる．もしかすると重すぎてラベル付けできないかも,,,Mont9165,,,,,
+165,https://github.com/aehrc/pathling/commit/8074c0e8504803869240eb57d8bdfdf8978f6aa9,Non-Refactoring,普通のリファクタリングな気がする,,,Mont9165,,,,,
+165,https://github.com/aehrc/pathling/commit/8074c0e8504803869240eb57d8bdfdf8978f6aa9,Non-Refactoring,hasRowsを追加．これはリファクタリングにすべきなのか？,,,Yutaro-Kashiwa,,,,,
+166,https://github.com/mimno/Mallet/commit/e401d6fab91ec7faaea4295fefcd5d8cabf9ab92,Non-Refactoring,only import,,,Mont9165,,,,,
+167,https://github.com/theborakompanioni/bitcoin-spring-boot-starter/commit/e984ab400030122bdb7800fd87daf887f755d4fc,Non-Refactoring,リファクタリングかわからない，新しいテストメソッドも追加されてる,,,Mont9165,,,,,
+168,https://github.com/mysto/java-fpe/commit/d386ac7918b26ab710c8eddd072b83c67d9ab104,Parameterized Test,＠Parameterized使ってないけど，それっぽい,,,Mont9165,,,,142.0,152.0
+169,https://github.com/camunda/camunda/commit/34c4fc9344280aecc53d21f18797ef05feb4d8e0,Non-Refactoring,,,,Mont9165,,,,,
+170,https://github.com/PixelExperience/frameworks_base/commit/21a1dbc58e9dce3d77f8ce2bd7eabbc72ed146eb,Non-Refactoring,,,,Mont9165,,,,,
+171,https://github.com/drsjb80/JDNSS/commit/e309bc3254db403567f2edeeb8abaeb807a8c37b,Non-Refactoring,,,,Mont9165,,,,,
+172,https://github.com/arianne/stendhal/commit/2fef04339b15b83dee0f0b443d50e1e1b39808e4,Parameterized Test,,,,Mont9165,,,,15.0,49.0
+173,https://github.com/commercetools/commercetools-sync-java/commit/b4c04db60bc60886ba9d5d3b3e249f0f793119fd,Non-Refactoring,renameと新規テスト追加,,,Mont9165,,,,,
+174,https://github.com/camunda/camunda/commit/82ac927f5b23cbddb08308f1f20a89e150e78b1b,Non-Refactoring,普通のリファクタリング,,,Mont9165,,,,,
+175,https://github.com/fedex81/helios/commit/1dac09eda579c04545ef76f67045a15eba71addb,Test Runner,要議論,,,Mont9165,,,,1.0,88.0
+176,https://github.com/bmwcarit/joynr/commit/0e37fe7d50da10499bc3d18e4f60ef2a272252a1,Any Refactoring,リファクタリングっぽいが，このコミットにはない,,,Mont9165,,,,,
+177,https://github.com/camunda/camunda/commit/c83bb6e4a1d61a5919ba18efacf9ffb73b36e955,Non-Refactoring,Add @Ignore,,,Mont9165,,,,,
+178,https://github.com/androidx/media/commit/d8b6c2971b0eec6dc44e42338d03f3cf7eb010c3,Non-Refactoring,rename,,,Mont9165,,,,,
+179,https://github.com/b3dgs/lionengine/commit/6123fffca86b26b2290d36e7660121a527adf5ae,Change Assertion Type,,,,Mont9165,,,,37.0,38.0
+180,https://github.com/globalbioticinteractions/globalbioticinteractions/commit/6fdd3044368c762a6fc2f06fbe98b533e2201c46,Non-Refactoring,アサーションのデータ変わってるからリファクタリングでないと判断,,,Mont9165,,,,,
+181,https://github.com/hngprojects/hng_boilerplate_java_web/commit/3caa3ddc2acb31225853cdeff34e2bb1dfffb271,Non-Refactoring,,,,Mont9165,,,,,
+182,https://github.com/fabric8io/fabric8-maven-plugin/commit/89abcae3019d2bcbd05142f83353165e581a49b2,Any Refactoring,Add expected = exception,,,Mont9165,,,,115.0,116.0
+182,https://github.com/fabric8io/fabric8-maven-plugin/commit/89abcae3019d2bcbd05142f83353165e581a49b2,Non-Refactoring,renameとコメントをメソッド内部に移動させただけ,,,Mont9165,,,,,
+183,https://github.com/jpmml/jpmml-model/commit/57788b2d3902a5ab982db8219d36e3e47941cf8f,Non-Refactoring,,,,Mont9165,,,,,
+184,https://github.com/AICP/frameworks_base/commit/05c96d4b32e7722a5a16a7939009bc2b74096d76,Non-Refactoring,bug fixな気がするのでスキップ,,,Mont9165,,,,69.0,72.0
+185,https://github.com/imagej/imagej-ops/commit/1b4673b26e8c758da3d10a6692b4b51dfc91e362,Shared Fixture,,,,Mont9165,,,,51.0,53.0

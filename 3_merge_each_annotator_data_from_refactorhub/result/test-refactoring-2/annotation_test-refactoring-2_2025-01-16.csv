@@ -1,0 +1,61 @@
+Order Index,URL,Type Name,Description,Memo,Agreement,Annotator Name,File Path,Start Line (Before),End Line (Before),Start Line (After),End Line (After)
+1,https://github.com/Tencent/TencentKona-11/commit/832d68597ec6af94bc870a22410d1be95eb2bfa5,Non-Refactoring,,,,niyaton,test/hotspot/jtreg/compiler/codecache/jmx/InitialAndMaxUsageTest.java,2.0,3.0,,
+15,https://github.com/remkop/picocli/commit/47cf9235a60ceddc8e583a4fd25b64aaae0d70ab,Non-Refactoring,,,,niyaton,,,,,
+80,https://github.com/FasterXML/jackson-dataformats-text/commit/ea850727af5f84fc2fe706e3ca8d009aeb1f27dc,Shared Fixture,,,,niyaton,toml/src/test/java/com/fasterxml/jackson/dataformat/toml/TomlBigStringsTest.java,41.0,42.0,69.0,70.0
+80,https://github.com/FasterXML/jackson-dataformats-text/commit/ea850727af5f84fc2fe706e3ca8d009aeb1f27dc,Shared Fixture,,,,niyaton,csv/src/test/java/com/fasterxml/jackson/dataformat/csv/deser/CSVBigStringsTest.java,32.0,33.0,50.0,51.0
+81,https://github.com/agrestio/agrest/commit/48be2e3a3be51123a67aa8b39ad656a301fa7f1f,Any Refactoring,"これDiffがぐちゃぐちゃ過ぎて（タブをスペースに変えてるのが原因）分割がそもそもまともにできない．Afterの23行目のsetUp関数はImplicit Setupに該当するような気がするが．Before部分がないのでリファクタリングかどうか自信がない．
+後は，class Xやclass Yの作成がMock Objectまたはライブラリの適用の逆のリファクタリング（ライブラリの非適用）リファクタリングに該当すると思います．",,,niyaton,,,,,
+82,https://github.com/hapifhir/hapi-hl7v2/commit/42db129f4354c441ab257ebdb142f1ab0a382497,Any Refactoring,"作業すると何故か重すぎる・・・MessageTypeRouterTest.javaは単にJUnitのバージョンを上げているだけ．
+MCFとVCはShared Fixtureとして抽出されている．
+
+buildSpecsを使ってる部分はParameterized Test",,,niyaton,,,,,
+83,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/0832ee2b376b0516dcd23de296d4afaa15a42dec,Testcase Superclass,すごく自信がないがAProjectTestCaseがそうな気がする．,,,niyaton,,,,51.0,52.0
+84,https://github.com/vt-middleware/passay/commit/1efb5b8f571b5a0889892f23a122afac15120115,Any Refactoring,Un Shared Fixture的なのをひたすらやっている・・・,,,niyaton,,,,,
+85,https://github.com/PixelExperience/frameworks_base/commit/38f298d4fb8cf0ce8c9885748aad4c79d8bf89b3,Any Refactoring,ライブラリか，別のタイミングで作ったテストUtilityを使ってリファクタリングをしているのは分かるが何かしらのリファクタリングパターンとして分類するのは難しい．,,,niyaton,,,,,
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Custom Assertion,,,,niyaton,,,,201.0,202.0
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Non-Refactoring,無視してください．,,,niyaton,,,,,
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Creation Method,createRecords（2つ）,,,niyaton,kafka-connect-s3/src/test/java/io/confluent/connect/s3/DataWriterAvroTest.java,138.0,149.0,255.0,263.0
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Implicit Setup,既にsetupがあるところに処理を持って来るのもimplicit setupとした．,,,niyaton,kafka-connect-s3/src/test/java/io/confluent/connect/s3/DataWriterAvroTest.java,91.0,94.0,79.0,83.0
+87,https://github.com/AdoptOpenJDK/jitwatch/commit/7788103ee76fde8751ccbe5adc03855c89ef4bdc,Any Refactoring,static化して高速化？,,,niyaton,,,,,
+88,https://github.com/Baqend/Orestes-Bloomfilter/commit/a855f91f954e46802ca342bcdd57ae2a0b7644a2,Non-Refactoring,テストの挙動が変わっている,,,niyaton,,,,,
+89,https://github.com/jenkinsci/remoting/commit/ffb771d86a6b593b5dca95940947527c53810c93,Any Refactoring,UnShared Fixtureみたいなやつ．,,,niyaton,src/test/java/hudson/remoting/ClassFilterTest.java,46.0,52.0,61.0,67.0
+89,https://github.com/jenkinsci/remoting/commit/ffb771d86a6b593b5dca95940947527c53810c93,Inline Setup,setUpのannotationを外して全部Inline呼び出ししてるのはなんなんだ・・・？Inline Setupでいいのか？,,,niyaton,,,,101.0,102.0
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Split Test Method,一杯あるのでタグづけしないですが一杯分割されている．,,,niyaton,,,,49.0,50.0
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Non-Refactoring,いつもの切れ端なので無視してください．,,,niyaton,,,,,
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Implicit Teardown,元の処理は派生しているクラスで書かれている．,,,niyaton,,,,29.0,34.0
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Implicit Setup,,,,niyaton,,,,23.0,24.0
+91,https://github.com/TEAMMATES/teammates/commit/18f1b3459f80eae83fbf15ba0096d4f0836182d4,Non-Refactoring,何かリファクタリングしてそうだがBaseComponentTestCaseクラスで，このコミットにはないためスキップ,,,Mont9165,,,,,
+91,https://github.com/TEAMMATES/teammates/commit/18f1b3459f80eae83fbf15ba0096d4f0836182d4,Any Refactoring,何かに分類できるわけではなさそう．signalFailureToDetectExceptionが同時に作られていないのも問題．,,,niyaton,,,,,
+92,https://github.com/prmr/JetUML/commit/5dbebf84e65eacfac0fee980ff742e5365eb5a3d,Any Refactoring,publicをinternalにしてるのはJUnit5からpublicにする必要がなくなったかららしい？,,,niyaton,,,,,
+92,https://github.com/prmr/JetUML/commit/5dbebf84e65eacfac0fee980ff742e5365eb5a3d,Suite Fixture Setup,BeforeEachからフィールドの宣言時に初期化に変更している．これも初期化回数を1回に減らしているのでSuite Fixture Setupと判断．,,,niyaton,test/org/jetuml/persistence/TestSerializationContext.java,58.0,64.0,41.0,47.0
+92,https://github.com/prmr/JetUML/commit/5dbebf84e65eacfac0fee980ff742e5365eb5a3d,Any Refactoring,呼び出しのところのリファクタリングな気がする,,,Mont9165,,,,,
+93,https://github.com/wizzardo/webery/commit/ddb836c34d5ce087d2ab3688fef402dce85ebfbc,Non-Refactoring,ただのExtract MethodとRename (Test) Methodのあわせ技,,,niyaton,,,,,
+93,https://github.com/wizzardo/webery/commit/ddb836c34d5ce087d2ab3688fef402dce85ebfbc,Any Refactoring,,,,Mont9165,,,,,
+94,https://github.com/nuxeo/nuxeo/commit/4bf86e3fd27450f5c45869e846c12eee0dd1d450,Non-Refactoring,JUnit4対応を複数ファイルにしているだけ,,,niyaton,,,,,
+95,https://github.com/camunda/camunda/commit/37090d84b7f06ea745c97211cf7b2fe4d9d3978a,Non-Refactoring,JUnit5対応（publicをinternalに）,,,niyaton,,,,,
+96,https://github.com/factcast/factcast/commit/0e25c2181fa9a1d4ca509eecede4937aa699c564,Non-Refactoring,SLF4JからLogCaptorへの変更？,,,niyaton,,,,,
+97,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/b14cf399b1afa29e0c94b1885c8fb1c623b014ea,Any Refactoring,loadConceptFromPluginはどこに消えた？別のコミットでPull up Methodみたいなのをしたのか？後はスペルミスを直しているだけ．,,,niyaton,,,,,
+98,https://github.com/mycelium-com/wallet-android/commit/bc00f053a7db2243d3752ff44122cb40f5b1bb74,Parameterized Test,@Parameterzed使ってないけどこれはParameterized Test？,,,niyaton,,,,,
+99,https://github.com/TEAMMATES/teammates/commit/262b722a45dcefc14a874e40800474f15c50bcd0,Non-Refactoring,1つのファイルはメッセージの変更をしているだけだし，もう一つはテスト自体を追加しまくってるのでリファクタリングではない．,,,niyaton,,,,,
+100,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/57cb232e392f7ee63b6ae66d643ac80b2ef69964,Non-Refactoring,finishWizardをextractしているように見えなくもないけど等価な処理なように思えない．,,,niyaton,,,,,
+101,https://github.com/awslabs/aws-mysql-jdbc/commit/4abeab362f8c1739fde9fccbfdf9228ce58054c3,Any Refactoring,3回までの失敗は許容するように変更している．,,,niyaton,,,,276.0,294.0
+101,https://github.com/awslabs/aws-mysql-jdbc/commit/4abeab362f8c1739fde9fccbfdf9228ce58054c3,Any Refactoring,2個目のファイルは名前をつけられるテスト固有のリファクタリングではない．,,,niyaton,,,,,
+102,https://github.com/neo4j/neo4j/commit/33e64d6265511a3fedc4f00bbfd9c505f0e66bda,Non-Refactoring,残りです．無視してください．,,,niyaton,,,,,
+102,https://github.com/neo4j/neo4j/commit/33e64d6265511a3fedc4f00bbfd9c505f0e66bda,Any Refactoring,ライブラリを使った書き方の変更．,,,niyaton,community/community-it/kernel-it/src/test/java/org/neo4j/graphdb/SchemaAcceptanceTest.java,1276.0,1283.0,1274.0,1290.0
+103,https://github.com/camsys/onebusaway-nyc/commit/28f0eeaa79b20ba58871a27e2311b67cbdd01ba2,Non-Refactoring,テストのやり方自体を変えているのでどちらかというとテストの修正,,,niyaton,,,,,
+104,https://github.com/MovingBlocks/Terasology/commit/c92f14ff5c5c73d849f7d6d0d2980846209ebead,Shared Fixture,,,,niyaton,engine-tests/src/test/java/org/terasology/config/flexible/SettingTest.java,40.0,41.0,33.0,34.0
+104,https://github.com/MovingBlocks/Terasology/commit/c92f14ff5c5c73d849f7d6d0d2980846209ebead,Non-Refactoring,残りはRename Variables,,,niyaton,,,,,
+105,https://github.com/camunda/camunda/commit/a0debbafb3b633a92ade2a385a8017cff6113bd3,Non-Refactoring,"""fix test after refactoring"" なので，リファクタリング後の""修正""",,,niyaton,,,,,
+106,https://github.com/exadel-inc/etoolbox-authoring-kit/commit/146b1c42f23ed9d59a7d39b98f5e641fd8838d37,Any Refactoring,全部同じ書き方の変更をしているようだが特に名前を付けられるようなものではないと思う．,,,niyaton,,,,,
+107,https://github.com/blackducksoftware/detect/commit/c09f7c60e0618ddfb4ce520819e54f138913980c,Non-Refactoring,出力メッセージを少し変えてるだけ（不要なメッセージの削除）,,,niyaton,,,,,
+108,https://github.com/crotwell/TauP/commit/7772af9cdf0d894050486edd8d6be53feda397ce,Non-Refactoring,コードの整形と@diabledでテストの一時的（？）な削除,,,niyaton,,,,,
+109,https://github.com/citerus/dddsample-core/commit/20fe3f8c1d55df857a96600ec0e66c0ce1beba36,Any Refactoring,いらない処理（重複した処理）を削除している．,,,niyaton,,,,,
+110,https://github.com/camunda/camunda/commit/58319798119b6bd1417b9af0a0feaf1825d727ae,Non-Refactoring,Linuxでだけ動作するように変更しているらしい．元コードでOSを判断するコードがあればリファクタリングだったと思うけどなかった．,,,niyaton,,,,,
+111,https://github.com/OxalisCommunity/oxalis/commit/fa133160504c7aa4d9d746d4837542d54a784cc5,Non-Refactoring,テストの追加をしている．@InjectはGuiceとやらにより同一のインスタンスが注入されるはずということを確認してるだけなのでリファクタリングではなくてテストの追加．,,,niyaton,,,,,
+112,https://github.com/Tencent/TencentKona-17/commit/832d68597ec6af94bc870a22410d1be95eb2bfa5,Any Refactoring,fillWithで埋めるか，canAllocateで空きがあるか聞きながらwhileで埋めるかみたいな書き方の変更をしているだけなのでAnyRefactoring．,,,niyaton,,,,,
+113,https://github.com/jakartaee/nosql/commit/299412c7e1cce67814280a0e98ff8574718d329d,Custom Assertion,Custom Assertionといえなくもないと思ったのでそうしておきました．,,,niyaton,tck/driver-tck/driver-tck-column/src/main/java/jakarta/nosql/tck/communication/driver/column/ColumnFamilyManagerTest.java,318.0,319.0,304.0,308.0
+114,https://github.com/bkiers/Liqp/commit/47c96cc196192e749017fec9e40bd6b273a27117,Shared Fixture,元のがあるけどSharedFixtureでいい・・・3個のファイル全部で同じ．,,,niyaton,,,,,
+115,https://github.com/dekorateio/dekorate/commit/4f36e9ad4a354d3916e926660af1678be5b9f76c,Non-Refactoring,コメントの削除とRename Method,,,niyaton,,,,,
+116,https://github.com/PixelExperience/frameworks_base/commit/6f4216f4bec92e16e181b16393375ae8bce0589b,Non-Refactoring,"むちゃくちゃ長い．かなり注意深く読んだけど分類できそうなリファクタリングはしていない．
+TestableNetworkCallbackを同時に作っていたら何かしらの分類はできた気がする．",,,niyaton,,,,,
+167,https://github.com/mysql/mysql-connector-j/commit/cdb16c08c9347634161aafb86342fa2a31288e13,Non-Refactoring,,,,niyaton,,,,,

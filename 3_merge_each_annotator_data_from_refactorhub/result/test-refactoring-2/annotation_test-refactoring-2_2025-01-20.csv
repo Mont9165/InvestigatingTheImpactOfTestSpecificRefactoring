@@ -1,0 +1,217 @@
+Order Index,URL,Type Name,Description,Memo,Agreement,Annotator Name,File Path,Start Line (Before),End Line (Before),Start Line (After),End Line (After)
+1,https://github.com/Tencent/TencentKona-11/commit/832d68597ec6af94bc870a22410d1be95eb2bfa5,Non-Refactoring,,,,niyaton,test/hotspot/jtreg/compiler/codecache/jmx/InitialAndMaxUsageTest.java,2.0,3.0,,
+15,https://github.com/remkop/picocli/commit/47cf9235a60ceddc8e583a4fd25b64aaae0d70ab,Non-Refactoring,,,,niyaton,,,,,
+80,https://github.com/FasterXML/jackson-dataformats-text/commit/ea850727af5f84fc2fe706e3ca8d009aeb1f27dc,Shared Fixture,,,,niyaton,toml/src/test/java/com/fasterxml/jackson/dataformat/toml/TomlBigStringsTest.java,41.0,42.0,69.0,70.0
+80,https://github.com/FasterXML/jackson-dataformats-text/commit/ea850727af5f84fc2fe706e3ca8d009aeb1f27dc,Shared Fixture,,,,niyaton,csv/src/test/java/com/fasterxml/jackson/dataformat/csv/deser/CSVBigStringsTest.java,32.0,33.0,50.0,51.0
+81,https://github.com/agrestio/agrest/commit/48be2e3a3be51123a67aa8b39ad656a301fa7f1f,Any Refactoring,"これDiffがぐちゃぐちゃ過ぎて（タブをスペースに変えてるのが原因）分割がそもそもまともにできない．Afterの23行目のsetUp関数はImplicit Setupに該当するような気がするが．Before部分がないのでリファクタリングかどうか自信がない．
+後は，class Xやclass Yの作成がMock Objectまたはライブラリの適用の逆のリファクタリング（ライブラリの非適用）リファクタリングに該当すると思います．",,,niyaton,,,,,
+82,https://github.com/hapifhir/hapi-hl7v2/commit/42db129f4354c441ab257ebdb142f1ab0a382497,Any Refactoring,"作業すると何故か重すぎる・・・MessageTypeRouterTest.javaは単にJUnitのバージョンを上げているだけ．
+MCFとVCはShared Fixtureとして抽出されている．
+
+buildSpecsを使ってる部分はParameterized Test",,,niyaton,,,,,
+83,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/0832ee2b376b0516dcd23de296d4afaa15a42dec,Testcase Superclass,すごく自信がないがAProjectTestCaseがそうな気がする．,,,niyaton,,,,51.0,52.0
+84,https://github.com/vt-middleware/passay/commit/1efb5b8f571b5a0889892f23a122afac15120115,Any Refactoring,Un Shared Fixture的なのをひたすらやっている・・・,,,niyaton,,,,,
+85,https://github.com/PixelExperience/frameworks_base/commit/38f298d4fb8cf0ce8c9885748aad4c79d8bf89b3,Any Refactoring,ライブラリか，別のタイミングで作ったテストUtilityを使ってリファクタリングをしているのは分かるが何かしらのリファクタリングパターンとして分類するのは難しい．,,,niyaton,,,,,
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Non-Refactoring,,,,Mont9165,,,,,
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Non-Refactoring,無視してください．,,,niyaton,,,,,
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Implicit Setup,既にsetupがあるところに処理を持って来るのもimplicit setupとした．,,,niyaton,kafka-connect-s3/src/test/java/io/confluent/connect/s3/DataWriterAvroTest.java,91.0,94.0,79.0,83.0
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Creation Method,createRecords（2つ）,,,niyaton,kafka-connect-s3/src/test/java/io/confluent/connect/s3/DataWriterAvroTest.java,138.0,149.0,255.0,263.0
+86,https://github.com/confluentinc/kafka-connect-storage-cloud/commit/e4745b751e9d0d65f4120e3a5fc2c0e0f97ad6da,Custom Assertion,,,,niyaton,,,,201.0,202.0
+87,https://github.com/AdoptOpenJDK/jitwatch/commit/7788103ee76fde8751ccbe5adc03855c89ef4bdc,Any Refactoring,static化して高速化？,,,niyaton,,,,,
+88,https://github.com/Baqend/Orestes-Bloomfilter/commit/a855f91f954e46802ca342bcdd57ae2a0b7644a2,Non-Refactoring,テストの挙動が変わっている,,,niyaton,,,,,
+89,https://github.com/jenkinsci/remoting/commit/ffb771d86a6b593b5dca95940947527c53810c93,Any Refactoring,UnShared Fixtureみたいなやつ．,,,niyaton,src/test/java/hudson/remoting/ClassFilterTest.java,46.0,52.0,61.0,67.0
+89,https://github.com/jenkinsci/remoting/commit/ffb771d86a6b593b5dca95940947527c53810c93,Inline Setup,setUpのannotationを外して全部Inline呼び出ししてるのはなんなんだ・・・？Inline Setupでいいのか？,,,niyaton,,,,101.0,102.0
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Implicit Setup,,,,niyaton,,,,23.0,24.0
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Split Test Method,一杯あるのでタグづけしないですが一杯分割されている．,,,niyaton,,,,49.0,50.0
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Non-Refactoring,いつもの切れ端なので無視してください．,,,niyaton,,,,,
+90,https://github.com/ldbc/ldbc_snb_interactive_v1_impls/commit/b673a0e26122dbea1d7f44b22ed78b6d74a3ed00,Implicit Teardown,元の処理は派生しているクラスで書かれている．,,,niyaton,,,,29.0,34.0
+91,https://github.com/TEAMMATES/teammates/commit/18f1b3459f80eae83fbf15ba0096d4f0836182d4,Any Refactoring,何かに分類できるわけではなさそう．signalFailureToDetectExceptionが同時に作られていないのも問題．,,,niyaton,,,,,
+91,https://github.com/TEAMMATES/teammates/commit/18f1b3459f80eae83fbf15ba0096d4f0836182d4,Non-Refactoring,何かリファクタリングしてそうだがBaseComponentTestCaseクラスで，このコミットにはないためスキップ,,,Mont9165,,,,,
+92,https://github.com/prmr/JetUML/commit/5dbebf84e65eacfac0fee980ff742e5365eb5a3d,Any Refactoring,呼び出しのところのリファクタリングな気がする,,,Mont9165,,,,,
+92,https://github.com/prmr/JetUML/commit/5dbebf84e65eacfac0fee980ff742e5365eb5a3d,Suite Fixture Setup,BeforeEachからフィールドの宣言時に初期化に変更している．これも初期化回数を1回に減らしているのでSuite Fixture Setupと判断．,,,niyaton,test/org/jetuml/persistence/TestSerializationContext.java,58.0,64.0,41.0,47.0
+92,https://github.com/prmr/JetUML/commit/5dbebf84e65eacfac0fee980ff742e5365eb5a3d,Any Refactoring,publicをinternalにしてるのはJUnit5からpublicにする必要がなくなったかららしい？,,,niyaton,,,,,
+93,https://github.com/wizzardo/webery/commit/ddb836c34d5ce087d2ab3688fef402dce85ebfbc,Delegated Setup,,,,Mont9165,,,,105.0,120.0
+93,https://github.com/wizzardo/webery/commit/ddb836c34d5ce087d2ab3688fef402dce85ebfbc,Non-Refactoring,ただのExtract MethodとRename (Test) Methodのあわせ技,,,niyaton,,,,,
+94,https://github.com/nuxeo/nuxeo/commit/4bf86e3fd27450f5c45869e846c12eee0dd1d450,Non-Refactoring,JUnit4対応を複数ファイルにしているだけ,,,niyaton,,,,,
+94,https://github.com/nuxeo/nuxeo/commit/4bf86e3fd27450f5c45869e846c12eee0dd1d450,Non-Refactoring,バージョンのアップグレードに伴って，アノテーションとimport変更してるだけ,,,Mont9165,,,,,
+95,https://github.com/camunda/camunda/commit/37090d84b7f06ea745c97211cf7b2fe4d9d3978a,Non-Refactoring,JUnit5対応（publicをinternalに）,,,niyaton,,,,,
+95,https://github.com/camunda/camunda/commit/37090d84b7f06ea745c97211cf7b2fe4d9d3978a,Non-Refactoring,JUnit5にして，public必要になくなったから消してるだけ,,,Mont9165,,,,,
+96,https://github.com/factcast/factcast/commit/0e25c2181fa9a1d4ca509eecede4937aa699c564,Non-Refactoring,ログのライブラリを変更してるだけ,,,Mont9165,,,,,
+96,https://github.com/factcast/factcast/commit/0e25c2181fa9a1d4ca509eecede4937aa699c564,Non-Refactoring,SLF4JからLogCaptorへの変更？,,,niyaton,,,,,
+97,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/b14cf399b1afa29e0c94b1885c8fb1c623b014ea,Non-Refactoring,継承するクラスを変更したか，継承するクラスをリファクタリングしたことによって変更する必要が生まれたため，このコミットを作った,,,Mont9165,,,,,
+97,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/b14cf399b1afa29e0c94b1885c8fb1c623b014ea,Any Refactoring,loadConceptFromPluginはどこに消えた？別のコミットでPull up Methodみたいなのをしたのか？後はスペルミスを直しているだけ．,,,niyaton,,,,,
+98,https://github.com/mycelium-com/wallet-android/commit/bc00f053a7db2243d3752ff44122cb40f5b1bb74,Parameterized Test,@Parameterzed使ってないけどこれはParameterized Test？,,,niyaton,,,,,
+98,https://github.com/mycelium-com/wallet-android/commit/bc00f053a7db2243d3752ff44122cb40f5b1bb74,Parameterized Test,Parameterized Testの一種な気がする，それかMerge Test Method？,,,Mont9165,mbw/src/androidTest/java/com/mycelium/wallet/activity/MessageVerifyActivityTest.java,29.0,173.0,82.0,101.0
+99,https://github.com/TEAMMATES/teammates/commit/262b722a45dcefc14a874e40800474f15c50bcd0,Non-Refactoring,1つのファイルはメッセージの変更をしているだけだし，もう一つはテスト自体を追加しまくってるのでリファクタリングではない．,,,niyaton,,,,,
+99,https://github.com/TEAMMATES/teammates/commit/262b722a45dcefc14a874e40800474f15c50bcd0,Non-Refactoring,テストメソッド増やして，testAllで一気にテストしてる,,,Mont9165,,,,,
+99,https://github.com/TEAMMATES/teammates/commit/262b722a45dcefc14a874e40800474f15c50bcd0,Custom Assertion,テストメソッドを増やしてる時は，リファクタリングに入れれる？,,,Mont9165,,,,98.0,107.0
+100,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/57cb232e392f7ee63b6ae66d643ac80b2ef69964,Non-Refactoring,finishWizardをextractしているように見えなくもないけど等価な処理なように思えない．,,,niyaton,,,,,
+100,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/57cb232e392f7ee63b6ae66d643ac80b2ef69964,Cleanup Method,,,,Mont9165,,,,183.0,189.0
+101,https://github.com/awslabs/aws-mysql-jdbc/commit/4abeab362f8c1739fde9fccbfdf9228ce58054c3,Non-Refactoring,try catchを増やした,,,Mont9165,,,,277.0,295.0
+101,https://github.com/awslabs/aws-mysql-jdbc/commit/4abeab362f8c1739fde9fccbfdf9228ce58054c3,Any Refactoring,2個目のファイルは名前をつけられるテスト固有のリファクタリングではない．,,,niyaton,,,,,
+101,https://github.com/awslabs/aws-mysql-jdbc/commit/4abeab362f8c1739fde9fccbfdf9228ce58054c3,Lazy Setup,,,,Mont9165,,,,97.0,102.0
+101,https://github.com/awslabs/aws-mysql-jdbc/commit/4abeab362f8c1739fde9fccbfdf9228ce58054c3,Any Refactoring,3回までの失敗は許容するように変更している．,,,niyaton,,,,276.0,294.0
+102,https://github.com/neo4j/neo4j/commit/33e64d6265511a3fedc4f00bbfd9c505f0e66bda,Lambdarize Method,,,,Mont9165,community/community-it/kernel-it/src/test/java/org/neo4j/graphdb/SchemaAcceptanceTest.java,1276.0,1280.0,1275.0,1284.0
+102,https://github.com/neo4j/neo4j/commit/33e64d6265511a3fedc4f00bbfd9c505f0e66bda,Non-Refactoring,残りです．無視してください．,,,niyaton,,,,,
+102,https://github.com/neo4j/neo4j/commit/33e64d6265511a3fedc4f00bbfd9c505f0e66bda,Any Refactoring,ライブラリを使った書き方の変更．,,,niyaton,community/community-it/kernel-it/src/test/java/org/neo4j/graphdb/SchemaAcceptanceTest.java,1276.0,1283.0,1274.0,1290.0
+103,https://github.com/camsys/onebusaway-nyc/commit/28f0eeaa79b20ba58871a27e2311b67cbdd01ba2,Non-Refactoring,テストのやり方自体を変えているのでどちらかというとテストの修正,,,niyaton,,,,,
+103,https://github.com/camsys/onebusaway-nyc/commit/28f0eeaa79b20ba58871a27e2311b67cbdd01ba2,Change Assertion Type,,,,Mont9165,onebusaway-nyc-webapp/src/test/java/org/onebusaway/nyc/webapp/actions/m/SearchResultFactoryImplTest.java,85.0,87.0,90.0,92.0
+104,https://github.com/MovingBlocks/Terasology/commit/c92f14ff5c5c73d849f7d6d0d2980846209ebead,Shared Fixture,,,,Mont9165,,,,33.0,34.0
+104,https://github.com/MovingBlocks/Terasology/commit/c92f14ff5c5c73d849f7d6d0d2980846209ebead,Shared Fixture,,,,niyaton,engine-tests/src/test/java/org/terasology/config/flexible/SettingTest.java,40.0,41.0,33.0,34.0
+104,https://github.com/MovingBlocks/Terasology/commit/c92f14ff5c5c73d849f7d6d0d2980846209ebead,Non-Refactoring,残りはRename Variables,,,niyaton,,,,,
+105,https://github.com/camunda/camunda/commit/a0debbafb3b633a92ade2a385a8017cff6113bd3,Non-Refactoring,"""fix test after refactoring"" なので，リファクタリング後の""修正""",,,niyaton,,,,,
+105,https://github.com/camunda/camunda/commit/a0debbafb3b633a92ade2a385a8017cff6113bd3,Non-Refactoring,リファクタリング後に影響のあったテスト修正,,,Mont9165,,,,,
+106,https://github.com/exadel-inc/etoolbox-authoring-kit/commit/146b1c42f23ed9d59a7d39b98f5e641fd8838d37,Any Refactoring,全部同じ書き方の変更をしているようだが特に名前を付けられるようなものではないと思う．,,,niyaton,,,,,
+106,https://github.com/exadel-inc/etoolbox-authoring-kit/commit/146b1c42f23ed9d59a7d39b98f5e641fd8838d37,Any Refactoring,pluginContextをリファクタリングしたことによる変更？,,,Mont9165,,,,,
+107,https://github.com/blackducksoftware/detect/commit/c09f7c60e0618ddfb4ce520819e54f138913980c,Non-Refactoring,,,,Mont9165,,,,,
+107,https://github.com/blackducksoftware/detect/commit/c09f7c60e0618ddfb4ce520819e54f138913980c,Non-Refactoring,出力メッセージを少し変えてるだけ（不要なメッセージの削除）,,,niyaton,,,,,
+108,https://github.com/crotwell/TauP/commit/7772af9cdf0d894050486edd8d6be53feda397ce,Non-Refactoring,コードの整形と@diabledでテストの一時的（？）な削除,,,niyaton,,,,,
+108,https://github.com/crotwell/TauP/commit/7772af9cdf0d894050486edd8d6be53feda397ce,Non-Refactoring,,,,Mont9165,,,,,
+109,https://github.com/citerus/dddsample-core/commit/20fe3f8c1d55df857a96600ec0e66c0ce1beba36,Any Refactoring,いらない処理（重複した処理）を削除している．,,,niyaton,,,,,
+109,https://github.com/citerus/dddsample-core/commit/20fe3f8c1d55df857a96600ec0e66c0ce1beba36,Non-Refactoring,重複してるtry catchの削除，これはリファクタリングではなくbug fixだと思う,,,Mont9165,,,,,
+110,https://github.com/camunda/camunda/commit/58319798119b6bd1417b9af0a0feaf1825d727ae,Non-Refactoring,Linuxでだけ動作するように変更しているらしい．元コードでOSを判断するコードがあればリファクタリングだったと思うけどなかった．,,,niyaton,,,,,
+110,https://github.com/camunda/camunda/commit/58319798119b6bd1417b9af0a0feaf1825d727ae,Any Refactoring,Custom Annotationを使って，必要な環境でのみテストを実施するようにしている,,,Mont9165,,,,,
+111,https://github.com/OxalisCommunity/oxalis/commit/fa133160504c7aa4d9d746d4837542d54a784cc5,Non-Refactoring,テスト内容を変更している,,,Mont9165,,,,,
+111,https://github.com/OxalisCommunity/oxalis/commit/fa133160504c7aa4d9d746d4837542d54a784cc5,Non-Refactoring,テストの追加をしている．@InjectはGuiceとやらにより同一のインスタンスが注入されるはずということを確認してるだけなのでリファクタリングではなくてテストの追加．,,,niyaton,,,,,
+112,https://github.com/Tencent/TencentKona-17/commit/832d68597ec6af94bc870a22410d1be95eb2bfa5,Non-Refactoring,テストと関係があるのかわからない,,,Mont9165,,,,,
+112,https://github.com/Tencent/TencentKona-17/commit/832d68597ec6af94bc870a22410d1be95eb2bfa5,Any Refactoring,fillWithで埋めるか，canAllocateで空きがあるか聞きながらwhileで埋めるかみたいな書き方の変更をしているだけなのでAnyRefactoring．,,,niyaton,,,,,
+113,https://github.com/jakartaee/nosql/commit/299412c7e1cce67814280a0e98ff8574718d329d,Custom Assertion,Custom AssertionとCreation Methodの複合？,,,Mont9165,,,,323.0,326.0
+113,https://github.com/jakartaee/nosql/commit/299412c7e1cce67814280a0e98ff8574718d329d,Custom Assertion,Custom Assertionといえなくもないと思ったのでそうしておきました．,,,niyaton,tck/driver-tck/driver-tck-column/src/main/java/jakarta/nosql/tck/communication/driver/column/ColumnFamilyManagerTest.java,318.0,319.0,304.0,308.0
+113,https://github.com/jakartaee/nosql/commit/299412c7e1cce67814280a0e98ff8574718d329d,Custom Assertion,,,,Mont9165,,,,305.0,308.0
+114,https://github.com/bkiers/Liqp/commit/47c96cc196192e749017fec9e40bd6b273a27117,Shared Fixture,元のがあるけどSharedFixtureでいい・・・3個のファイル全部で同じ．,,,niyaton,,,,,
+114,https://github.com/bkiers/Liqp/commit/47c96cc196192e749017fec9e40bd6b273a27117,Non-Refactoring,これは普通のリファクタリング,,,Mont9165,,,,,
+115,https://github.com/dekorateio/dekorate/commit/4f36e9ad4a354d3916e926660af1678be5b9f76c,Non-Refactoring,コメントの削除とRename Method,,,niyaton,,,,,
+115,https://github.com/dekorateio/dekorate/commit/4f36e9ad4a354d3916e926660af1678be5b9f76c,Non-Refactoring,"rename, コメントアウト削除",,,Mont9165,,,,,
+116,https://github.com/PixelExperience/frameworks_base/commit/6f4216f4bec92e16e181b16393375ae8bce0589b,Non-Refactoring,新規作成したTestableNetworkCallbackを継承させて，余分なOverrideを削除してるだけ,,,Mont9165,,,,,
+116,https://github.com/PixelExperience/frameworks_base/commit/6f4216f4bec92e16e181b16393375ae8bce0589b,Non-Refactoring,"むちゃくちゃ長い．かなり注意深く読んだけど分類できそうなリファクタリングはしていない．
+TestableNetworkCallbackを同時に作っていたら何かしらの分類はできた気がする．",,,niyaton,,,,,
+117,https://github.com/blackducksoftware/detect/commit/9ba649982b1172954289bfe6307ca135466728f2,Delegated Setup,,,,niyaton,,,,105.0,109.0
+117,https://github.com/blackducksoftware/detect/commit/9ba649982b1172954289bfe6307ca135466728f2,Inline Setup,複数のメソッドにInline setupしている．,,,niyaton,detectable/src/test/java/com/synopsys/integration/detectable/detectables/go/gomod/process/GoModDependencyManagerTest.java,44.0,46.0,32.0,33.0
+117,https://github.com/blackducksoftware/detect/commit/9ba649982b1172954289bfe6307ca135466728f2,Inline Setup,,,,Mont9165,detectable/src/test/java/com/synopsys/integration/detectable/detectables/go/gomod/process/GoModDependencyManagerTest.java,26.0,54.0,20.0,103.0
+117,https://github.com/blackducksoftware/detect/commit/9ba649982b1172954289bfe6307ca135466728f2,Delegated Setup,,,,Mont9165,,,,105.0,110.0
+118,https://github.com/groovy/groovy-core/commit/fcb8b1f158bc1567a147f5b020f80a643b35bf6b,Non-Refactoring,rename,,,Mont9165,,,,,
+118,https://github.com/groovy/groovy-core/commit/fcb8b1f158bc1567a147f5b020f80a643b35bf6b,Non-Refactoring,変数名の書き方と浮動小数点の生成方法や型の変更だけ．,,,niyaton,,,,,
+119,https://github.com/martint/jmxutils/commit/b8e0398069cde724652b12e58ffeb20276345d3f,Delegated Setup,,,,niyaton,,,,76.0,77.0
+119,https://github.com/martint/jmxutils/commit/b8e0398069cde724652b12e58ffeb20276345d3f,Testcase Superclass,,,,Mont9165,src/test/java/org/weakref/jmx/TestExporter.java,113.0,207.0,19.0,121.0
+119,https://github.com/martint/jmxutils/commit/b8e0398069cde724652b12e58ffeb20276345d3f,Testcase Superclass,元々Superclassがあったけど追加で親クラスに処理を移動してきたタイプ,,,niyaton,src/test/java/org/weakref/jmx/TestExporter.java,205.0,207.0,12.0,20.0
+120,https://github.com/b3dgs/lionengine/commit/19bd5fc2980999a91c39460778f05a4722642883,Non-Refactoring,Test visibility refactoredと書いてる．修飾子を消したり変更してる．これは普通のリファクタリング,,,Mont9165,,,,,
+120,https://github.com/b3dgs/lionengine/commit/19bd5fc2980999a91c39460778f05a4722642883,Non-Refactoring,"""Test visibility refactored."" JUnitのバージョンアップ対応？",,,niyaton,,,,,
+121,https://github.com/apache/jspwiki/commit/453d7c436d59174c9b73731ad16e9f9337feb26f,Non-Refactoring,良く分からないが高速になるらしい．分類不能．,,,niyaton,,,,,
+121,https://github.com/apache/jspwiki/commit/453d7c436d59174c9b73731ad16e9f9337feb26f,Any Refactoring,テストの実行時間を20%減少させたらしい．適当にスリープさせてたのを，効率的なsleepに変更したため？,,,Mont9165,,,,,
+122,https://github.com/IHTSDO/snowstorm/commit/1fb8b05e3d6ae496e89aa4e7d17c791611bf99e0,Non-Refactoring,コードの追加しかない,,,niyaton,,,,,
+122,https://github.com/IHTSDO/snowstorm/commit/1fb8b05e3d6ae496e89aa4e7d17c791611bf99e0,Non-Refactoring,cleanupとloggerを追加してるが，これはリファクタリングなのか？,,,Mont9165,,,,,
+123,https://github.com/devlauer/plantuml-generator/commit/a9390dfb67e8085126ac681c199f9cbff21c5f22,Parameterized Test,他は改行を変えたりしてるだけ．,,,niyaton,,,,,
+123,https://github.com/devlauer/plantuml-generator/commit/a9390dfb67e8085126ac681c199f9cbff21c5f22,Parameterized Test,,,,Mont9165,plantuml-generator-util/src/test/java/de/elnarion/util/plantuml/generator/classdiagram/PlantUMLClassDiagramGeneratorTest.java,121.0,142.0,60.0,74.0
+124,https://github.com/oVirt/ovirt-engine/commit/1fa532f18a126bd0ceef11185ce86f095f38d8f5,Non-Refactoring,"rename, typo fixがほとんど",,,Mont9165,,,,,
+124,https://github.com/oVirt/ovirt-engine/commit/1fa532f18a126bd0ceef11185ce86f095f38d8f5,Non-Refactoring,整形しただけのものを排除,,,niyaton,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/exportimport/ImportVmCommandTest.java,219.0,220.0,219.0,220.0
+124,https://github.com/oVirt/ovirt-engine/commit/1fa532f18a126bd0ceef11185ce86f095f38d8f5,Non-Refactoring,fix typo,,,niyaton,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/exportimport/ImportVmCommandTest.java,308.0,309.0,308.0,309.0
+124,https://github.com/oVirt/ovirt-engine/commit/1fa532f18a126bd0ceef11185ce86f095f38d8f5,Non-Refactoring,残りも整形だけだった．,,,niyaton,,,,,
+124,https://github.com/oVirt/ovirt-engine/commit/1fa532f18a126bd0ceef11185ce86f095f38d8f5,Non-Refactoring,使ってない関数を削除した？（分割）,,,niyaton,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/exportimport/ImportVmCommandTest.java,189.0,199.0,,
+124,https://github.com/oVirt/ovirt-engine/commit/1fa532f18a126bd0ceef11185ce86f095f38d8f5,Rename Variable,,,,niyaton,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/exportimport/ImportVmCommandTest.java,265.0,265.0,266.0,266.0
+124,https://github.com/oVirt/ovirt-engine/commit/1fa532f18a126bd0ceef11185ce86f095f38d8f5,Non-Refactoring,整形しただけのものを排除,,,niyaton,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/exportimport/ImportVmCommandTest.java,357.0,359.0,357.0,359.0
+125,https://github.com/AICP/frameworks_base/commit/693e21d6052b32ad7815d9c0d7bd01fd6170a608,Mock Object,,,,niyaton,,,,130.0,131.0
+125,https://github.com/AICP/frameworks_base/commit/693e21d6052b32ad7815d9c0d7bd01fd6170a608,Delegated Setup,,,,Mont9165,media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/integration/CameraDeviceBinderTest.java,158.0,170.0,59.0,80.0
+125,https://github.com/AICP/frameworks_base/commit/693e21d6052b32ad7815d9c0d7bd01fd6170a608,Delegated Setup,,,,niyaton,media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/integration/CameraDeviceBinderTest.java,158.0,170.0,71.0,82.0
+125,https://github.com/AICP/frameworks_base/commit/693e21d6052b32ad7815d9c0d7bd01fd6170a608,Shared Fixture,,,,Mont9165,,,,40.0,53.0
+126,https://github.com/CodeStory/fluent-http/commit/98e8e68ad30346714bd754b5eb223801bef84b03,Inline Setup,,,,Mont9165,src/test/java/net/codestory/http/convert/TypeConvertTest.java,30.0,31.0,94.0,95.0
+126,https://github.com/CodeStory/fluent-http/commit/98e8e68ad30346714bd754b5eb223801bef84b03,Any Refactoring,Inline Fixture?,,,niyaton,src/test/java/net/codestory/http/convert/TypeConvertTest.java,30.0,31.0,84.0,85.0
+126,https://github.com/CodeStory/fluent-http/commit/98e8e68ad30346714bd754b5eb223801bef84b03,Merge Test Method,,,,Mont9165,src/test/java/net/codestory/http/convert/TypeConvertTest.java,103.0,135.0,97.0,111.0
+126,https://github.com/CodeStory/fluent-http/commit/98e8e68ad30346714bd754b5eb223801bef84b03,Non-Refactoring,残りはテストの削除と追加？,,,niyaton,,,,,
+127,https://github.com/mcdcorp/opentest/commit/eefdac542aed86e7d1c7012f023aa8d8dd33a379,Non-Refactoring,整形とrenameだけ,,,niyaton,,,,,
+127,https://github.com/mcdcorp/opentest/commit/eefdac542aed86e7d1c7012f023aa8d8dd33a379,Non-Refactoring,rename,,,Mont9165,,,,,
+128,https://github.com/jmock-developers/jmock-library/commit/04f5a176204af2aad085f723f00cab3b754ad829,Non-Refactoring,bug fix,,,Mont9165,,,,,
+128,https://github.com/jmock-developers/jmock-library/commit/04f5a176204af2aad085f723f00cab3b754ad829,Any Refactoring,到達不能コードの明示（failの追加）を2つのファイルでしている．,,,niyaton,,,,49.0,50.0
+128,https://github.com/jmock-developers/jmock-library/commit/04f5a176204af2aad085f723f00cab3b754ad829,Non-Refactoring,,,,niyaton,,,,,
+129,https://github.com/oVirt/ovirt-engine/commit/94f5da8379ea345f24fb7024dc31ba427315a47c,Any Refactoring,ひたすらassertEqualsをassertThatに直したのと，Matcherとやらを作ってメソッド呼び出しに置き換えているが，肝心のmatcherを作ったのは別のコミットの様子．,,,niyaton,,,,,
+129,https://github.com/oVirt/ovirt-engine/commit/94f5da8379ea345f24fb7024dc31ba427315a47c,Change Assertion Type,,,,Mont9165,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/network/cluster/NetworkClusterValidatorTest.java,27.0,28.0,27.0,27.0
+129,https://github.com/oVirt/ovirt-engine/commit/94f5da8379ea345f24fb7024dc31ba427315a47c,Non-Refactoring,importを変えたことによる変更,,,Mont9165,,,,,
+130,https://github.com/spring-cloud/spring-cloud-open-service-broker/commit/10adc4e7019f376fab1bd1c3c8801b5e9fef3d98,Any Refactoring,Remove Custom Assertion?,,,niyaton,spring-cloud-open-service-broker-autoconfigure/src/test/java/org/springframework/cloud/servicebroker/autoconfigure/web/ControllerIntegrationTest.java,128.0,133.0,,
+130,https://github.com/spring-cloud/spring-cloud-open-service-broker/commit/10adc4e7019f376fab1bd1c3c8801b5e9fef3d98,Inline Setup,,,,Mont9165,spring-cloud-open-service-broker-autoconfigure/src/test/java/org/springframework/cloud/servicebroker/autoconfigure/web/reactive/ServiceInstanceControllerIntegrationTest.java,66.0,67.0,408.0,409.0
+131,https://github.com/xenon-middleware/xenon/commit/31bfdfbce2443523526b3c3d238a8f19a4178a64,Non-Refactoring,ただのRename．,,,niyaton,,,,,
+131,https://github.com/xenon-middleware/xenon/commit/31bfdfbce2443523526b3c3d238a8f19a4178a64,Non-Refactoring,コミットメッセージは面白いが，SlurmJobScriptGeneratorTestからSlurmJobScriptGeneratorを使用するようにしているだけで何をやっているか意図が不明,,,Mont9165,,,,,
+132,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/a810eda7261f27eed7ec4fa3e5ee16084b5286d4,Non-Refactoring,テストメソッド内のやつはextract variable,,,Mont9165,,,,,
+132,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/a810eda7261f27eed7ec4fa3e5ee16084b5286d4,Non-Refactoring,残りはextract variableとexpandNodeという別クラスのメソッド追加（このコミットには含まれない）によるコードの簡略化．,,,niyaton,,,,,
+132,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/a810eda7261f27eed7ec4fa3e5ee16084b5286d4,Shared Fixture,,,,niyaton,de.dlr.sc.virsat.swtbot.test/src/de/dlr/sc/virsat/swtbot/test/ExporterImporterWizardTest.java,54.0,56.0,33.0,34.0
+132,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/a810eda7261f27eed7ec4fa3e5ee16084b5286d4,Shared Fixture,,,,niyaton,de.dlr.sc.virsat.swtbot.test/src/de/dlr/sc/virsat/swtbot/test/ExporterImporterWizardTest.java,91.0,92.0,32.0,33.0
+132,https://github.com/virtualsatellite/VirtualSatellite4-Core/commit/a810eda7261f27eed7ec4fa3e5ee16084b5286d4,Shared Fixture,,,,Mont9165,,,,32.0,34.0
+133,https://github.com/C2SP/wycheproof/commit/f22bfc7c3d6747ca68255dd4935de4d9a5d5475c,Parameterized Test,trueとfalseだけだけどParameterized Testかな？2つのファイルで全く同じリファクタリングをしている．,,,niyaton,java/com/google/security/wycheproof/testcases/CipherInputStreamTest.java,217.0,244.0,241.0,242.0
+133,https://github.com/C2SP/wycheproof/commit/f22bfc7c3d6747ca68255dd4935de4d9a5d5475c,Non-Refactoring,いつもの余りの部分,,,niyaton,,,,,
+133,https://github.com/C2SP/wycheproof/commit/f22bfc7c3d6747ca68255dd4935de4d9a5d5475c,Non-Refactoring,コメントの追加・変更,,,niyaton,java/com/google/security/wycheproof/testcases/CipherInputStreamTest.java,35.0,36.0,35.0,53.0
+133,https://github.com/C2SP/wycheproof/commit/f22bfc7c3d6747ca68255dd4935de4d9a5d5475c,Any Refactoring,else ifを追加することで，testCorruptDecryptEmptyを使わなくてもいいようにしてる,,,Mont9165,,,,,
+134,https://github.com/C2SP/wycheproof/commit/f22bfc7c3d6747ca68255dd4935de4d9a5d5475c,Non-Refactoring,同じコミットが混ざってるのでスキップ,,,Mont9165,,,,,
+134,https://github.com/C2SP/wycheproof/commit/f22bfc7c3d6747ca68255dd4935de4d9a5d5475c,Non-Refactoring,,,,niyaton,,,,,
+135,https://github.com/osmlab/atlas/commit/a78f06e9636f8f142690b61622b2eddd902b970b,Non-Refactoring,print文からAssert文にしてる．リファクタリングかはわからない,,,Mont9165,,,,,
+135,https://github.com/osmlab/atlas/commit/a78f06e9636f8f142690b61622b2eddd902b970b,Non-Refactoring,普通にテストの追加・修正,,,niyaton,,,,,
+136,https://github.com/camunda/camunda/commit/fbbb9ca9818cd738786185d3316f299c553ff22c,Non-Refactoring,コードの削除しかない,,,niyaton,,,,,
+136,https://github.com/camunda/camunda/commit/fbbb9ca9818cd738786185d3316f299c553ff22c,Non-Refactoring,,,,Mont9165,,,,,
+137,https://github.com/yegor256/takes/commit/b7595471c724053eba83474209ad6d480de5c018,Non-Refactoring,,,,Mont9165,,,,,
+137,https://github.com/yegor256/takes/commit/b7595471c724053eba83474209ad6d480de5c018,Non-Refactoring,型と名前が変わっている．そもそもの大元の型名の変更は別コミット？,,,niyaton,,,,,
+138,https://github.com/eclipse-jkube/jkube/commit/ce55ead00cd9364ec26a2eec7c19f6bfb79a0fe9,Any Refactoring,@Nestedを使用してテストのグループを分けてる,,,Mont9165,,,,,
+138,https://github.com/eclipse-jkube/jkube/commit/ce55ead00cd9364ec26a2eec7c19f6bfb79a0fe9,Any Refactoring,JUnit5の機能であるNested Test Classの導入．他はテスト固有のリファクタリングではない．,,,niyaton,,,,,
+139,https://github.com/ibi-group/datatools-server/commit/629ffd2764e667074c751072951a041d05d75f47,Delegated Setup,,,,niyaton,src/test/java/com/conveyal/datatools/manager/jobs/AutoDeployFeedJobTest.java,72.0,76.0,212.0,217.0
+139,https://github.com/ibi-group/datatools-server/commit/629ffd2764e667074c751072951a041d05d75f47,Non-Refactoring,afterの194行目のメソッドの変更はテスト固有のリファクタリングではないと判断．,,,niyaton,,,,,
+139,https://github.com/ibi-group/datatools-server/commit/629ffd2764e667074c751072951a041d05d75f47,Creation Method,,,,Mont9165,,,,210.0,214.0
+139,https://github.com/ibi-group/datatools-server/commit/629ffd2764e667074c751072951a041d05d75f47,Shared Fixture,,,,Mont9165,,,,43.0,47.0
+140,https://github.com/camunda/camunda/commit/195d81393646e1b6b353a882c87050ca5b2495e0,Non-Refactoring,,,,Mont9165,,,,,
+140,https://github.com/camunda/camunda/commit/195d81393646e1b6b353a882c87050ca5b2495e0,Suite Fixture Setup,@ClassRule使ってるけど結局は初期化を一度にするようにしてるだけなのでSuite Fixture Setupかな？ただ，Ruleだと事後処理の方も含まれる？（相談したい）,,,niyaton,,,,,
+141,https://github.com/camunda/camunda/commit/40996ec05821d48f0af481698edd8a5f2e37cf5e,Non-Refactoring,コメント追加してるだけ,,,Mont9165,,,,,
+141,https://github.com/camunda/camunda/commit/40996ec05821d48f0af481698edd8a5f2e37cf5e,Non-Refactoring,コードの削除とコメントの追加（コードの追加はなし）,,,niyaton,,,,,
+142,https://github.com/openjdk/crac/commit/7f80683cfeee3c069f48d5bce45fa92b2381b518,Any Refactoring,メモリの使用量を減らすためにvmのメモリを減らしている．また，COUNT変数の中身を小さくすることでもパフォーマンス改善を行っている．,,,niyaton,,,,,
+142,https://github.com/openjdk/crac/commit/7f80683cfeee3c069f48d5bce45fa92b2381b518,Non-Refactoring,,,,Mont9165,,,,,
+143,https://github.com/camunda/camunda/commit/8694c15fa36e2fe779306b04b2ae0339070612df,Split Test Method,,,,Mont9165,atomix/cluster/src/test/java/io/atomix/raft/storage/RaftStorageTest.java,61.0,77.0,55.0,95.0
+143,https://github.com/camunda/camunda/commit/8694c15fa36e2fe779306b04b2ae0339070612df,Non-Refactoring,残りの部分のcleanupStorageは何故か@Beforeが外されている（Inline Setupではない）．このメソッドの変更内容自体はディレクトリの削除をFileUtilに任せているだけ．,,,niyaton,,,,,
+143,https://github.com/camunda/camunda/commit/8694c15fa36e2fe779306b04b2ae0339070612df,Any Refactoring,assertEqualsをassertThatに帰るのはChange Assertion Typeなんでしたっけ？（これはassertJのassertThatを使用）,,,niyaton,atomix/cluster/src/test/java/io/atomix/raft/storage/RaftStorageTest.java,43.0,44.0,43.0,44.0
+143,https://github.com/camunda/camunda/commit/8694c15fa36e2fe779306b04b2ae0339070612df,Non-Refactoring,（恐らく不要な）thorws Exceptionの削除,,,niyaton,atomix/cluster/src/test/java/io/atomix/raft/storage/RaftStorageTest.java,41.0,42.0,19.0,20.0
+143,https://github.com/camunda/camunda/commit/8694c15fa36e2fe779306b04b2ae0339070612df,Any Refactoring,"Split Test Method ( testStorageLock -> canAcquireLockOnEmptyDirectory, cannotLockAlreadyLockedDirectory, canAcquireLockOnDirectoryLockedBySameNode)",,,niyaton,atomix/cluster/src/test/java/io/atomix/raft/storage/RaftStorageTest.java,61.0,62.0,61.0,64.0
+143,https://github.com/camunda/camunda/commit/8694c15fa36e2fe779306b04b2ae0339070612df,Change Assertion Type,,,,Mont9165,atomix/cluster/src/test/java/io/atomix/raft/storage/RaftStorageTest.java,43.0,44.0,43.0,44.0
+144,https://github.com/PixelExperience/frameworks_base/commit/745b5edc471f1ea2760345b58b6f95b376487a41,Non-Refactoring,不要なassertを削除しただけ,,,niyaton,,,,,
+144,https://github.com/PixelExperience/frameworks_base/commit/745b5edc471f1ea2760345b58b6f95b376487a41,Non-Refactoring,,,,Mont9165,,,,,
+145,https://github.com/AICP/frameworks_base/commit/5f6eda577d032d7419d9b1e3e53ca8745f46a04d,Non-Refactoring,importの順番を並び替えてるだけ,,,niyaton,,,,,
+145,https://github.com/AICP/frameworks_base/commit/5f6eda577d032d7419d9b1e3e53ca8745f46a04d,Non-Refactoring,いらないインポートを消した,,,Mont9165,,,,,
+146,https://github.com/oVirt/ovirt-engine/commit/81741301b2b463a533bc72c10f8c14031ac4d7f0,Delegated Setup,createDiskメソッドが新規に作られた訳ではない（引数は増えてる）,,,niyaton,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/validator/storage/DiskImagesValidatorTest.java,77.0,83.0,76.0,78.0
+146,https://github.com/oVirt/ovirt-engine/commit/81741301b2b463a533bc72c10f8c14031ac4d7f0,Creation Method,,,,Mont9165,backend/manager/modules/bll/src/test/java/org/ovirt/engine/core/bll/validator/storage/DiskImagesValidatorTest.java,91.0,101.0,86.0,96.0
+147,https://github.com/google/ExoPlayer/commit/e54127cf5282ddc4a3466ee45d31fd7fdf7f023f,Rename Attribute,height -> inputHeight （作業用分割）,,,niyaton,google3/third_party/java_src/android_libs/media/libraries/effect/src/androidTest/java/androidx/media3/effect/MatrixTextureProcessorPixelTest.java,77.0,77.0,77.0,77.0
+147,https://github.com/google/ExoPlayer/commit/e54127cf5282ddc4a3466ee45d31fd7fdf7f023f,Non-Refactoring,,,,Mont9165,,,,,
+147,https://github.com/google/ExoPlayer/commit/e54127cf5282ddc4a3466ee45d31fd7fdf7f023f,Non-Refactoring,結局Renameしかなかった・・・,,,niyaton,,,,,
+147,https://github.com/google/ExoPlayer/commit/e54127cf5282ddc4a3466ee45d31fd7fdf7f023f,Rename Attribute,width -> inputWidth (作業用分割）,,,niyaton,google3/third_party/java_src/android_libs/media/libraries/effect/src/androidTest/java/androidx/media3/effect/MatrixTextureProcessorPixelTest.java,76.0,76.0,76.0,76.0
+148,https://github.com/kiegroup/droolsjbpm-integration/commit/3d62668c7436383ae122168870b1dc18be55a600,Non-Refactoring,一般的なリファクタリング,,,Mont9165,,,,,
+148,https://github.com/kiegroup/droolsjbpm-integration/commit/3d62668c7436383ae122168870b1dc18be55a600,Non-Refactoring,ListをCollectionに変更しているだけでテスト固有のリファクタリングではなさそう．,,,niyaton,,,,,
+149,https://github.com/aehrc/pathling/commit/2f362cb6ba2fec0a40f0fa4dcee8081740ceea69,Testcase Superclass,ほぼ全部Testcase Superclass関係の変更っぽい．複数クラスの処理を集約しててお手本感ある．,,,niyaton,,,,,
+149,https://github.com/aehrc/pathling/commit/2f362cb6ba2fec0a40f0fa4dcee8081740ceea69,Test Helper,,,,Mont9165,,,,1.0,63.0
+150,https://github.com/FasterXML/jackson-modules-java8/commit/3956c030f7d334e827da5c2d4f8da68cef5c8d2c,Testcase Class,別のクラスに分割（Testcase Classで良いのか？extendsはしてないのでTestcase superclassではない）,,,niyaton,datetime/src/test/java/com/fasterxml/jackson/datatype/jsr310/TestInstantSerialization.java,46.0,75.0,1.0,444.0
+150,https://github.com/FasterXML/jackson-modules-java8/commit/3956c030f7d334e827da5c2d4f8da68cef5c8d2c,Testcase Class,,,,Mont9165,,,,1.0,444.0
+151,https://github.com/Tencent/TencentKona-17/commit/8b87402a4409b345b820207dcd2aec720a23325b,Non-Refactoring,後は細々としたリファクタリングでテスト固有のリファクタリングはなさそう．,,,niyaton,,,,,
+151,https://github.com/Tencent/TencentKona-17/commit/8b87402a4409b345b820207dcd2aec720a23325b,Test Utility Method,少し複雑,,,niyaton,test/jdk/tools/launcher/Test7029048.java,91.0,92.0,99.0,100.0
+151,https://github.com/Tencent/TencentKona-17/commit/8b87402a4409b345b820207dcd2aec720a23325b,Non-Refactoring,Inline setupかと思ったが，テストメソッドではなさそう,,,Mont9165,,,,,
+151,https://github.com/Tencent/TencentKona-17/commit/8b87402a4409b345b820207dcd2aec720a23325b,Inline Setup,envを毎回初期化するようにしたと言えなくもない？,,,niyaton,test/jdk/tools/launcher/Test7029048.java,65.0,66.0,77.0,78.0
+151,https://github.com/Tencent/TencentKona-17/commit/8b87402a4409b345b820207dcd2aec720a23325b,Test Utility Method,System.out.printfだしAssertion Messageではないかなと判断．,,,niyaton,test/jdk/tools/launcher/Test7029048.java,161.0,162.0,200.0,202.0
+152,https://github.com/pravega/pravega/commit/1b69c3b08418c33ca155238e58e009d349e5055a,Non-Refactoring,何かしらやってるがテスト固有のリファクタリングではない．,,,niyaton,,,,,
+152,https://github.com/pravega/pravega/commit/1b69c3b08418c33ca155238e58e009d349e5055a,Non-Refactoring,,,,Mont9165,,,,,
+153,https://github.com/camunda/camunda/commit/8548470c68439fa811ddbd0fbc1ea3019a32772f,Non-Refactoring,rename,,,Mont9165,,,,,
+153,https://github.com/camunda/camunda/commit/8548470c68439fa811ddbd0fbc1ea3019a32772f,Non-Refactoring,ただのRename,,,niyaton,,,,,
+154,https://github.com/Kong/unirest-java/commit/994f7b4cca0bef1190e097327343b436d66014d6,Implicit Setup,特定（1メソッド）の時だけOffにしてる,,,niyaton,unirest-bdd-tests/src/test/java/BehaviorTests/RetryTest.java,165.0,166.0,47.0,52.0
+154,https://github.com/Kong/unirest-java/commit/994f7b4cca0bef1190e097327343b436d66014d6,Implicit Setup,,,,Mont9165,,,,47.0,51.0
+155,https://github.com/FasterXML/jackson-modules-java8/commit/cf3792fc1afd7e326310f1617f1b4de9fa922212,Non-Refactoring,コメント追加してるだけ,,,Mont9165,,,,,
+155,https://github.com/FasterXML/jackson-modules-java8/commit/cf3792fc1afd7e326310f1617f1b4de9fa922212,Non-Refactoring,コメントの変更（作業用分割）,,,niyaton,,,,63.0,68.0
+155,https://github.com/FasterXML/jackson-modules-java8/commit/cf3792fc1afd7e326310f1617f1b4de9fa922212,Non-Refactoring,単にテストメソッドの順番を変更しているだけ．,,,niyaton,,,,,
+156,https://github.com/blackducksoftware/detect/commit/5ab5058287582f84f6b40ba5a6b9312435473911,Split Test Method,,,,Mont9165,detectable/src/test/java/com/synopsys/integration/detectable/detectable/util/DependencyTypeFilterTest.java,37.0,50.0,37.0,54.0
+156,https://github.com/blackducksoftware/detect/commit/5ab5058287582f84f6b40ba5a6b9312435473911,Any Refactoring,Split Test Method,,,niyaton,detectable/src/test/java/com/synopsys/integration/detectable/detectable/util/DependencyTypeFilterTest.java,42.0,43.0,41.0,44.0
+157,https://github.com/RyanSusana/elepy/commit/775b36449bee95e40aee0465eb4869fd53a09098,Non-Refactoring,rename,,,Mont9165,,,,,
+157,https://github.com/RyanSusana/elepy/commit/775b36449bee95e40aee0465eb4869fd53a09098,Non-Refactoring,後はほぼRename,,,niyaton,,,,,
+157,https://github.com/RyanSusana/elepy/commit/775b36449bee95e40aee0465eb4869fd53a09098,Rename Attribute,作業用分割,,,niyaton,test/src/test/java/com/elepy/test/e2e/user/EndToEndTest.java,62.0,62.0,62.0,62.0
+158,https://github.com/arnaudroger/SimpleFlatMapper/commit/f690ba3c84cf50a7a80ed1489c46c8ddfcb09038,Non-Refactoring,切れ端,,,Mont9165,,,,,
+158,https://github.com/arnaudroger/SimpleFlatMapper/commit/f690ba3c84cf50a7a80ed1489c46c8ddfcb09038,Custom Assertion,,,,Mont9165,,,,391.0,407.0
+158,https://github.com/arnaudroger/SimpleFlatMapper/commit/f690ba3c84cf50a7a80ed1489c46c8ddfcb09038,Test Utility Method,validateMapperが対象．validateProfessorsは対象に見えて実際はvalidateGSをほぼrenameしてるだけに見えるので違うと判断．,,,niyaton,src/test/java/org/sfm/jdbc/JoinJdbcMapperTest.java,202.0,216.0,213.0,228.0
+159,https://github.com/PixelExperience/frameworks_base/commit/7b58df821a285c037f40b382123c965e81a7b835,Non-Refactoring,Shared Fixtureかと思ったが，処理内容が変わってそう,,,Mont9165,,,,,
+159,https://github.com/PixelExperience/frameworks_base/commit/7b58df821a285c037f40b382123c965e81a7b835,Any Refactoring,名前の付けられる && テスト固有のリファクタリングはないように思える．ALLOWED_LOG_SOURCESの作成とかはちょっと面白いけどなんとも分類できない．,,,niyaton,,,,,
+160,https://github.com/mikera/vectorz/commit/2b4f56c8837e539656e1c6cd6b4814a1715f8492,Non-Refactoring,,,,Mont9165,,,,,
+160,https://github.com/mikera/vectorz/commit/2b4f56c8837e539656e1c6cd6b4814a1715f8492,Non-Refactoring,,,,niyaton,,,,,
+161,https://github.com/dita-ot/dita-ot/commit/3e42598cdbf25633b965e61ca133380f5cd0442a,Parameterized Test,,,,Mont9165,src/test/java/org/dita/dost/invoker/ConversionArgumentsTest.java,35.0,47.0,35.0,53.0
+162,https://github.com/nuxeo/nuxeo/commit/3457e40db35a191a105704f757375c823aead71b,Non-Refactoring,,,,Mont9165,,,,,
+163,https://github.com/imagej/imagej-ops/commit/be0162ac5e1b6bb1534f70deaccde72cac2c031d,Non-Refactoring,,,,Mont9165,,,,,
+164,https://github.com/camunda/camunda/commit/0957f99828dd50e702ad179aefb35c0de5981f71,Testcase Class,,,,Mont9165,engine/src/test/java/io/camunda/zeebe/engine/processing/processinstance/ModifyProcessInstanceTest.java,494.0,789.0,1.0,333.0
+165,https://github.com/PixelExperience/frameworks_base/commit/d9061364e3b18d22e32f9c80011e853699cb6037,Implicit Teardown,,,,Mont9165,,,,106.0,112.0
+165,https://github.com/PixelExperience/frameworks_base/commit/d9061364e3b18d22e32f9c80011e853699cb6037,Implicit Setup,,,,Mont9165,,,,100.0,107.0
+165,https://github.com/PixelExperience/frameworks_base/commit/d9061364e3b18d22e32f9c80011e853699cb6037,Split Test Method,,,,Mont9165,packages/SystemUI/tests/src/com/android/systemui/accessibility/MagnificationModeSwitchTest.java,140.0,166.0,139.0,174.0
+165,https://github.com/PixelExperience/frameworks_base/commit/d9061364e3b18d22e32f9c80011e853699cb6037,Creation Method,,,,Mont9165,,,,394.0,399.0
+167,https://github.com/mysql/mysql-connector-j/commit/cdb16c08c9347634161aafb86342fa2a31288e13,Non-Refactoring,,,,niyaton,,,,,
