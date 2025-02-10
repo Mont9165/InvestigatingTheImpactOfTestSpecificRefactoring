@@ -3060,6 +3060,74 @@
     }
   },
   {
+    "name": "Replace annotation with assertThrow",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+  {
     "name": "Add explanation message",
     "description": "",
     "before": {
@@ -3466,5 +3534,278 @@
         "description": "code fragment"
       }
     }
+  },
+  {
+    "name": "De-Parameterize Test",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+  {
+    "name": "Split Parameterize Test",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+  {
+    "name": "Upgrade Library Version",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+  {
+    "name": "Add Conditional Annotation",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
   }
+
 ]

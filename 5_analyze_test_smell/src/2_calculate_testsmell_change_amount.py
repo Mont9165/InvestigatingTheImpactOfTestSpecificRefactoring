@@ -19,6 +19,7 @@ FILE_PATH = os.path.abspath(
     '/result_sigss/data/Inspected_changes_with_commit_urls.json')
 CSV_PATH = "/result_sigss/data/inspection_commit_data.csv"
 
+
 def load_json(file_path):
     with open(file_path, 'r') as f:
         data = json.load(f)

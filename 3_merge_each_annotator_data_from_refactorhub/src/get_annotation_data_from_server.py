@@ -3,7 +3,7 @@ import pandas as pd
 import json
 from datetime import datetime
 
-DATABASE_URL = "postgresql://rhuser:rhpass@localhost:5434/refactorhub"
+DATABASE_URL = "postgresql://rhuser:rhpass@localhost:5435/refactorhub"
 engine = create_engine(DATABASE_URL)
 
 query = text("""
