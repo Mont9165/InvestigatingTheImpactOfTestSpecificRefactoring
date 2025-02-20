@@ -3806,6 +3806,279 @@
         "description": "code fragment"
       }
     }
-  }
+  },
+  {
+    "name": "Await Event",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+  {
+    "name": "Inline Assertion",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+  {
+    "name": "Flaky Test Mitigation",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+  {
+    "name": "Tuning Resources",
+    "description": "",
+    "before": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method before",
+                "category": "before"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    },
+    "after": {
+      "method": {
+        "type": "MethodDeclaration",
+        "multiple": true,
+        "required": false,
+        "autofills": [
+          {
+            "type": "Surround",
+            "element": "MethodDeclaration",
+            "follows": [
+              {
+                "name": "method after",
+                "category": "after"
+              }
+            ]
+          }
+        ],
+        "description": ""
+      },
+      "invocation": {
+        "type": "MethodInvocation",
+        "multiple": true,
+        "required": false,
+        "description": "method invocation"
+      },
+      "code fragment": {
+        "type": "CodeFragment",
+        "multiple": true,
+        "required": false,
+        "description": "code fragment"
+      }
+    }
+  },
+
 
 ]

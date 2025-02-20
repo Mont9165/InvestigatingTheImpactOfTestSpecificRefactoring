@@ -25,10 +25,10 @@ query = text("""
     JOIN experiments e ON cm.experiment_id = e.id
     JOIN users u ON a.owner_id = u.id
     WHERE e.title IN ('test-refactoring-1', 'test-refactoring-2')
-    AND c.type_name != 'Non-Refactoring'
 """)
 
 with engine.connect() as connection:
     result = connection.execute(query)
     df = pd.DataFrame(result.fetchall(), columns=result.keys())
-    df.to_csv('refactoring_data.csv', index=False)
+    time = datetime.now().strftime('%Y-%m-%d')
+    df.to_csv('refactoring_data_' + time + '.csv', index=False)
