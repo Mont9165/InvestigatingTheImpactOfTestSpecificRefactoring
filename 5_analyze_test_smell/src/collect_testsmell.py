@@ -3,12 +3,9 @@ import os
 import subprocess
 from concurrent.futures import ProcessPoolExecutor
 
-from sqlalchemy import create_engine
 import pandas as pd
 
-DATABASE_URL = "postgresql://rhuser:rhpass@localhost:5435/refactorhub"
-JAR_PATH = "../TestSmellDetector/jar/TestSmellDetector-0.1-jar-with-dependencies.jar"
-engine = create_engine(DATABASE_URL)
+JAR_PATH = "/work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring/5_analyze_test_smell/TestSmellDetector/jar/TestSmellDetector-0.1-jar-with-dependencies.jar"
 
 
 logging.basicConfig(
@@ -22,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 def get_refactoring_data_from_annotation_data():
-    return pd.read_json('results/annotation_result.json')
+    return pd.read_json('/work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring/5_analyze_test_smell/src/results/annotation_result.json')
 
 
 def process_parameter_data(parameter_data, commit_url, parent_commit_url):
@@ -50,7 +47,7 @@ def get_parent_commit_id(df2, commit_id):
 def collect_testsmell(commit_url):
     try:
         jar_path = os.path.abspath(JAR_PATH)
-        os.chdir("../TestSmellDetector/")
+        os.chdir("/work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring/5_analyze_test_smell/TestSmellDetector/")
         logger.info(f"Running TestSmellDetector for {commit_url} using {jar_path}")
 
         result = subprocess.run(["java", "-jar", jar_path, commit_url], capture_output=True, text=True)
@@ -80,11 +77,11 @@ def process_grouped_data(commit_url, df2, group):
 
 def main():
     df1 = get_refactoring_data_from_annotation_data()
-    df2 = pd.read_csv("../../2_sampling_test_refactor_commits/result/sampling_test_commits_all.csv")
+    df2 = pd.read_csv("/work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring/2_sampling_test_refactor_commits/result/sampling_test_commits_all.csv")
     grouped = df1.groupby("url")
 
     # parallel processing
-    with ProcessPoolExecutor(max_workers=4) as executor:
+    with ProcessPoolExecutor(max_workers=16) as executor:
         futures = {executor.submit(process_grouped_data, commit_url, df2, group) for commit_url, group in grouped}
         for future in futures:
             future.result()

@@ -1,0 +1,1 @@
+python3 /work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring/5_analyze_test_smell/src/collect_testsmell.py
