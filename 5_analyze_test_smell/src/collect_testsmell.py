@@ -5,10 +5,10 @@ from concurrent.futures import ProcessPoolExecutor
 import pandas as pd
 
 # Constants
-BASE_DIR = "/work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring/5_analyze_test_smell"
-JAR_PATH = f"{BASE_DIR}/TestSmellDetector/jar/TestSmellDetector-0.1-jar-with-dependencies.jar"
-TEST_SMELL_DIR = f"{BASE_DIR}/TestSmellDetector/"
-RESULTS_DIR = f"{BASE_DIR}/src/results"
+BASE_DIR = "/work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring"
+JAR_PATH = f"{BASE_DIR}/5_analyze_test_smell/TestSmellDetector/jar/TestSmellDetector-0.1-jar-with-dependencies.jar"
+TEST_SMELL_DIR = f"{BASE_DIR}/5_analyze_test_smell/TestSmellDetector/"
+RESULTS_DIR = f"{BASE_DIR}/5_analyze_test_smell/src/results"
 
 # Logging configuration
 logging.basicConfig(
@@ -99,7 +99,7 @@ def main():
     """Main function."""
     try:
         df1 = get_refactoring_data_from_annotation_data()
-        df2 = pd.read_csv(f"{BASE_DIR}/../2_sampling_test_refactor_commits/results/sampling_test_commits_all.csv")
+        df2 = pd.read_csv(f"{BASE_DIR}/2_sampling_test_refactor_commits/results/sampling_test_commits_all.csv")
         grouped = df1.groupby("url")
 
         # Parallel processing (Process pool)
