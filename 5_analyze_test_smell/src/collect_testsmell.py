@@ -99,7 +99,7 @@ def main():
     """Main function."""
     try:
         df1 = get_refactoring_data_from_annotation_data()
-        df2 = pd.read_csv(f"{BASE_DIR}/2_sampling_test_refactor_commits/results/sampling_test_commits_all.csv")
+        df2 = pd.read_csv(f"{BASE_DIR}/2_sampling_test_refactor_commits/result/sampling_test_commits_all.csv")
         grouped = df1.groupby("url")
 
         # Parallel processing (Process pool)
