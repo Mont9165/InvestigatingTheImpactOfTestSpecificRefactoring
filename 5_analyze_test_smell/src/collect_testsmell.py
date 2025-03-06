@@ -25,22 +25,6 @@ def get_refactoring_data_from_annotation_data():
     return pd.read_json(f"{RESULTS_DIR}/annotation_result_2024-02-20.json")
 
 
-def process_parameter_data(parameter_data, commit_url, parent_commit_url):
-    """Process parameter data."""
-    commit_dir = commit_url.replace("https://github.com", "").replace("commit/", "")
-    parent_commit_dir = parent_commit_url.replace("https://github.com", "").replace("commit/", "")
-
-    try:
-        commit_df = pd.read_csv(f"results/smells/{commit_dir}/smells_number.csv")
-        for key, value in parameter_data.items():
-            print(f"{key}: ")
-            for k, v in value.items():
-                for element in v["elements"]:
-                    print(f"    {element['location']['path']}")
-    except Exception as e:
-        logger.error(f"Error in process_parameter_data: {e}")
-
-
 def get_parent_commit_id(df2, commit_id):
     """Get the parent commit ID (performance improved)."""
     row = df2.loc[df2["commit_id"] == commit_id]
@@ -89,7 +73,6 @@ def process_grouped_data(commit_url, df2, group):
         # Process parameter data
         for _, row in group.iterrows():
             logger.info(f"Processing refactoring type: {row['type_name']} for commit: {commit_url}")
-            # process_parameter_data(row["parameter_data"], commit_url, parent_commit_url)
 
     except Exception as e:
         logger.error(f"Error in process_grouped_data for {commit_url}: {e}")
