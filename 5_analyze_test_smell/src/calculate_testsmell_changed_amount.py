@@ -6,8 +6,9 @@ from collections import defaultdict
 import pandas as pd
 
 BASE_DIR = "/Users/horikawa/Dev/Research-repo/InvestigatingTheImpactOfTestSpecificRefactoring"
-TEST_SMELL_DIR = f"{BASE_DIR}/5_analyze_test_smell/TestSmellDetector/"
+TEST_SMELL_DIR = f"{BASE_DIR}/5_analyze_test_smell/TestSmellDetector"
 RESULTS_DIR = f"{BASE_DIR}/5_analyze_test_smell/src/results"
+SMELL_RESULT_DIR = f"{BASE_DIR}/5_analyze_test_smell/src/smells_result"
 
 FILE_SMELL_COLUMNS = [
     "Assertion Roulette",
@@ -217,8 +218,8 @@ def process_parameter_data(
     json_list: list
 ):
     # CSV読み込み
-    commit_dir = commit_url.replace("https://github.com", "").replace("commit/", "")
-    parent_commit_dir = parent_commit_url.replace("https://github.com", "").replace("commit/", "")
+    commit_dir = commit_url.replace("https://github.com/", "").replace("commit/", "")
+    parent_commit_dir = parent_commit_url.replace("https://github.com/", "").replace("commit/", "")
     commit_df = load_csv_smell_data(commit_dir)
     parent_df = load_csv_smell_data(parent_commit_dir)
     # JSON読み込み
@@ -296,6 +297,7 @@ def process_grouped_data(commit_url, df2, group,
                                    json_list)
     except Exception as e:
         logger.error(f"Error in process_grouped_data for {commit_url}: {e}")
+        return
 
 
 def main():
@@ -318,8 +320,8 @@ def main():
                                  json_list)
 
         # CSV出力
-        file_csv = "smells_result/file_level_wide.csv"
-        range_csv = "smells_result/method_level_wide.csv"
+        file_csv = f"{SMELL_RESULT_DIR}/file_level_wide.csv"
+        range_csv = f"{SMELL_RESULT_DIR}/method_level_wide.csv"
         file_wide_df.to_csv(file_csv, index=False, encoding="utf-8-sig")
         range_wide_df.to_csv(range_csv, index=False, encoding="utf-8-sig")
 
@@ -327,7 +329,7 @@ def main():
         print(f"Method-level wide CSV saved to: {range_csv}")
 
         # JSON出力 (1リファクタリング1オブジェクト)
-        output_json = "smells_result/test_smell_analysis.json"
+        output_json = f"{SMELL_RESULT_DIR}/test_smell_analysis.json"
         with open(output_json, "w", encoding="utf-8") as f:
             json.dump(json_list, f, ensure_ascii=False, indent=2)
         print(f"JSON saved to: {output_json}")

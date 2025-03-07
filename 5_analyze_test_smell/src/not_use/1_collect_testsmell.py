@@ -9,7 +9,7 @@ import pandas as pd
 logging.basicConfig(
     level=logging.INFO, # ログレベルをINFOに設定
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', # ログのフォーマットを設定
-    filename='logfile.log', # ログを保存するファイル名を指定
+    filename='../logfile.log', # ログを保存するファイル名を指定
     filemode='a' # ログファイルを追記モードで開く
 )
 
