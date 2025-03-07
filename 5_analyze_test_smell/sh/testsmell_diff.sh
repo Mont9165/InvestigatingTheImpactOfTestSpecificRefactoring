@@ -1,0 +1,1 @@
+python3 /work/kosei-ho/InvestigatingTheImpactOfTestSpecificRefactoring/5_analyze_test_smell/src/calculate_testsmell_changed_amount.py
