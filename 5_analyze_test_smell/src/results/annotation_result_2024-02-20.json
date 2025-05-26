@@ -3067,7 +3067,7 @@
     "experiment_id": "bf2f3847-4792-4b4e-8edf-7cf124179f64",
     "experiment_title": "test-refactoring-2",
     "order_index": 120,
-    "type_name": "Any Refactoring",
+    "type_name": "Await Event",
     "description": "message : \"overall tests execution time is reduced by ~20%\"",
     "parameter_data": {"after": {}, "before": {}},
     "snapshot_id": "9c7ed34b-4e58-4914-9616-a350637ca659",
@@ -4051,7 +4051,8 @@
     "experiment_id": "bf2f3847-4792-4b4e-8edf-7cf124179f64",
     "experiment_title": "test-refactoring-2",
     "order_index": 141,
-    "type_name": "Any Refactoring",
+    "type_name": "Tuning Resources",
+//    TODO: split this into two separate annotations each refactoring one method
     "description": "Improve Performance",
     "parameter_data": {"after": {}, "before": {}},
     "snapshot_id": "18bce818-ee30-4517-8c0c-ea723e23cc41",
@@ -4093,18 +4094,6 @@
     "snapshot_id": "dc91f781-6849-4897-bd97-fe71e9a81379",
     "annotator_name": "test-refactoring",
     "url": "https://github.com/FasterXML/jackson-modules-java8/commit/3956c030f7d334e827da5c2d4f8da68cef5c8d2c"
-  },
-  {
-    "commit_id": "3310ede4-8064-46b2-88c3-e8ab91719b23",
-    "experiment_id": "bf2f3847-4792-4b4e-8edf-7cf124179f64",
-    "experiment_title": "test-refactoring-2",
-    "order_index": 150,
-    "type_name": "Any Refactoring",
-    "description": "",
-    "parameter_data": {"after": {}, "before": {}},
-    "snapshot_id": "61120116-b132-47e6-b00d-10ebc70c85e8",
-    "annotator_name": "test-refactoring",
-    "url": "https://github.com/Tencent/TencentKona-17/commit/8b87402a4409b345b820207dcd2aec720a23325b"
   },
   {
     "commit_id": "017de465-6695-40fb-bb39-3ac60e1ded9a",
