@@ -4047,19 +4047,6 @@
     "url": "https://github.com/camunda/camunda/commit/8694c15fa36e2fe779306b04b2ae0339070612df"
   },
   {
-    "commit_id": "88268ec6-f472-4f52-8ee2-8f80c9f47d3a",
-    "experiment_id": "bf2f3847-4792-4b4e-8edf-7cf124179f64",
-    "experiment_title": "test-refactoring-2",
-    "order_index": 141,
-    "type_name": "Tuning Resources",
-//    TODO: split this into two separate annotations each refactoring one method
-    "description": "Improve Performance",
-    "parameter_data": {"after": {}, "before": {}},
-    "snapshot_id": "18bce818-ee30-4517-8c0c-ea723e23cc41",
-    "annotator_name": "test-refactoring",
-    "url": "https://github.com/openjdk/crac/commit/7f80683cfeee3c069f48d5bce45fa92b2381b518"
-  },
-  {
     "commit_id": "a660d221-69be-4e60-b2fe-1a102626cf9c",
     "experiment_id": "bf2f3847-4792-4b4e-8edf-7cf124179f64",
     "experiment_title": "test-refactoring-2",
