@@ -54,10 +54,26 @@ def already_exists(commit_url: str, test_smell_dir: str) -> bool:
     return False
 
 
+def remove_index_lock_if_exists(commit_url: str, test_smell_dir: str):
+    """対象リポジトリの .git/index.lock が存在すれば削除する"""
+    commit_dir = commit_url.replace("https://github.com/", "").replace("commit/", "")
+    repo_dir = os.path.join(test_smell_dir, "repos", "/".join(commit_dir.split("/")[:-1]))
+    index_lock_path = os.path.join(repo_dir, ".git", "index.lock")
+    if os.path.isfile(index_lock_path):
+        try:
+            os.remove(index_lock_path)
+            logging.warning(f"Removed stale index.lock: {index_lock_path}")
+        except Exception as e:
+            logging.error(f"Failed to remove index.lock: {index_lock_path} ({e})")
+
+
 def collect_testsmell(commit_url: str, jar_path: str, test_smell_dir: str):
     """Jarファイルを使ってテストスメルを検出する (存在確認付き)"""
     if already_exists(commit_url, test_smell_dir):
         return
+
+    # ここで index.lock の削除を試みる
+    remove_index_lock_if_exists(commit_url, test_smell_dir)
 
     try:
         logging.info(f"Running TestSmellDetector for {commit_url}")
