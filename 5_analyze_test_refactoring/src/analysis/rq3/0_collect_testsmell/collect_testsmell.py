@@ -108,8 +108,8 @@ def main():
 
     # 引数に基づき定数を設定
     BASE_DIR = args.base_dir
-    JAR_PATH = f"{BASE_DIR}/5_analyze_test_smell/TestSmellDetector/jar/TestSmellDetector-0.1-jar-with-dependencies.jar"
-    TEST_SMELL_DIR = f"{BASE_DIR}/5_analyze_test_smell/TestSmellDetector/"
+    JAR_PATH = f"{BASE_DIR}/5_analyze_test_refactoring/TestSmellDetector/jar/TestSmellDetector-0.1-jar-with-dependencies.jar"
+    TEST_SMELL_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/TestSmellDetector/"
     ANNOTATION_RESULTS_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/src/results"
 
     setup_logging(args.log_file)
