@@ -1,0 +1,39 @@
+type_name,count,mean,std,min,25%,50%,75%,max
+Add Cleanup Method,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
+Add Conditional Annotation,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
+Add explanation message,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Any Refactoring,3.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Assert All,1.0,2.0,,2.0,2.0,2.0,2.0,2.0
+Await Event,3.0,1.6666666666666667,0.5773502691896257,1.0,1.5,2.0,2.0,2.0
+Change Assertion Type,11.0,11.181818181818182,22.315098842793333,1.0,1.0,4.0,8.5,77.0
+Custom Assertion,6.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+De-Parameterize Test,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Delegated Setup,24.0,1.3333333333333333,0.6370220572706061,1.0,1.0,1.0,1.25,3.0
+Delete Mock Object,3.0,3.3333333333333335,3.2145502536643185,1.0,1.5,2.0,4.5,7.0
+Flaky Test Mitigation,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
+Grouping Tests,15.0,1.5333333333333334,1.8073922282301282,1.0,1.0,1.0,1.0,8.0
+Guard Assertion,2.0,5.0,5.656854249492381,1.0,3.0,5.0,7.0,9.0
+Implicit Setup,10.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Implicit Teardown,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Inline Assertion,3.0,2.0,1.0,1.0,1.5,2.0,2.5,3.0
+Inline Setup,4.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Lambdarize Method,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Lazy Setup,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
+Lazy Teardown,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Merge Test Method,1.0,2.0,,2.0,2.0,2.0,2.0,2.0
+Parameterized Test,15.0,1.5333333333333334,1.5522640914238175,1.0,1.0,1.0,1.0,7.0
+Prebuilt Fixture,22.0,1.5909090909090908,1.0537502599713133,1.0,1.0,1.0,2.0,5.0
+Print to Assertion,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Replace Dependency with Test Double,5.0,1.2,0.44721359549995804,1.0,1.0,1.0,1.0,2.0
+Replace annotation with assertThrow,3.0,2.0,0.0,2.0,2.0,2.0,2.0,2.0
+Replace annotation with try/catch,1.0,3.0,,3.0,3.0,3.0,3.0,3.0
+Replace assertThrow with try/catch,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
+Replace try/catch with annotation,1.0,14.0,,14.0,14.0,14.0,14.0,14.0
+Replace try/catch with asserThrows,2.0,1.5,0.7071067811865476,1.0,1.25,1.5,1.75,2.0
+Split Parameterize Test,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
+Split Test Method,16.0,2.3125,5.25,1.0,1.0,1.0,1.0,22.0
+Suite Fixture Setup,1.0,2.0,,2.0,2.0,2.0,2.0,2.0
+Test Helper,7.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Testcase Superclass,3.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Tuning Resources,2.0,3.0,0.0,3.0,3.0,3.0,3.0,3.0
+Verification Method,7.0,1.1428571428571428,0.37796447300922725,1.0,1.0,1.0,1.0,2.0

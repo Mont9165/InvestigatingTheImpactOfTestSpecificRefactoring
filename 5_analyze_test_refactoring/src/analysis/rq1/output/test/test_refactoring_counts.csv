@@ -1,0 +1,38 @@
+type_name,count
+Change Assertion Type,123
+Split Test Method,37
+Prebuilt Fixture,35
+Delegated Setup,32
+Grouping Tests,23
+Parameterized Test,23
+Replace try/catch with annotation,14
+Guard Assertion,10
+Delete Mock Object,10
+Implicit Setup,10
+Verification Method,8
+Test Helper,7
+Await Event,6
+Replace annotation with assertThrow,6
+Inline Assertion,6
+Custom Assertion,6
+Tuning Resources,6
+Replace Dependency with Test Double,6
+Inline Setup,4
+Replace annotation with try/catch,3
+Testcase Superclass,3
+Replace try/catch with asserThrows,3
+Implicit Teardown,2
+Suite Fixture Setup,2
+Add explanation message,2
+De-Parameterize Test,2
+Assert All,2
+Lambdarize Method,2
+Merge Test Method,2
+Lazy Teardown,2
+Print to Assertion,2
+Split Parameterize Test,1
+Replace assertThrow with try/catch,1
+Add Conditional Annotation,1
+Add Cleanup Method,1
+Flaky Test Mitigation,1
+Lazy Setup,1
