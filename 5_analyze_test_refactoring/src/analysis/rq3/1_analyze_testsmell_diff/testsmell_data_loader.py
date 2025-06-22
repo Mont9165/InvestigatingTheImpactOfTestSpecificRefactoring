@@ -3,7 +3,7 @@ import os
 import json
 
 BASE_DIR = "/Users/horikawa/Dev/Research-repo/InvestigatingTheImpactOfTestSpecificRefactoring"
-TEST_SMELL_DIR = f"{BASE_DIR}/5_analyze_test_smell/TestSmellDetector"
+TEST_SMELL_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/TestSmellDetector"
 ANNOTATION_RESULTS_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/src/results"
 SAMPLING_CSV = f"{BASE_DIR}/2_sampling_test_refactor_commits/result/sampling_test_commits_all.csv"
 
@@ -39,20 +39,24 @@ def load_testsmell_data(level="file"):
             if level == "file":
                 csv_path = os.path.join(TEST_SMELL_DIR, "results", "smells", commit_dir, "smells_number.csv")
                 if not os.path.isfile(csv_path):
-                    return {}
+                    print("Not Found: "+ csv_path)
+                    return {}, csv_path
                 df = pd.read_csv(csv_path)
-                return df.sum(numeric_only=True).to_dict()
+                print("Found")
+                return df.sum(numeric_only=True).to_dict(), csv_path
             elif level == "method":
                 json_path = os.path.join(TEST_SMELL_DIR, "results", "smells", commit_dir, "smells_result.json")
-                return load_method_smell_counts(json_path)
+                return load_method_smell_counts(json_path), json_path
             else:
                 raise ValueError("levelは 'file' または 'method' を指定してください")
-        before = load_counts(parent_commit_url)
-        after = load_counts(commit_url)
+        before, before_path = load_counts(parent_commit_url)
+        after, after_path = load_counts(commit_url)
         results.append({
             "commit_url": commit_url,
             "type_name": row.get("type_name", ""),
             "before": before,
-            "after": after
+            "after": after,
+            "before_file_path": before_path,
+            "after_file_path": after_path
         })
     return results

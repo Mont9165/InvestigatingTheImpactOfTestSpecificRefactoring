@@ -3,6 +3,8 @@ import pandas as pd
 def calculate_diff(pair):
     # pair = { "commit_url": ..., "type_name": ..., "before": {...}, "after": {...} }
     diff = {
+        "before_file_path": pair.get("before_file_path", ""),
+        "after_file_path": pair.get("after_file_path", ""),
         "commit_url": pair["commit_url"],
         "type_name": pair.get("type_name", "")
     }

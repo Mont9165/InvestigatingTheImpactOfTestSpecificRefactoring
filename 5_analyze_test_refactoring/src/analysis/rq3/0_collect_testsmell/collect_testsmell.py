@@ -5,6 +5,8 @@ from concurrent.futures import ProcessPoolExecutor
 import pandas as pd
 import argparse
 import platform
+import fcntl
+import time
 
 # --- 設定 ---
 def get_default_base_dir():
@@ -92,9 +94,48 @@ def collect_testsmell(commit_url: str, jar_path: str, test_smell_dir: str):
         logging.error(f"Error running TestSmellDetector for {commit_url}: {e}")
 
 
-def process_commit(commit_url: str, df_commits: pd.DataFrame, jar_path: str, test_smell_dir: str):
-    """単一のコミットURLを処理し、親コミットと合わせてテストスメルを検出する"""
+def get_repo_lock_path(commit_url: str, test_smell_dir: str) -> str:
+    """リポジトリ単位のロックファイルパスを取得"""
+    commit_dir = commit_url.replace("https://github.com/", "").replace("commit/", "")
+    repo_name = "/".join(commit_dir.split("/")[:-1])  # コミットIDを除いたリポジトリ名
+    return os.path.join(test_smell_dir, "locks", f"{repo_name.replace('/', '_')}.lock")
+
+def acquire_repo_lock(commit_url: str, test_smell_dir: str, timeout=300):
+    """リポジトリ単位のロックを取得（タイムアウト付き）"""
+    lock_path = get_repo_lock_path(commit_url, test_smell_dir)
+    os.makedirs(os.path.dirname(lock_path), exist_ok=True)
+    
+    lock_file = open(lock_path, 'w')
+    start_time = time.time()
+    
+    while time.time() - start_time < timeout:
+        try:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            logging.info(f"Acquired lock for repo: {commit_url}")
+            return lock_file
+        except IOError:
+            logging.info(f"Waiting for lock: {lock_path}")
+            time.sleep(1)
+    
+    lock_file.close()
+    raise TimeoutError(f"Failed to acquire lock for {commit_url} within {timeout} seconds")
+
+def release_repo_lock(lock_file):
+    """リポジトリ単位のロックを解放"""
     try:
+        fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
+        lock_file.close()
+        logging.info("Released repo lock")
+    except Exception as e:
+        logging.error(f"Error releasing lock: {e}")
+
+def process_commit(commit_url: str, df_commits: pd.DataFrame, jar_path: str, test_smell_dir: str):
+    """単一のコミットURLを処理し、親コミットと合わせてテストスメルを検出する（ロック付き）"""
+    lock_file = None
+    try:
+        # リポジトリ単位のロックを取得
+        lock_file = acquire_repo_lock(commit_url, test_smell_dir)
+        
         commit_id = commit_url.split("/")[-1]
         repo_url = "/".join(commit_url.split("/")[:5])
         parent_commit_id = get_parent_commit_id(df_commits, commit_id)
@@ -111,7 +152,27 @@ def process_commit(commit_url: str, df_commits: pd.DataFrame, jar_path: str, tes
 
     except Exception as e:
         logging.error(f"Error in process_commit for {commit_url}: {e}")
+    finally:
+        # ロックを解放
+        if lock_file:
+            release_repo_lock(lock_file)
 
+
+def group_commits_by_repo(commit_urls):
+    """コミットURLをリポジトリ単位でグループ化"""
+    repo_groups = {}
+    for url in commit_urls:
+        commit_dir = url.replace("https://github.com/", "").replace("commit/", "")
+        repo_name = "/".join(commit_dir.split("/")[:-1])
+        if repo_name not in repo_groups:
+            repo_groups[repo_name] = []
+        repo_groups[repo_name].append(url)
+    return repo_groups
+
+def process_repo_group(repo_commits, df_commits, jar_path, test_smell_dir):
+    """リポジトリ単位でコミット群を処理"""
+    for commit_url in repo_commits:
+        process_commit(commit_url, df_commits, jar_path, test_smell_dir)
 
 def main():
     """メイン関数: コマンドライン引数を解釈し、処理を実行する"""
@@ -120,6 +181,7 @@ def main():
     parser.add_argument("--parallel", action="store_true", help="Run in parallel mode.")
     parser.add_argument("--workers", type=int, default=os.cpu_count(), help="Number of parallel workers.")
     parser.add_argument("--log-file", type=str, default="logfile.log", help="Path to the log file.")
+    parser.add_argument("--safe-parallel", action="store_true", help="Use safe parallel mode (repo-level grouping).")
     args = parser.parse_args()
 
     # 引数に基づき定数を設定
@@ -138,7 +200,21 @@ def main():
         # 重複を除いたコミットURLのリストを取得
         commit_urls = df_refactorings["url"].unique()
 
-        if args.parallel:
+        if args.safe_parallel:
+            # 安全な並列処理：リポジトリ単位でグループ化
+            logging.info(f"Running in SAFE PARALLEL mode with {args.workers} workers.")
+            repo_groups = group_commits_by_repo(commit_urls)
+            logging.info(f"Grouped {len(commit_urls)} commits into {len(repo_groups)} repositories")
+            
+            with ProcessPoolExecutor(max_workers=args.workers) as executor:
+                futures = {
+                    executor.submit(process_repo_group, commits, df_commits, JAR_PATH, TEST_SMELL_DIR) 
+                    for commits in repo_groups.values()
+                }
+                for future in futures:
+                    future.result()
+                    
+        elif args.parallel:
             logging.info(f"Running in PARALLEL mode with {args.workers} workers.")
             with ProcessPoolExecutor(max_workers=args.workers) as executor:
                 futures = {executor.submit(process_commit, url, df_commits, JAR_PATH, TEST_SMELL_DIR) for url in commit_urls}
