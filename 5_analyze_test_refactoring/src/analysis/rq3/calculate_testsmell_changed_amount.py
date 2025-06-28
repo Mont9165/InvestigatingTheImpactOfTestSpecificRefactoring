@@ -41,23 +41,23 @@ FILE_SMELL_COLUMNS = [
     "Conditional Test Logic",
     "Constructor Initialization",
     "Default Test",
-    "Dependent Test",
-    "Duplicate Assert",
-    "Eager Test",
     "Empty Test",
     "Exception Catching Throwing",
     "General Fixture",
-    "Ignored Test",
-    "Lazy Test",
-    "Magic Number Test",
     "Mystery Guest",
     "Print Statement",
     "Redundant Assertion",
-    "Resource Optimism",
     "Sensitive Equality",
-    "Sleepy Test",
-    "Unknown Test",
     "Verbose Test",
+    "Sleepy Test",
+    "Eager Test",
+    "Lazy Test",
+    "Duplicate Assert",
+    "Unknown Test",
+    "IgnoredTest",
+    "Resource Optimism",
+    "Magic Number Test",
+    "Dependent Test",
     "NumberOfMethods"
 ]
 
@@ -102,6 +102,11 @@ def get_file_smell_counts(param_data: dict, df: pd.DataFrame) -> dict:
     for data_type, data_dict in param_data.items():
         elements = data_dict.get("elements", [])
         for elem in elements:
+            # locationがNoneの場合はスキップ
+            if elem.get("location") is None:
+                logger.warning(f"Skipping element with None location in {data_type}: {elem}")
+                continue
+            
             file_path = elem["location"]["path"]
             file_name = os.path.basename(file_path)
 
@@ -146,6 +151,11 @@ def get_range_smell_count(param_data: dict, commit_json: list) -> dict:
     for data_type, data_dict in param_data.items():
         elements = data_dict.get("elements", [])
         for elem in elements:
+            # locationがNoneの場合はスキップ
+            if elem.get("location") is None:
+                logger.warning(f"Skipping element with None location in {data_type}: {elem}")
+                continue
+            
             file_path = elem["location"]["path"]
             file_name = os.path.basename(file_path)
             rng = elem["location"].get("range")
