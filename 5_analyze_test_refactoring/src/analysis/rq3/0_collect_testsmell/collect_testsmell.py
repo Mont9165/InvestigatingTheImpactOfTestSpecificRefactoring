@@ -69,29 +69,63 @@ def remove_index_lock_if_exists(commit_url: str, test_smell_dir: str):
             logging.error(f"Failed to remove index.lock: {index_lock_path} ({e})")
 
 
-def collect_testsmell(commit_url: str, jar_path: str, test_smell_dir: str):
-    """Jarファイルを使ってテストスメルを検出する (存在確認付き)"""
+def record_failed_commit(commit_url: str, error_msg: str, failed_log_path: str):
+    """失敗したコミットをログファイルに記録"""
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    with open(failed_log_path, 'a', encoding='utf-8') as f:
+        f.write(f"{timestamp},{commit_url},{error_msg}\n")
+
+
+def collect_testsmell(commit_url: str, jar_path: str, test_smell_dir: str, max_retries=3, failed_log_path="failed_commits.csv"):
+    """Jarファイルを使ってテストスメルを検出する (存在確認付き、リトライ機能付き)"""
     if already_exists(commit_url, test_smell_dir):
         return
 
     # ここで index.lock の削除を試みる
     remove_index_lock_if_exists(commit_url, test_smell_dir)
 
-    try:
-        logging.info(f"Running TestSmellDetector for {commit_url}")
-        result = subprocess.run(
-            ["java", "-jar", jar_path, commit_url],
-            capture_output=True,
-            text=True,
-            check=True,  # これで returncode != 0 の場合に例外が発生する
-            cwd=test_smell_dir
-        )
-        logging.info(f"Test smell detection successful for {commit_url}")
-        print(result.stdout)
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Test smell detection failed for {commit_url}: {e.stderr}")
-    except Exception as e:
-        logging.error(f"Error running TestSmellDetector for {commit_url}: {e}")
+    for attempt in range(max_retries):
+        try:
+            logging.info(f"Running TestSmellDetector for {commit_url} (attempt {attempt + 1}/{max_retries})")
+            result = subprocess.run(
+                ["java", "-jar", jar_path, commit_url],
+                capture_output=True,
+                text=True,
+                check=True,  # これで returncode != 0 の場合に例外が発生する
+                cwd=test_smell_dir,
+                timeout=600  # 10分のタイムアウト
+            )
+            logging.info(f"Test smell detection successful for {commit_url}")
+            print(result.stdout)
+            return  # 成功したら終了
+            
+        except subprocess.TimeoutExpired:
+            error_msg = f"Timeout after {600} seconds"
+            logging.error(f"Test smell detection timed out for {commit_url} (attempt {attempt + 1})")
+            if attempt == max_retries - 1:
+                logging.error(f"Failed after {max_retries} attempts for {commit_url}")
+                record_failed_commit(commit_url, error_msg, failed_log_path)
+            else:
+                time.sleep(5)  # 5秒待機してリトライ
+                
+        except subprocess.CalledProcessError as e:
+            error_msg = e.stderr if e.stderr else str(e)
+            if "Connection reset" in error_msg or "TransportException" in error_msg:
+                logging.warning(f"Network error for {commit_url} (attempt {attempt + 1}): {error_msg[:200]}...")
+                if attempt == max_retries - 1:
+                    logging.error(f"Failed after {max_retries} attempts for {commit_url}")
+                    record_failed_commit(commit_url, f"Network error: {error_msg[:200]}", failed_log_path)
+                else:
+                    time.sleep(10)  # ネットワークエラーの場合は10秒待機
+            else:
+                logging.error(f"Test smell detection failed for {commit_url}: {error_msg}")
+                record_failed_commit(commit_url, error_msg, failed_log_path)
+                break  # ネットワーク以外のエラーはリトライしない
+                
+        except Exception as e:
+            logging.error(f"Unexpected error running TestSmellDetector for {commit_url}: {e}")
+            record_failed_commit(commit_url, str(e), failed_log_path)
+            break  # 予期しないエラーはリトライしない
 
 
 def get_repo_lock_path(commit_url: str, test_smell_dir: str) -> str:
@@ -182,6 +216,9 @@ def main():
     parser.add_argument("--workers", type=int, default=os.cpu_count(), help="Number of parallel workers.")
     parser.add_argument("--log-file", type=str, default="logfile.log", help="Path to the log file.")
     parser.add_argument("--safe-parallel", action="store_true", help="Use safe parallel mode (repo-level grouping).")
+    parser.add_argument("--max-retries", type=int, default=3, help="Maximum number of retries for failed commits.")
+    parser.add_argument("--timeout", type=int, default=600, help="Timeout in seconds for each commit processing.")
+    parser.add_argument("--failed-log", type=str, default="failed_commits.csv", help="Path to log failed commits.")
     args = parser.parse_args()
 
     # 引数に基づき定数を設定

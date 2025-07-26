@@ -2,9 +2,8 @@ type_name,count,mean,std,min,25%,50%,75%,max
 Add Cleanup Method,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
 Add Conditional Annotation,1.0,1.0,,1.0,1.0,1.0,1.0,1.0
 Add explanation message,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
-Any Refactoring,3.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
 Assert All,1.0,2.0,,2.0,2.0,2.0,2.0,2.0
-Await Event,3.0,1.6666666666666667,0.5773502691896257,1.0,1.5,2.0,2.0,2.0
+Await Event,4.0,1.5,0.5773502691896257,1.0,1.0,1.5,2.0,2.0
 Change Assertion Type,11.0,11.181818181818182,22.315098842793333,1.0,1.0,4.0,8.5,77.0
 Custom Assertion,6.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
 De-Parameterize Test,2.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0

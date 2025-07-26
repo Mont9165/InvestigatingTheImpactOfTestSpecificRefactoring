@@ -5,8 +5,8 @@ import os
 
 # データのディレクトリ
 BASE_DIR = "/Users/horikawa/Dev/Research-repo/InvestigatingTheImpactOfTestSpecificRefactoring"
-JSON_DIR = f"{BASE_DIR}/5_analyze_test_smell/src/results"
-RESULTS_DIR = f"{BASE_DIR}/5_analyze_test_smell/src/analysis/rq2"
+JSON_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/src/results"
+RESULTS_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/src/analysis/rq2"
 
 # 出力ディレクトリを作成（存在しない場合）
 os.makedirs(RESULTS_DIR, exist_ok=True)
