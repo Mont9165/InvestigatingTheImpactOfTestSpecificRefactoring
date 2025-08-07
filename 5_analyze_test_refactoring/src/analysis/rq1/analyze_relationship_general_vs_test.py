@@ -1,353 +1,234 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
-from typing import Dict, List, Tuple
 import seaborn as sns
+from matplotlib_venn import venn2
+import os
+from typing import Dict, Any
 
-BASE_DIR = "/Users/horikawa/Dev/Research-repo/InvestigatingTheImpactOfTestSpecificRefactoring"
-DATA_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/src/analysis/rq1/output"
-TEST_REFACTORING_PATH = f"{DATA_DIR}/test/all_commits_test_refactoring.csv"
-GENERAL_REFACTORING_PATH = f"{DATA_DIR}/general/all_commits_refactoring.csv"
-TEST_TYPE_PATH = f"{DATA_DIR}/test/test_refactoring_counts.csv"
-GENERAL_TYPE_PATH = f"{DATA_DIR}/general/general_refactoring_counts.csv"
-RESULTS_DIR = f"{BASE_DIR}/5_analyze_test_refactoring/src/analysis/rq1/output/relationship"
+class Config:
+    """設定を管理するクラス"""
+    # スクリプトの場所を基準とした相対パスに変更
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_DIR = os.path.join(BASE_DIR, "output") # 仮のデータディレクトリ名
 
-def load_data() -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    """テストリファクタリングと一般リファクタリングのデータを読み込む"""
-    test_refactoring = pd.read_csv(TEST_REFACTORING_PATH)
-    general_refactoring = pd.read_csv(GENERAL_REFACTORING_PATH)
-    test_types = pd.read_csv(TEST_TYPE_PATH)
-    general_types = pd.read_csv(GENERAL_TYPE_PATH)
-    return test_refactoring, general_refactoring, test_types, general_types
+    TEST_REFACTORING_PATH = os.path.join(DATA_DIR, "test", "all_commits_test_refactoring.csv")
+    GENERAL_REFACTORING_PATH = os.path.join(DATA_DIR, "general", "all_commits_refactoring.csv")
+    TEST_TYPE_PATH = os.path.join(DATA_DIR, "test", "test_refactoring_counts.csv")
+    GENERAL_TYPE_PATH = os.path.join(DATA_DIR, "general", "general_refactoring_counts.csv")
 
-def analyze_quantitative_comparison(test_df: pd.DataFrame, general_df: pd.DataFrame) -> Dict:
-    """量的な比較分析を実施"""
-    results = {}
-    
-    # リファクタリングを含むコミットの割合
-    test_commits_with_refactoring = len(test_df[test_df['refactoring_count'] > 0])
-    general_commits_with_refactoring = len(general_df[general_df['refactoring_count'] > 0])
-    total_commits = len(test_df)
-    
-    results['test_refactoring_ratio'] = test_commits_with_refactoring / total_commits
-    results['general_refactoring_ratio'] = general_commits_with_refactoring / total_commits
-    
-    # 1コミットあたりの平均リファクタリング数
-    results['test_avg_refactoring'] = test_df['refactoring_count'].mean()
-    results['general_avg_refactoring'] = general_df['refactoring_count'].mean()
-    
-    return results
+    RESULTS_DIR = os.path.join(BASE_DIR, "results")
+    REPORT_PATH = os.path.join(RESULTS_DIR, "analysis_report.txt")
 
-def analyze_correlation(test_df: pd.DataFrame, general_df: pd.DataFrame) -> Dict:
-    """テストリファクタリングと一般リファクタリングの相関関係を分析"""
-    results = {}
-    
-    # 両方のリファクタリングを含むコミット数
-    merged_df = pd.merge(test_df, general_df, on='commit_id', suffixes=('_test', '_general'))
-    both_refactoring = len(merged_df[(merged_df['refactoring_count_test'] > 0) & 
-                                   (merged_df['refactoring_count_general'] > 0)])
-    
-    results['both_refactoring_ratio'] = both_refactoring / len(merged_df)
-    
-    # リファクタリング数の相関
-    correlation = merged_df['refactoring_count_test'].corr(merged_df['refactoring_count_general'])
-    results['refactoring_count_correlation'] = correlation
-    
-    return results
+    TOP_N_TYPES = 10
 
-def analyze_refactoring_types(test_types: pd.DataFrame, general_types: pd.DataFrame) -> Dict:
-    """リファクタリングタイプの比較分析を実施"""
-    results = {}
-    
-    # カラム名を統一
-    test_types = test_types.rename(columns={'type_name': 'refactoring_type'})
-    
-    # リファクタリングタイプの総数
-    results['test_type_count'] = len(test_types)
-    results['general_type_count'] = len(general_types)
-    
-    # 上位5つのリファクタリングタイプ
-    results['top_test_types'] = test_types.nlargest(5, 'count')
-    results['top_general_types'] = general_types.nlargest(5, 'count')
-    
-    return results
+class RefactoringAnalyzer:
+    """
+    テストリファクタリングと一般リファクタリングの分析を行うクラス
+    """
+    def __init__(self, config: Config):
+        self.config = config
+        self.results: Dict[str, Any] = {}
+        os.makedirs(self.config.RESULTS_DIR, exist_ok=True)
+        self._load_and_preprocess_data()
 
-def visualize_comparison(test_df: pd.DataFrame, general_df: pd.DataFrame):
-    """比較結果を可視化"""
-    # リファクタリング数の分布を比較
-    plt.figure(figsize=(12, 6))
-    plt.hist(test_df['refactoring_count'], bins=50, alpha=0.5, label='Test Refactoring')
-    plt.hist(general_df['refactoring_count'], bins=50, alpha=0.5, label='General Refactoring')
-    plt.xlabel('Number of Refactorings per Commit')
-    plt.ylabel('Frequency')
-    plt.title('Distribution of Refactoring Counts')
-    plt.legend()
-    plt.savefig(f"{RESULTS_DIR}/refactoring_distribution_comparison.png")
-    plt.close()
+    def _load_and_preprocess_data(self):
+        """データの読み込みと前処理を一度に行う"""
+        try:
+            test_df = pd.read_csv(self.config.TEST_REFACTORING_PATH)
+            general_df = pd.read_csv(self.config.GENERAL_REFACTORING_PATH)
+            self.test_types_df = pd.read_csv(self.config.TEST_TYPE_PATH).rename(columns={'type_name': 'refactoring_type'})
+            self.general_types_df = pd.read_csv(self.config.GENERAL_TYPE_PATH)
 
-def visualize_refactoring_types(test_types: pd.DataFrame, general_types: pd.DataFrame):
-    """リファクタリングタイプの分布を可視化"""
-    # カラム名を統一
-    test_types = test_types.rename(columns={'type_name': 'refactoring_type'})
-    
-    # 上位10タイプの比較
-    top_n = 10
-    test_top = test_types.nlargest(top_n, 'count')
-    general_top = general_types.nlargest(top_n, 'count')
-    
-    # テストリファクタリングタイプの分布
-    plt.figure(figsize=(15, 6))
-    plt.subplot(1, 2, 1)
-    sns.barplot(data=test_top, x='count', y='refactoring_type')
-    plt.title('Top 10 Test Refactoring Types')
-    plt.xlabel('Count')
-    plt.ylabel('Refactoring Type')
-    
-    # 一般リファクタリングタイプの分布
-    plt.subplot(1, 2, 2)
-    sns.barplot(data=general_top, x='count', y='refactoring_type')
-    plt.title('Top 10 General Refactoring Types')
-    plt.xlabel('Count')
-    plt.ylabel('Refactoring Type')
-    
-    plt.tight_layout()
-    plt.savefig(f"{RESULTS_DIR}/refactoring_types_comparison.png")
-    plt.close()
-    
-    # リファクタリングタイプ数の比較
-    plt.figure(figsize=(8, 6))
-    type_counts = pd.DataFrame({
-        'Category': ['Test Refactoring', 'General Refactoring'],
-        'Number of Types': [len(test_types), len(general_types)]
-    })
-    sns.barplot(data=type_counts, x='Category', y='Number of Types')
-    plt.title('Number of Refactoring Types')
-    plt.savefig(f"{RESULTS_DIR}/refactoring_type_counts.png")
-    plt.close()
+            # commit_idの重複をチェック (ここでは警告のみ)
+            if test_df['commit_id'].duplicated().any() or general_df['commit_id'].duplicated().any():
+                print("Warning: Duplicate commit_ids found. Aggregating counts.")
+                test_df = test_df.groupby('commit_id').sum().reset_index()
+                general_df = general_df.groupby('commit_id').sum().reset_index()
 
-def analyze_coexistence(test_df: pd.DataFrame, general_df: pd.DataFrame) -> Dict:
-    """リファクタリングの共存関係を分析"""
-    results = {}
-    
-    # 両方のデータフレームをマージ
-    merged_df = pd.merge(test_df, general_df, on='commit_id', suffixes=('_test', '_general'))
-    
-    # 各カテゴリのコミット数を計算
-    test_only = len(merged_df[(merged_df['refactoring_count_test'] > 0) & (merged_df['refactoring_count_general'] == 0)])
-    general_only = len(merged_df[(merged_df['refactoring_count_test'] == 0) & (merged_df['refactoring_count_general'] > 0)])
-    both = len(merged_df[(merged_df['refactoring_count_test'] > 0) & (merged_df['refactoring_count_general'] > 0)])
-    neither = len(merged_df[(merged_df['refactoring_count_test'] == 0) & (merged_df['refactoring_count_general'] == 0)])
-    
-    results['test_only'] = test_only
-    results['general_only'] = general_only
-    results['both'] = both
-    results['neither'] = neither
-    results['total'] = len(merged_df)
-    
-    # 各カテゴリの割合を計算
-    results['test_only_ratio'] = test_only / len(merged_df)
-    results['general_only_ratio'] = general_only / len(merged_df)
-    results['both_ratio'] = both / len(merged_df)
-    results['neither_ratio'] = neither / len(merged_df)
-    
-    return results
+            # データフレームをマージしてインスタンス変数として保持
+            self.merged_df = pd.merge(test_df, general_df, on='commit_id', suffixes=('_test', '_general'))
 
-def analyze_relationship(test_df: pd.DataFrame, general_df: pd.DataFrame) -> Dict:
-    """リファクタリングの関連性を分析"""
-    results = {}
-    
-    # 両方のデータフレームをマージ
-    merged_df = pd.merge(test_df, general_df, on='commit_id', suffixes=('_test', '_general'))
-    
-    # リファクタリング数の相関
-    correlation = merged_df['refactoring_count_test'].corr(merged_df['refactoring_count_general'])
-    results['correlation'] = correlation
-    
-    # リファクタリング数の比率
-    results['test_to_general_ratio'] = merged_df['refactoring_count_test'].mean() / merged_df['refactoring_count_general'].mean()
-    
-    # リファクタリングの同時発生の傾向
-    test_refactoring_commits = merged_df[merged_df['refactoring_count_test'] > 0]
-    general_refactoring_commits = merged_df[merged_df['refactoring_count_general'] > 0]
-    
-    # テストリファクタリングを含むコミットで一般リファクタリングが発生する確率
-    results['general_given_test'] = len(test_refactoring_commits[test_refactoring_commits['refactoring_count_general'] > 0]) / len(test_refactoring_commits)
-    
-    # 一般リファクタリングを含むコミットでテストリファクタリングが発生する確率
-    results['test_given_general'] = len(general_refactoring_commits[general_refactoring_commits['refactoring_count_test'] > 0]) / len(general_refactoring_commits)
-    
-    return results
+        except FileNotFoundError as e:
+            print(f"Error: Data file not found. {e}")
+            raise
 
-def visualize_coexistence(coexistence_results: Dict):
-    """共存関係を可視化"""
-    # カテゴリ別のコミット数を可視化
-    plt.figure(figsize=(10, 6))
-    categories = ['Test Only', 'General Only', 'Both', 'Neither']
-    counts = [
-        coexistence_results['test_only'],
-        coexistence_results['general_only'],
-        coexistence_results['both'],
-        coexistence_results['neither']
-    ]
-    
-    plt.bar(categories, counts)
-    plt.title('Distribution of Refactoring Types in Commits')
-    plt.ylabel('Number of Commits')
-    
-    # 数値を棒グラフの上に表示
-    for i, count in enumerate(counts):
-        plt.text(i, count, str(count), ha='center', va='bottom')
-    
-    plt.savefig(f"{RESULTS_DIR}/refactoring_coexistence.png")
-    plt.close()
-    
-    # パーセンテージを可視化
-    plt.figure(figsize=(10, 6))
-    percentages = [
-        coexistence_results['test_only_ratio'],
-        coexistence_results['general_only_ratio'],
-        coexistence_results['both_ratio'],
-        coexistence_results['neither_ratio']
-    ]
-    
-    plt.bar(categories, percentages)
-    plt.title('Distribution of Refactoring Types in Commits (Percentage)')
-    plt.ylabel('Percentage')
-    
-    # パーセンテージを棒グラフの上に表示
-    for i, pct in enumerate(percentages):
-        plt.text(i, pct, f'{pct:.1%}', ha='center', va='bottom')
-    
-    plt.savefig(f"{RESULTS_DIR}/refactoring_coexistence_percentage.png")
-    plt.close()
+    def run_analysis(self):
+        """全ての分析を実行し、結果をself.resultsに格納する"""
+        self._analyze_prevalence()
+        self._analyze_statistics()
+        self._analyze_coexistence()
+        self._analyze_correlation()
+        self._analyze_types()
+        print("Analysis complete.")
 
-def check_duplicate_commits(test_df: pd.DataFrame, general_df: pd.DataFrame):
-    """重複しているコミットIDを確認"""
-    # テストリファクタリングの重複を確認
-    test_duplicates = test_df[test_df.duplicated(subset=['commit_id'], keep=False)]
-    if not test_duplicates.empty:
-        print("\nテストリファクタリングで重複しているコミットID:")
-        for commit_id in test_duplicates['commit_id'].unique():
-            print(f"コミットID: {commit_id}")
-            print(f"  出現回数: {len(test_duplicates[test_duplicates['commit_id'] == commit_id])}")
-            print(f"  リファクタリング数: {test_duplicates[test_duplicates['commit_id'] == commit_id]['refactoring_count'].tolist()}")
-    
-    # 一般リファクタリングの重複を確認
-    general_duplicates = general_df[general_df.duplicated(subset=['commit_id'], keep=False)]
-    if not general_duplicates.empty:
-        print("\n一般リファクタリングで重複しているコミットID:")
-        for commit_id in general_duplicates['commit_id'].unique():
-            print(f"コミットID: {commit_id}")
-            print(f"  出現回数: {len(general_duplicates[general_duplicates['commit_id'] == commit_id])}")
-            print(f"  リファクタリング数: {general_duplicates[general_duplicates['commit_id'] == commit_id]['refactoring_count'].tolist()}")
-    
-    # 重複がない場合のメッセージ
-    if test_duplicates.empty and general_duplicates.empty:
-        print("\n重複しているコミットIDはありません。")
+    def _analyze_prevalence(self):
+        total_commits = len(self.merged_df)
+        self.results['prevalence'] = {
+            'total_commits': total_commits,
+            'test_refactoring_commits': len(self.merged_df[self.merged_df['refactoring_count_test'] > 0]),
+            'general_refactoring_commits': len(self.merged_df[self.merged_df['refactoring_count_general'] > 0]),
+            'test_ratio': len(self.merged_df[self.merged_df['refactoring_count_test'] > 0]) / total_commits,
+            'general_ratio': len(self.merged_df[self.merged_df['refactoring_count_general'] > 0]) / total_commits,
+        }
 
-def analyze_statistics(test_df: pd.DataFrame, general_df: pd.DataFrame):
-    """リファクタリング数の詳細な統計情報を分析"""
-    print("\nテストリファクタリングの統計情報:")
-    test_stats = test_df['refactoring_count'].describe()
-    print(f"全コミット数: {len(test_df)}")
-    print(f"平均: {test_stats['mean']:.3f}")
-    print(f"標準偏差: {test_stats['std']:.3f}")
-    print(f"最小値: {test_stats['min']:.0f}")
-    print(f"25%タイル: {test_stats['25%']:.0f}")
-    print(f"中央値: {test_stats['50%']:.0f}")
-    print(f"75%タイル: {test_stats['75%']:.0f}")
-    print(f"最大値: {test_stats['max']:.0f}")
-    
-    print("\n一般リファクタリングの統計情報:")
-    general_stats = general_df['refactoring_count'].describe()
-    print(f"全コミット数: {len(general_df)}")
-    print(f"平均: {general_stats['mean']:.3f}")
-    print(f"標準偏差: {general_stats['std']:.3f}")
-    print(f"最小値: {general_stats['min']:.0f}")
-    print(f"25%タイル: {general_stats['25%']:.0f}")
-    print(f"中央値: {general_stats['50%']:.0f}")
-    print(f"75%タイル: {general_stats['75%']:.0f}")
-    print(f"最大値: {general_stats['max']:.0f}")
-    
-    # リファクタリング数の分布を可視化
-    plt.figure(figsize=(12, 6))
-    
-    # テストリファクタリングの分布
-    plt.subplot(1, 2, 1)
-    plt.hist(test_df['refactoring_count'], bins=50, alpha=0.7, color='skyblue')
-    plt.title('Distribution of Test Refactoring Counts')
-    plt.xlabel('Number of Refactorings')
-    plt.ylabel('Frequency')
-    plt.axvline(test_stats['mean'], color='red', linestyle='dashed', linewidth=1, label=f'Mean: {test_stats["mean"]:.2f}')
-    plt.axvline(test_stats['50%'], color='green', linestyle='dashed', linewidth=1, label=f'Median: {test_stats["50%"]:.2f}')
-    plt.legend()
-    
-    # 一般リファクタリングの分布
-    plt.subplot(1, 2, 2)
-    plt.hist(general_df['refactoring_count'], bins=50, alpha=0.7, color='lightcoral')
-    plt.title('Distribution of General Refactoring Counts')
-    plt.xlabel('Number of Refactorings')
-    plt.ylabel('Frequency')
-    plt.axvline(general_stats['mean'], color='red', linestyle='dashed', linewidth=1, label=f'Mean: {general_stats["mean"]:.2f}')
-    plt.axvline(general_stats['50%'], color='green', linestyle='dashed', linewidth=1, label=f'Median: {general_stats["50%"]:.2f}')
-    plt.legend()
-    
-    plt.tight_layout()
-    plt.savefig(f"{RESULTS_DIR}/refactoring_statistics_distribution.png")
-    plt.close()
+    def _analyze_statistics(self):
+        self.results['statistics'] = {
+            'test': self.merged_df['refactoring_count_test'].describe().to_dict(),
+            'general': self.merged_df['refactoring_count_general'].describe().to_dict()
+        }
+
+    def _analyze_coexistence(self):
+        test_exists = self.merged_df['refactoring_count_test'] > 0
+        general_exists = self.merged_df['refactoring_count_general'] > 0
+        total_commits = len(self.merged_df)
+
+        self.results['coexistence'] = {
+            'test_only': (test_exists & ~general_exists).sum(),
+            'general_only': (~test_exists & general_exists).sum(),
+            'both': (test_exists & general_exists).sum(),
+            'neither': (~test_exists & ~general_exists).sum(),
+            'total': total_commits
+        }
+
+    def _analyze_correlation(self):
+        test_commits = self.merged_df[self.merged_df['refactoring_count_test'] > 0]
+        general_commits = self.merged_df[self.merged_df['refactoring_count_general'] > 0]
+
+        self.results['correlation'] = {
+            'spearman_corr': self.merged_df['refactoring_count_test'].corr(self.merged_df['refactoring_count_general'], method='spearman'),
+            'general_given_test_prob': len(test_commits[test_commits['refactoring_count_general'] > 0]) / len(test_commits) if len(test_commits) > 0 else 0,
+            'test_given_general_prob': len(general_commits[general_commits['refactoring_count_test'] > 0]) / len(general_commits) if len(general_commits) > 0 else 0,
+        }
+
+    def _analyze_types(self):
+        self.results['types'] = {
+            'test_type_count': len(self.test_types_df),
+            'general_type_count': len(self.general_types_df),
+            'top_test_types': self.test_types_df.nlargest(self.config.TOP_N_TYPES, 'count'),
+            'top_general_types': self.general_types_df.nlargest(self.config.TOP_N_TYPES, 'count')
+        }
+
+    def generate_visualizations(self):
+        """全ての可視化を実行し、ファイルに保存する"""
+        self._visualize_distributions()
+        self._visualize_coexistence()
+        self._visualize_venn_diagram()
+        self._visualize_types()
+        print(f"Visualizations saved to {self.config.RESULTS_DIR}")
+
+    def _visualize_distributions(self):
+        fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+        sns.histplot(self.merged_df['refactoring_count_test'], bins=50, ax=axes[0], kde=True, color='skyblue').set_title('Distribution of Test Refactoring Counts')
+        sns.histplot(self.merged_df['refactoring_count_general'], bins=50, ax=axes[1], kde=True, color='lightcoral').set_title('Distribution of General Refactoring Counts')
+        for ax in axes:
+            ax.set_xlabel('Number of Refactorings per Commit')
+            ax.set_ylabel('Frequency')
+            ax.set_yscale('log') # データが歪んでいるため対数スケールを推奨
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.config.RESULTS_DIR, "refactoring_distributions.png"))
+        plt.close()
+
+    def _visualize_coexistence(self):
+        coexistence = self.results['coexistence']
+        labels = ['Test Only', 'General Only', 'Both', 'Neither (False Positive)']
+        sizes = [coexistence['test_only'], coexistence['general_only'], coexistence['both'], coexistence['neither']]
+
+        plt.figure(figsize=(10, 7))
+        bars = plt.bar(labels, sizes, color=['skyblue', 'lightcoral', 'darkslateblue', 'grey'])
+        plt.ylabel('Number of Commits')
+        plt.title('Commit Categories by Refactoring Type')
+        plt.bar_label(bars)
+        plt.savefig(os.path.join(self.config.RESULTS_DIR, "refactoring_coexistence.png"))
+        plt.close()
+
+    def _visualize_venn_diagram(self):
+        coexistence = self.results['coexistence']
+        plt.figure(figsize=(8, 8))
+        v = venn2(subsets=(coexistence['test_only'], coexistence['general_only'], coexistence['both']),
+                  set_labels=('Test Refactoring', 'General Refactoring'))
+        v.get_patch_by_id('10').set_color('skyblue')
+        v.get_patch_by_id('01').set_color('lightcoral')
+        v.get_patch_by_id('11').set_color('darkslateblue')
+        v.get_patch_by_id('11').set_alpha(0.6)
+        plt.title(f"Coexistence of Refactoring Types (N={coexistence['total']})\n"
+                  f"Commits with No Refactoring: {coexistence['neither']}", fontsize=14)
+        plt.savefig(os.path.join(self.config.RESULTS_DIR, "refactoring_venn_diagram.png"))
+        plt.close()
+
+    def _visualize_types(self):
+        types = self.results['types']
+        fig, axes = plt.subplots(1, 2, figsize=(18, 8))
+        sns.barplot(data=types['top_test_types'], x='count', y='refactoring_type', ax=axes[0], palette='Blues_r').set_title(f'Top {self.config.TOP_N_TYPES} Test Refactoring Types')
+        sns.barplot(data=types['top_general_types'], x='count', y='refactoring_type', ax=axes[1], palette='Reds_r').set_title(f'Top {self.config.TOP_N_TYPES} General Refactoring Types')
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.config.RESULTS_DIR, "refactoring_types_comparison.png"))
+        plt.close()
+
+    def generate_and_save_report(self):
+        """分析結果を整形し、コンソールに出力およびファイルに保存する"""
+        report_lines = []
+        report_lines.append("="*50)
+        report_lines.append("Refactoring Analysis Report")
+        report_lines.append("="*50)
+
+        # Prevalence
+        prevalence = self.results['prevalence']
+        report_lines.append("\n## 1. Prevalence of Refactoring in Commits")
+        report_lines.append(f"Total commits analyzed: {prevalence['total_commits']}")
+        report_lines.append(f"Commits with test refactoring: {prevalence['test_refactoring_commits']} ({prevalence['test_ratio']:.2%})")
+        report_lines.append(f"Commits with general refactoring: {prevalence['general_refactoring_commits']} ({prevalence['general_ratio']:.2%})")
+
+        # Statistics
+        stats = self.results['statistics']
+        report_lines.append("\n## 2. Descriptive Statistics (per commit)")
+        report_lines.append(f"Test Refactoring: Mean={stats['test']['mean']:.2f}, Median={stats['test']['50%']:.2f}, Std={stats['test']['std']:.2f}, Max={stats['test']['max']:.0f}")
+        report_lines.append(f"General Refactoring: Mean={stats['general']['mean']:.2f}, Median={stats['general']['50%']:.2f}, Std={stats['general']['std']:.2f}, Max={stats['general']['max']:.0f}")
+
+        # Coexistence
+        coexistence = self.results['coexistence']
+        report_lines.append("\n## 3. Coexistence Analysis")
+        report_lines.append(f"Test Only: {coexistence['test_only']} ({coexistence['test_only']/coexistence['total']:.2%})")
+        report_lines.append(f"General Only: {coexistence['general_only']} ({coexistence['general_only']/coexistence['total']:.2%})")
+        report_lines.append(f"Both: {coexistence['both']} ({coexistence['both']/coexistence['total']:.2%})")
+        report_lines.append(f"Neither (False Positive): {coexistence['neither']} ({coexistence['neither']/coexistence['total']:.2%})")
+
+        # Correlation
+        correlation = self.results['correlation']
+        report_lines.append("\n## 4. Correlation Analysis")
+        report_lines.append(f"Spearman's correlation of counts: {correlation['spearman_corr']:.3f}")
+        report_lines.append(f"P(General | Test): {correlation['general_given_test_prob']:.2%} (Probability of general refactoring given test refactoring exists)")
+        report_lines.append(f"P(Test | General): {correlation['test_given_general_prob']:.2%} (Probability of test refactoring given general refactoring exists)")
+
+        # Types
+        types_res = self.results['types']
+        report_lines.append("\n## 5. Refactoring Types Analysis")
+        report_lines.append(f"Distinct test refactoring types: {types_res['test_type_count']}")
+        report_lines.append(f"Distinct general refactoring types: {types_res['general_type_count']}")
+        report_lines.append("\nTop 5 Test Refactoring Types:")
+        for _, row in types_res['top_test_types'].head(5).iterrows():
+            report_lines.append(f"  - {row['refactoring_type']}: {row['count']}")
+        report_lines.append("\nTop 5 General Refactoring Types:")
+        for _, row in types_res['top_general_types'].head(5).iterrows():
+            report_lines.append(f"  - {row['refactoring_type']}: {row['count']}")
+
+        report = "\n".join(report_lines)
+        print(report)
+
+        with open(self.config.REPORT_PATH, 'w') as f:
+            f.write(report)
+        print(f"\nReport saved to {self.config.REPORT_PATH}")
+
 
 def main():
-    # データの読み込み
-    test_df, general_df, test_types, general_types = load_data()
-    
-    # 重複チェック
-    check_duplicate_commits(test_df, general_df)
-    
-    # 統計情報の分析
-    analyze_statistics(test_df, general_df)
-    
-    # 量的な比較分析
-    quantitative_results = analyze_quantitative_comparison(test_df, general_df)
-    print("\n量的な比較結果:")
-    print(f"テストリファクタリングを含むコミットの割合: {quantitative_results['test_refactoring_ratio']:.2%}")
-    print(f"一般リファクタリングを含むコミットの割合: {quantitative_results['general_refactoring_ratio']:.2%}")
-    print(f"1コミットあたりの平均テストリファクタリング数: {quantitative_results['test_avg_refactoring']:.2f}")
-    print(f"1コミットあたりの平均一般リファクタリング数: {quantitative_results['general_avg_refactoring']:.2f}")
-    
-    # 共存関係の分析
-    coexistence_results = analyze_coexistence(test_df, general_df)
-    print("\n共存関係の分析結果:")
-    print(f"テストリファクタリングのみ: {coexistence_results['test_only']}コミット ({coexistence_results['test_only_ratio']:.1%})")
-    print(f"一般リファクタリングのみ: {coexistence_results['general_only']}コミット ({coexistence_results['general_only_ratio']:.1%})")
-    print(f"両方のリファクタリング: {coexistence_results['both']}コミット ({coexistence_results['both_ratio']:.1%})")
-    print(f"リファクタリングなし: {coexistence_results['neither']}コミット ({coexistence_results['neither_ratio']:.1%})")
-    
-    # 関連性の分析
-    relationship_results = analyze_relationship(test_df, general_df)
-    print("\n関連性の分析結果:")
-    print(f"リファクタリング数の相関係数: {relationship_results['correlation']:.2f}")
-    print(f"テストリファクタリング数/一般リファクタリング数の比率: {relationship_results['test_to_general_ratio']:.2f}")
-    print(f"テストリファクタリングを含むコミットで一般リファクタリングが発生する確率: {relationship_results['general_given_test']:.1%}")
-    print(f"一般リファクタリングを含むコミットでテストリファクタリングが発生する確率: {relationship_results['test_given_general']:.1%}")
-    
-    # リファクタリングタイプの分析
-    type_results = analyze_refactoring_types(test_types, general_types)
-    print("\nリファクタリングタイプの分析結果:")
-    print(f"テストリファクタリングタイプ数: {type_results['test_type_count']}")
-    print(f"一般リファクタリングタイプ数: {type_results['general_type_count']}")
-    
-    print("\n上位5つのテストリファクタリングタイプ:")
-    for _, row in type_results['top_test_types'].iterrows():
-        print(f"{row['refactoring_type']}: {row['count']}")
-    
-    print("\n上位5つの一般リファクタリングタイプ:")
-    for _, row in type_results['top_general_types'].iterrows():
-        print(f"{row['refactoring_type']}: {row['count']}")
-    
-    # 可視化
-    visualize_comparison(test_df, general_df)
-    visualize_refactoring_types(test_types, general_types)
-    visualize_coexistence(coexistence_results)
+    """メインの実行関数"""
+    try:
+        config = Config()
+        analyzer = RefactoringAnalyzer(config)
+        analyzer.run_analysis()
+        analyzer.generate_and_save_report()
+        analyzer.generate_visualizations()
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     main()
