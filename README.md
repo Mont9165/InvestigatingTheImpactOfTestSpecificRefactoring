@@ -181,8 +181,9 @@ cd 5_analyze_test_refactoring
 
 Analysis results are stored in:
 - `5_analyze_test_refactoring/src/analysis/rq*/`: Statistical analysis results
-- `5_analyze_test_refactoring/src/results/`: Summary statistics and datasets
-- Generated visualizations and LaTeX tables for publication
+- `5_analyze_test_refactoring/src/results/`: Manual inspection results
+
+[//]: # (- Generated visualizations and LaTeX tables for publication)
 
 [//]: # (## Citation)
 
