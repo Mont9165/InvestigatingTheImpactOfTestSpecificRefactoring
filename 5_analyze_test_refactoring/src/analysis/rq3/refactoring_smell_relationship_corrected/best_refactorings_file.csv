@@ -1,0 +1,23 @@
+test_smell,best_by_improvement_rate,improvement_rate,total_pairs,best_by_effect_size,effect_size_r,p_value_corrected
+Assertion Roulette,Grouping Tests,46.15384615384615,13,None,0.0,
+Conditional Test Logic,Test Helper,20.0,5,None,0.0,
+Constructor Initialization,Grouping Tests,7.6923076923076925,13,None,0.0,
+Default Test,Await Event,0.0,6,None,0.0,
+Dependent Test,Await Event,0.0,6,None,0.0,
+Duplicate Assert,Split Test Method,67.64705882352942,34,Split Test Method,-0.7249140044735349,0.002866395402990394
+Eager Test,Parameterized Test,23.076923076923077,13,None,0.0,
+EmptyTest,Await Event,0.0,6,None,0.0,
+Exception Catching Throwing,Change Assertion Type,44.44444444444444,9,None,0.0,
+General Fixture,Parameterized Test,30.76923076923077,13,None,0.0,
+IgnoredTest,Inline Assertion,60.0,5,None,0.0,
+Lazy Test,Parameterized Test,23.076923076923077,13,None,0.0,
+Magic Number Test,Grouping Tests,69.23076923076923,13,None,0.0,
+Mystery Guest,Await Event,0.0,6,None,0.0,
+NumberOfMethods,Inline Assertion,100.0,5,Grouping Tests,-0.9366517484476092,0.039388020833333336
+Print Statement,Test Helper,20.0,5,None,0.0,
+Redundant Assertion,Grouping Tests,15.384615384615385,13,None,0.0,
+Resource Optimism,Parameterized Test,7.6923076923076925,13,None,0.0,
+Sensitive Equality,Grouping Tests,7.6923076923076925,13,None,0.0,
+Sleepy Test,Await Event,0.0,6,None,0.0,
+Unknown Test,Inline Assertion,60.0,5,None,0.0,
+Verbose Test,Await Event,0.0,6,None,0.0,

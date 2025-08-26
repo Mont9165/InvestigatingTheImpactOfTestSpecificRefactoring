@@ -1,0 +1,52 @@
+services:
+  test-refactoring-research:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: final
+    image: test-refactoring-analysis:latest
+    container_name: test-refactoring-container
+    volumes:
+      # Mount data directories for persistent storage
+      - ./data:/app/data
+      - ./results:/app/results
+      # Mount specific result directories
+      - ./1_collect_test_refactoring_commits/src/main/resources/output:/app/1_collect_test_refactoring_commits/src/main/resources/output
+      - ./2_sampling_test_refactor_commits/result:/app/2_sampling_test_refactor_commits/result
+      - ./3_merge_each_annotator_data_from_refactorhub/result:/app/3_merge_each_annotator_data_from_refactorhub/result
+      - ./4_manual_inspection/result:/app/4_manual_inspection/result
+      - ./5_analyze_test_refactoring/src/results:/app/5_analyze_test_refactoring/src/results
+      - ./5_analyze_test_refactoring/src/smells_result:/app/5_analyze_test_refactoring/src/smells_result
+    working_dir: /app
+    environment:
+      - PYTHONPATH=/app
+      - RESEARCH_HOME=/app
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    
+  # Optional: Jupyter notebook service for interactive analysis
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: final
+    image: test-refactoring-analysis:latest
+    container_name: test-refactoring-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - PYTHONPATH=/app
+      - RESEARCH_HOME=/app
+    command: >
+      bash -c "pip install jupyter &&
+               jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+               --NotebookApp.token='' --NotebookApp.password=''"
+
+networks:
+  default:
+    name: test-refactoring-network

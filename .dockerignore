@@ -1,0 +1,88 @@
+# Docker-specific ignore file for Test Refactoring Research Project
+
+# Git files
+.git/
+.gitignore
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache and environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+
+# Java build files
+target/
+*.class
+*.jar
+!**/jar/*.jar
+!1_collect_test_refactoring_commits/GetCommitInformation-1.0-SNAPSHOT.jar
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Results and data (mounted as volumes in docker-compose)
+*/result/
+*/results/
+*/output/
+data/
+logs/
+*.log
+
+# Large repository data and build artifacts
+5_analyze_test_refactoring/TestSmellDetector/repos/
+5_analyze_test_refactoring/TestSmellDetector/target/
+5_analyze_test_refactoring/TestSmellDetector/results/
+5_analyze_test_refactoring/TestSmellDetector/locks/
+!5_analyze_test_refactoring/TestSmellDetector/jar/
+!5_analyze_test_refactoring/TestSmellDetector/pom.xml
+!5_analyze_test_refactoring/TestSmellDetector/src/
+
+# Analysis results and graphs  
+*/analysis_result/
+*/descriptive_analysis/
+*/statistical_analysis/
+*/detailed_visualization/
+*/conditional_analysis/
+*/refactoring_smell_relationship/
+*/refactoring_smell_relationship_corrected/
+*/statistical_analysis_corrected/
+*.pdf
+*.png
+*.csv
+*.ndjson
+*.dump
+*.sql
+*.tex
+!requirements.txt
+
+# Exclude large files and directories
+**/*.zip
+**/*.tar.gz
+**/*.rar
+**/*.7z
+**/node_modules/
+**/.git/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Docker files themselves
+docker-compose*.yml
+Dockerfile*
+

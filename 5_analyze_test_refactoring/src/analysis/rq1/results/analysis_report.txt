@@ -1,0 +1,41 @@
+==================================================
+Refactoring Analysis Report
+==================================================
+
+## 1. Prevalence of Refactoring in Commits
+Total commits analyzed: 366
+Commits with test refactoring: 158 (43.17%)
+Commits with general refactoring: 154 (42.08%)
+
+## 2. Descriptive Statistics (per commit)
+Test Refactoring: Mean=1.11, Median=0.00, Std=4.87, Max=86
+General Refactoring: Mean=6.93, Median=0.00, Std=35.61, Max=640
+
+## 3. Coexistence Analysis
+Test Only: 76 (20.77%)
+General Only: 72 (19.67%)
+Both: 82 (22.40%)
+Neither (False Positive): 136 (37.16%)
+
+## 4. Correlation Analysis
+Spearman's correlation of counts: 0.212
+P(General | Test): 51.90% (Probability of general refactoring given test refactoring exists)
+P(Test | General): 53.25% (Probability of test refactoring given general refactoring exists)
+
+## 5. Refactoring Types Analysis
+Distinct test refactoring types: 37
+Distinct general refactoring types: 66
+
+Top 5 Test Refactoring Types:
+  - Change Assertion Type: 123
+  - Split Test Method: 37
+  - Prebuilt Fixture: 35
+  - Delegated Setup: 32
+  - Grouping Tests: 23
+
+Top 5 General Refactoring Types:
+  - PUSH_DOWN_OPERATION: 560
+  - RENAME_METHOD: 207
+  - EXTRACT_OPERATION: 145
+  - CHANGE_VARIABLE_TYPE: 145
+  - ADD_VARIABLE_MODIFIER: 117

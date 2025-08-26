@@ -1,0 +1,485 @@
+level,total_pairs,improvements,degradations,no_changes,improvement_rate,degradation_rate,wilcoxon_stat,p_value,effect_size_r,type_name,test_smell,analysis_type,p_value_corrected,significant_corrected
+file,6,0,2,4,0.0,33.33333333333333,0.0,0.15729920705028505,0.577350269189626,Await Event,Assertion Roulette,detailed_by_type_and_smell,0.8951716726048291,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Default Test,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Eager Test,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,General Fixture,detailed_by_type_and_smell,1.0,False
+file,6,0,2,4,0.0,33.33333333333333,0.0,0.15729920705028505,0.577350269189626,Await Event,IgnoredTest,detailed_by_type_and_smell,0.8951716726048291,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Lazy Test,detailed_by_type_and_smell,1.0,False
+file,6,0,2,4,0.0,33.33333333333333,0.0,0.15729920705028505,0.577350269189626,Await Event,Magic Number Test,detailed_by_type_and_smell,0.8951716726048291,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,6,0,2,4,0.0,33.33333333333333,0.0,0.15729920705028505,0.577350269189626,Await Event,NumberOfMethods,detailed_by_type_and_smell,0.8951716726048291,False
+file,6,1,0,5,16.666666666666664,0.0,0.0,0.31731050786291415,-0.408248290463863,Await Event,Print Statement,detailed_by_type_and_smell,0.9684390066567553,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Resource Optimism,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Unknown Test,detailed_by_type_and_smell,1.0,False
+file,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,9,4,1,4,44.44444444444444,11.11111111111111,5.0,0.4795001221869535,-0.23570226039551587,Change Assertion Type,Assertion Roulette,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Default Test,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+file,9,1,4,4,11.11111111111111,44.44444444444444,5.0,0.4795001221869535,0.23570226039551587,Change Assertion Type,Eager Test,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,9,4,0,5,44.44444444444444,0.0,0.0,0.045500263896358396,-0.666666666666667,Change Assertion Type,Exception Catching Throwing,detailed_by_type_and_smell,0.7204792576090416,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,General Fixture,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,IgnoredTest,detailed_by_type_and_smell,1.0,False
+file,9,1,4,4,11.11111111111111,44.44444444444444,1.0,0.06599205505934755,0.6128258770283413,Change Assertion Type,Lazy Test,detailed_by_type_and_smell,0.741357554709266,False
+file,9,0,4,5,0.0,44.44444444444444,0.0,0.045500263896358396,0.666666666666667,Change Assertion Type,Magic Number Test,detailed_by_type_and_smell,0.7204792576090416,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,9,1,4,4,11.11111111111111,44.44444444444444,3.0,0.17971249487899976,0.44721359549995804,Change Assertion Type,NumberOfMethods,detailed_by_type_and_smell,0.8951716726048291,False
+file,9,0,4,5,0.0,44.44444444444444,0.0,0.045500263896358396,0.666666666666667,Change Assertion Type,Print Statement,detailed_by_type_and_smell,0.7204792576090416,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Resource Optimism,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Unknown Test,detailed_by_type_and_smell,1.0,False
+file,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,20,6,0,14,30.0,0.0,0.0,0.025596805385948558,-0.49915182296860483,Delegated Setup,Assertion Roulette,detailed_by_type_and_smell,0.5913433833355943,False
+file,20,2,0,18,10.0,0.0,0.0,0.17971249487899976,-0.30000000000000004,Delegated Setup,Conditional Test Logic,detailed_by_type_and_smell,0.8951716726048291,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Default Test,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Eager Test,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,20,0,1,19,0.0,5.0,0.0,0.31731050786291415,0.22360679774997894,Delegated Setup,Exception Catching Throwing,detailed_by_type_and_smell,0.9684390066567553,False
+file,20,0,5,15,0.0,25.0,0.0,0.039359508888249725,0.46072133762546347,Delegated Setup,General Fixture,detailed_by_type_and_smell,0.7204792576090416,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,IgnoredTest,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Lazy Test,detailed_by_type_and_smell,1.0,False
+file,20,2,1,17,10.0,5.0,3.0,1.0,0.0,Delegated Setup,Magic Number Test,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,20,0,17,3,0.0,85.0,0.0,0.00024204608712114617,0.8207559246023047,Delegated Setup,NumberOfMethods,detailed_by_type_and_smell,0.012780033399996518,True
+file,20,2,0,18,10.0,0.0,0.0,0.15729920705028505,-0.316227766016838,Delegated Setup,Print Statement,detailed_by_type_and_smell,0.8951716726048291,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,20,0,1,19,0.0,5.0,0.0,0.31731050786291415,0.22360679774997894,Delegated Setup,Resource Optimism,detailed_by_type_and_smell,0.9684390066567553,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,20,2,3,15,10.0,15.0,6.0,0.6547208460185769,0.10000000000000003,Delegated Setup,Unknown Test,detailed_by_type_and_smell,1.0,False
+file,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,13,6,1,6,46.15384615384615,7.6923076923076925,1.0,0.02687924469707247,-0.6138498140448515,Grouping Tests,Assertion Roulette,detailed_by_type_and_smell,0.5913433833355943,False
+file,13,2,0,11,15.384615384615385,0.0,0.0,0.17971249487899976,-0.37210420376762543,Grouping Tests,Conditional Test Logic,detailed_by_type_and_smell,0.8951716726048291,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Grouping Tests,Constructor Initialization,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Default Test,detailed_by_type_and_smell,1.0,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,13,4,0,9,30.76923076923077,0.0,0.0,0.06559969214707187,-0.5106429211881653,Grouping Tests,Duplicate Assert,detailed_by_type_and_smell,0.741357554709266,False
+file,13,2,0,11,15.384615384615385,0.0,0.0,0.17971249487899976,-0.37210420376762543,Grouping Tests,Eager Test,detailed_by_type_and_smell,0.8951716726048291,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,13,5,2,6,38.46153846153847,15.384615384615385,3.0,0.0625089161964483,-0.5166112993626544,Grouping Tests,Exception Catching Throwing,detailed_by_type_and_smell,0.741357554709266,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Grouping Tests,General Fixture,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Grouping Tests,IgnoredTest,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,2,0,11,15.384615384615385,0.0,0.0,0.17971249487899976,-0.37210420376762543,Grouping Tests,Lazy Test,detailed_by_type_and_smell,0.8951716726048291,False
+file,13,9,1,3,69.23076923076923,7.6923076923076925,2.0,0.009344113002204883,-0.7208885625950239,Grouping Tests,Magic Number Test,detailed_by_type_and_smell,0.30835572907276115,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,13,12,1,0,92.3076923076923,7.6923076923076925,2.0,0.000732421875,-0.9366517484476092,Grouping Tests,NumberOfMethods,detailed_by_type_and_smell,0.0322265625,True
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Print Statement,detailed_by_type_and_smell,1.0,False
+file,13,2,0,11,15.384615384615385,0.0,0.0,0.15729920705028505,-0.39223227027636814,Grouping Tests,Redundant Assertion,detailed_by_type_and_smell,0.8951716726048291,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Resource Optimism,detailed_by_type_and_smell,1.0,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Grouping Tests,Sensitive Equality,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,13,5,0,8,38.46153846153847,0.0,0.0,0.042168197097155954,-0.5635355675740085,Grouping Tests,Unknown Test,detailed_by_type_and_smell,0.7204792576090416,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,8,2,1,5,25.0,12.5,3.0,1.0,0.0,Implicit Setup,Assertion Roulette,detailed_by_type_and_smell,1.0,False
+file,8,0,2,6,0.0,25.0,0.0,0.17971249487899976,0.47434164902525694,Implicit Setup,Conditional Test Logic,detailed_by_type_and_smell,0.8951716726048291,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Default Test,detailed_by_type_and_smell,1.0,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,8,2,0,6,25.0,0.0,0.0,0.17971249487899976,-0.47434164902525694,Implicit Setup,Duplicate Assert,detailed_by_type_and_smell,0.8951716726048291,False
+file,8,0,1,7,0.0,12.5,0.0,0.31731050786291415,0.3535533905932737,Implicit Setup,Eager Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,8,0,1,7,0.0,12.5,0.0,0.31731050786291415,0.3535533905932737,Implicit Setup,Exception Catching Throwing,detailed_by_type_and_smell,0.9684390066567553,False
+file,8,2,1,5,25.0,12.5,2.0,0.5929800980174267,-0.18898223650461365,Implicit Setup,General Fixture,detailed_by_type_and_smell,1.0,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,IgnoredTest,detailed_by_type_and_smell,1.0,False
+file,8,0,1,7,0.0,12.5,0.0,0.31731050786291415,0.3535533905932737,Implicit Setup,Lazy Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,8,1,2,5,12.5,25.0,3.0,1.0,0.0,Implicit Setup,Magic Number Test,detailed_by_type_and_smell,1.0,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,8,1,6,1,12.5,75.0,6.5,0.20000529271911371,0.4530915699976327,Implicit Setup,NumberOfMethods,detailed_by_type_and_smell,0.9684390066567553,False
+file,8,1,0,7,12.5,0.0,0.0,0.31731050786291415,-0.3535533905932737,Implicit Setup,Print Statement,detailed_by_type_and_smell,0.9684390066567553,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Resource Optimism,detailed_by_type_and_smell,1.0,False
+file,8,0,1,7,0.0,12.5,0.0,0.31731050786291415,0.3535533905932737,Implicit Setup,Sensitive Equality,detailed_by_type_and_smell,0.9684390066567553,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,8,1,1,6,12.5,12.5,1.0,0.6547208460185769,-0.158113883008419,Implicit Setup,Unknown Test,detailed_by_type_and_smell,1.0,False
+file,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Assertion Roulette,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Default Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Eager Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,General Fixture,detailed_by_type_and_smell,1.0,False
+file,5,3,0,2,60.0,0.0,0.0,0.08326451666355039,-0.7745966692414835,Inline Assertion,IgnoredTest,detailed_by_type_and_smell,0.8141419407102705,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Lazy Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Magic Number Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,5,5,0,0,100.0,0.0,0.0,0.0625,-0.8330390158819877,Inline Assertion,NumberOfMethods,detailed_by_type_and_smell,0.741357554709266,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Print Statement,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Resource Optimism,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,5,3,0,2,60.0,0.0,0.0,0.08326451666355039,-0.7745966692414835,Inline Assertion,Unknown Test,detailed_by_type_and_smell,0.8141419407102705,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,13,6,0,7,46.15384615384615,0.0,0.0,0.025596805385948558,-0.6191216388163047,Parameterized Test,Assertion Roulette,detailed_by_type_and_smell,0.5913433833355943,False
+file,13,2,3,8,15.384615384615385,23.076923076923077,5.0,0.4795001221869535,0.19611613513818404,Parameterized Test,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+file,13,0,2,11,0.0,15.384615384615385,0.0,0.15729920705028505,0.39223227027636814,Parameterized Test,Constructor Initialization,detailed_by_type_and_smell,0.8951716726048291,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Default Test,detailed_by_type_and_smell,1.0,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Duplicate Assert,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,3,0,10,23.076923076923077,0.0,0.0,0.10880943004054569,-0.4447495899966607,Parameterized Test,Eager Test,detailed_by_type_and_smell,0.844873221491296,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,13,4,3,6,30.76923076923077,23.076923076923077,6.0,0.17241510261138115,-0.3784399334330128,Parameterized Test,Exception Catching Throwing,detailed_by_type_and_smell,0.8951716726048291,False
+file,13,4,0,9,30.76923076923077,0.0,0.0,0.05878172135535887,-0.5241424183609592,Parameterized Test,General Fixture,detailed_by_type_and_smell,0.741357554709266,False
+file,13,2,1,10,15.384615384615385,7.6923076923076925,1.5,0.4142161782425251,-0.22645540682891915,Parameterized Test,IgnoredTest,detailed_by_type_and_smell,1.0,False
+file,13,3,0,10,23.076923076923077,0.0,0.0,0.10247043485974941,-0.45291081365783836,Parameterized Test,Lazy Test,detailed_by_type_and_smell,0.844873221491296,False
+file,13,5,1,7,38.46153846153847,7.6923076923076925,1.0,0.04520135297652212,-0.5554700788944518,Parameterized Test,Magic Number Test,detailed_by_type_and_smell,0.7204792576090416,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,13,7,4,2,53.84615384615385,30.76923076923077,17.0,0.15199599099260785,-0.39730865819689604,Parameterized Test,NumberOfMethods,detailed_by_type_and_smell,0.8951716726048291,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Print Statement,detailed_by_type_and_smell,1.0,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Resource Optimism,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Sensitive Equality,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Unknown Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,22,4,3,15,18.181818181818183,13.636363636363635,10.0,0.49508575626006945,-0.14545454545454545,Prebuilt Fixture,Assertion Roulette,detailed_by_type_and_smell,1.0,False
+file,22,3,0,19,13.636363636363635,0.0,0.0,0.08326451666355039,-0.36927447293799825,Prebuilt Fixture,Conditional Test Logic,detailed_by_type_and_smell,0.8141419407102705,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Default Test,detailed_by_type_and_smell,1.0,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,22,1,1,20,4.545454545454546,4.545454545454546,1.0,0.6547208460185769,-0.09534625892455927,Prebuilt Fixture,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Eager Test,detailed_by_type_and_smell,1.0,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,22,0,4,18,0.0,18.181818181818183,0.0,0.05878172135535887,0.4029114820126901,Prebuilt Fixture,Exception Catching Throwing,detailed_by_type_and_smell,0.741357554709266,False
+file,22,0,1,21,0.0,4.545454545454546,0.0,0.31731050786291415,0.21320071635561041,Prebuilt Fixture,General Fixture,detailed_by_type_and_smell,0.9684390066567553,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,IgnoredTest,detailed_by_type_and_smell,1.0,False
+file,22,0,1,21,0.0,4.545454545454546,0.0,0.31731050786291415,0.21320071635561041,Prebuilt Fixture,Lazy Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,22,0,4,18,0.0,18.181818181818183,0.0,0.05878172135535887,0.4029114820126901,Prebuilt Fixture,Magic Number Test,detailed_by_type_and_smell,0.741357554709266,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,22,0,9,13,0.0,40.909090909090914,0.0,0.006956476135331761,0.5754118154485101,Prebuilt Fixture,NumberOfMethods,detailed_by_type_and_smell,0.2623585285325121,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Print Statement,detailed_by_type_and_smell,1.0,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,22,0,1,21,0.0,4.545454545454546,0.0,0.31731050786291415,0.21320071635561041,Prebuilt Fixture,Resource Optimism,detailed_by_type_and_smell,0.9684390066567553,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,22,0,1,21,0.0,4.545454545454546,0.0,0.31731050786291415,0.21320071635561041,Prebuilt Fixture,Unknown Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,34,2,11,21,5.88235294117647,32.35294117647059,12.0,0.01186151155651356,0.43153122545162664,Split Test Method,Assertion Roulette,detailed_by_type_and_smell,0.36840459422583294,False
+file,34,0,4,30,0.0,11.76470588235294,0.0,0.0633177868300456,0.3184648776492411,Split Test Method,Conditional Test Logic,detailed_by_type_and_smell,0.741357554709266,False
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Default Test,detailed_by_type_and_smell,1.0,False
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,34,23,0,11,67.64705882352942,0.0,0.0,2.3689218206532182e-05,-0.7249140044735349,Split Test Method,Duplicate Assert,detailed_by_type_and_smell,0.002084651202174832,True
+file,34,1,4,29,2.941176470588235,11.76470588235294,1.5,0.10405923452892792,0.27876839611480914,Split Test Method,Eager Test,detailed_by_type_and_smell,0.844873221491296,False
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,34,6,14,14,17.647058823529413,41.17647058823529,96.0,0.734708044291658,0.058115639255146595,Split Test Method,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+file,34,0,2,32,0.0,5.88235294117647,0.0,0.17971249487899976,0.23008949665421116,Split Test Method,General Fixture,detailed_by_type_and_smell,0.8951716726048291,False
+file,34,0,1,33,0.0,2.941176470588235,0.0,0.31731050786291415,0.17149858514250882,Split Test Method,IgnoredTest,detailed_by_type_and_smell,0.9684390066567553,False
+file,34,0,4,30,0.0,11.76470588235294,0.0,0.06788915486182899,0.3131121455425748,Split Test Method,Lazy Test,detailed_by_type_and_smell,0.7467807034801188,False
+file,34,0,32,2,0.0,94.11764705882352,0.0,7.46060569114198e-07,0.8487418842089252,Split Test Method,Magic Number Test,detailed_by_type_and_smell,0.00013130666016409885,True
+file,34,0,22,12,0.0,64.70588235294117,0.0,3.1106791438833405e-05,0.7143273939241601,Split Test Method,Mystery Guest,detailed_by_type_and_smell,0.0023463408399577194,True
+file,34,0,34,0,0.0,100.0,0.0,1.1641532182693481e-10,1.1051256540523262,Split Test Method,NumberOfMethods,detailed_by_type_and_smell,6.146728992462158e-08,True
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Print Statement,detailed_by_type_and_smell,1.0,False
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,34,0,1,33,0.0,2.941176470588235,0.0,0.31731050786291415,0.17149858514250882,Split Test Method,Resource Optimism,detailed_by_type_and_smell,0.9684390066567553,False
+file,34,0,12,22,0.0,35.294117647058826,0.0,0.0005320055051392492,0.5940885257860046,Split Test Method,Sensitive Equality,detailed_by_type_and_smell,0.025536264246683964,True
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,34,0,1,33,0.0,2.941176470588235,0.0,0.31731050786291415,0.17149858514250882,Split Test Method,Unknown Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Test Helper,Assertion Roulette,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,1,1,3,20.0,20.0,1.0,0.6547208460185769,-0.20000000000000007,Test Helper,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Default Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Test Helper,Duplicate Assert,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,1,1,3,20.0,20.0,1.0,0.6547208460185769,-0.20000000000000007,Test Helper,Eager Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Test Helper,Exception Catching Throwing,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,General Fixture,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,IgnoredTest,detailed_by_type_and_smell,1.0,False
+file,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Test Helper,Lazy Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,1,1,3,20.0,20.0,1.0,0.6547208460185769,-0.20000000000000007,Test Helper,Magic Number Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,5,2,3,0,40.0,60.0,6.0,0.8125,0.10608000817310125,Test Helper,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+file,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Test Helper,Print Statement,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Resource Optimism,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Test Helper,Unknown Test,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Verbose Test,detailed_by_type_and_smell,1.0,False
+file,5,2,0,3,40.0,0.0,0.0,0.17971249487899976,-0.6000000000000001,Verification Method,Assertion Roulette,detailed_by_type_and_smell,0.8951716726048291,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Default Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Dependent Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Eager Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,EmptyTest,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+file,5,0,1,4,0.0,20.0,0.0,0.31731050786291415,0.44721359549995787,Verification Method,General Fixture,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,IgnoredTest,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Lazy Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Magic Number Test,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Mystery Guest,detailed_by_type_and_smell,1.0,False
+file,5,0,5,0,0.0,100.0,0.0,0.0625,0.8330390158819877,Verification Method,NumberOfMethods,detailed_by_type_and_smell,0.741357554709266,False
+file,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Verification Method,Print Statement,detailed_by_type_and_smell,0.9684390066567553,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Resource Optimism,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Sleepy Test,detailed_by_type_and_smell,1.0,False
+file,5,0,3,2,0.0,60.0,0.0,0.10247043485974941,0.7302967433402215,Verification Method,Unknown Test,detailed_by_type_and_smell,0.844873221491296,False
+file,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,6,0,2,4,0.0,33.33333333333333,0.0,0.15729920705028505,0.577350269189626,Await Event,Assertion Roulette,detailed_by_type_and_smell,0.8951716726048291,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Default Test,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Eager Test,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,General Fixture,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Lazy Test,detailed_by_type_and_smell,1.0,False
+method,6,0,2,4,0.0,33.33333333333333,0.0,0.15729920705028505,0.577350269189626,Await Event,Magic Number Test,detailed_by_type_and_smell,0.8951716726048291,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,6,1,0,5,16.666666666666664,0.0,0.0,0.31731050786291415,-0.408248290463863,Await Event,Print Statement,detailed_by_type_and_smell,0.9684390066567553,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Unknown Test,detailed_by_type_and_smell,1.0,False
+method,6,0,0,6,0.0,0.0,,1.0,0.0,Await Event,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,9,0,1,8,0.0,11.11111111111111,0.0,0.31731050786291415,0.3333333333333333,Change Assertion Type,Assertion Roulette,detailed_by_type_and_smell,0.9684390066567553,False
+method,9,0,1,8,0.0,11.11111111111111,0.0,0.31731050786291415,0.3333333333333333,Change Assertion Type,Conditional Test Logic,detailed_by_type_and_smell,0.9684390066567553,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Default Test,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Eager Test,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,9,4,1,4,44.44444444444444,11.11111111111111,5.0,0.4795001221869535,-0.23570226039551587,Change Assertion Type,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,General Fixture,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,9,1,0,8,11.11111111111111,0.0,0.0,0.31731050786291415,-0.3333333333333333,Change Assertion Type,Lazy Test,detailed_by_type_and_smell,0.9684390066567553,False
+method,9,0,1,8,0.0,11.11111111111111,0.0,0.31731050786291415,0.3333333333333333,Change Assertion Type,Magic Number Test,detailed_by_type_and_smell,0.9684390066567553,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,9,0,2,7,0.0,22.22222222222222,0.0,0.15729920705028505,0.4714045207910318,Change Assertion Type,Print Statement,detailed_by_type_and_smell,0.8951716726048291,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Unknown Test,detailed_by_type_and_smell,1.0,False
+method,9,0,0,9,0.0,0.0,,1.0,0.0,Change Assertion Type,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,20,6,3,11,30.0,15.0,13.0,0.2501717511585505,-0.2571326819313642,Delegated Setup,Assertion Roulette,detailed_by_type_and_smell,0.9684390066567553,False
+method,20,3,1,16,15.0,5.0,1.5,0.1974660733580187,-0.28818543935741636,Delegated Setup,Conditional Test Logic,detailed_by_type_and_smell,0.9653896919725358,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Default Test,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,20,0,1,19,0.0,5.0,0.0,0.31731050786291415,0.22360679774997894,Delegated Setup,Duplicate Assert,detailed_by_type_and_smell,0.9684390066567553,False
+method,20,1,0,19,5.0,0.0,0.0,0.31731050786291415,-0.22360679774997894,Delegated Setup,Eager Test,detailed_by_type_and_smell,0.9684390066567553,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,20,1,3,16,5.0,15.0,2.0,0.25683925795785656,0.25354627641855493,Delegated Setup,Exception Catching Throwing,detailed_by_type_and_smell,0.9684390066567553,False
+method,20,1,6,13,5.0,30.0,3.0,0.05366539182616074,0.4314554973040049,Delegated Setup,General Fixture,detailed_by_type_and_smell,0.741357554709266,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,20,0,1,19,0.0,5.0,0.0,0.31731050786291415,0.22360679774997894,Delegated Setup,Lazy Test,detailed_by_type_and_smell,0.9684390066567553,False
+method,20,3,5,12,15.0,25.0,12.0,0.36571229628151325,0.20225995873897265,Delegated Setup,Magic Number Test,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,20,2,0,18,10.0,0.0,0.0,0.17971249487899976,-0.30000000000000004,Delegated Setup,Print Statement,detailed_by_type_and_smell,0.8951716726048291,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,20,2,4,14,10.0,20.0,9.0,0.7388826803635273,0.07453559924999296,Delegated Setup,Unknown Test,detailed_by_type_and_smell,1.0,False
+method,20,0,0,20,0.0,0.0,,1.0,0.0,Delegated Setup,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,13,0,2,11,0.0,15.384615384615385,0.0,0.17971249487899976,0.37210420376762543,Grouping Tests,Assertion Roulette,detailed_by_type_and_smell,0.8951716726048291,False
+method,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Grouping Tests,Conditional Test Logic,detailed_by_type_and_smell,0.9684390066567553,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Default Test,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+method,13,1,1,11,7.6923076923076925,7.6923076923076925,1.0,0.6547208460185769,-0.12403473458920851,Grouping Tests,Eager Test,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,13,2,1,10,15.384615384615385,7.6923076923076925,1.0,0.28504940740261275,-0.2964997266644404,Grouping Tests,Exception Catching Throwing,detailed_by_type_and_smell,0.9684390066567553,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,General Fixture,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,13,3,0,10,23.076923076923077,0.0,0.0,0.10247043485974941,-0.45291081365783836,Grouping Tests,Lazy Test,detailed_by_type_and_smell,0.844873221491296,False
+method,13,3,1,9,23.076923076923077,7.6923076923076925,1.0,0.14412703481601533,-0.40509574683346655,Grouping Tests,Magic Number Test,detailed_by_type_and_smell,0.8951716726048291,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Print Statement,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Unknown Test,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Grouping Tests,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,8,4,1,3,50.0,12.5,2.0,0.1307970618068586,-0.5342072242964953,Implicit Setup,Assertion Roulette,detailed_by_type_and_smell,0.8951716726048291,False
+method,8,2,0,6,25.0,0.0,0.0,0.17971249487899976,-0.47434164902525694,Implicit Setup,Conditional Test Logic,detailed_by_type_and_smell,0.8951716726048291,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Default Test,detailed_by_type_and_smell,1.0,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,8,2,0,6,25.0,0.0,0.0,0.17971249487899976,-0.47434164902525694,Implicit Setup,Duplicate Assert,detailed_by_type_and_smell,0.8951716726048291,False
+method,8,2,0,6,25.0,0.0,0.0,0.15729920705028505,-0.5000000000000001,Implicit Setup,Eager Test,detailed_by_type_and_smell,0.8951716726048291,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,8,3,1,4,37.5,12.5,2.0,0.27332167829229814,-0.3872983346207417,Implicit Setup,Exception Catching Throwing,detailed_by_type_and_smell,0.9684390066567553,False
+method,8,3,0,5,37.5,0.0,0.0,0.10880943004054569,-0.5669467095138407,Implicit Setup,General Fixture,detailed_by_type_and_smell,0.844873221491296,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Lazy Test,detailed_by_type_and_smell,1.0,False
+method,8,6,1,1,75.0,12.5,4.0,0.08865923208274724,-0.6019292654288461,Implicit Setup,Magic Number Test,detailed_by_type_and_smell,0.844873221491296,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,8,1,0,7,12.5,0.0,0.0,0.31731050786291415,-0.3535533905932737,Implicit Setup,Print Statement,detailed_by_type_and_smell,0.9684390066567553,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,8,0,1,7,0.0,12.5,0.0,0.31731050786291415,0.3535533905932737,Implicit Setup,Sensitive Equality,detailed_by_type_and_smell,0.9684390066567553,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,8,2,0,6,25.0,0.0,0.0,0.17971249487899976,-0.47434164902525694,Implicit Setup,Unknown Test,detailed_by_type_and_smell,0.8951716726048291,False
+method,8,0,0,8,0.0,0.0,,1.0,0.0,Implicit Setup,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Assertion Roulette,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Default Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Eager Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,General Fixture,detailed_by_type_and_smell,1.0,False
+method,5,2,0,3,40.0,0.0,0.0,0.15729920705028505,-0.632455532033676,Inline Assertion,IgnoredTest,detailed_by_type_and_smell,0.8951716726048291,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Lazy Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Magic Number Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Print Statement,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,5,3,0,2,60.0,0.0,0.0,0.10247043485974941,-0.7302967433402215,Inline Assertion,Unknown Test,detailed_by_type_and_smell,0.844873221491296,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Inline Assertion,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,13,6,0,7,46.15384615384615,0.0,0.0,0.019630657257290667,-0.6471502289294341,Parameterized Test,Assertion Roulette,detailed_by_type_and_smell,0.5182493515924737,False
+method,13,1,3,9,7.6923076923076925,23.076923076923077,2.5,0.31731050786291415,0.2773500981126145,Parameterized Test,Conditional Test Logic,detailed_by_type_and_smell,0.9684390066567553,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Default Test,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Duplicate Assert,detailed_by_type_and_smell,0.9684390066567553,False
+method,13,3,0,10,23.076923076923077,0.0,0.0,0.10880943004054569,-0.4447495899966607,Parameterized Test,Eager Test,detailed_by_type_and_smell,0.844873221491296,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,13,5,2,6,38.46153846153847,15.384615384615385,6.0,0.16052953514392299,-0.389203404328416,Parameterized Test,Exception Catching Throwing,detailed_by_type_and_smell,0.8951716726048291,False
+method,13,4,0,9,30.76923076923077,0.0,0.0,0.06559969214707187,-0.5106429211881653,Parameterized Test,General Fixture,detailed_by_type_and_smell,0.741357554709266,False
+method,13,1,1,11,7.6923076923076925,7.6923076923076925,1.5,1.0,0.0,Parameterized Test,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,13,3,0,10,23.076923076923077,0.0,0.0,0.10880943004054569,-0.4447495899966607,Parameterized Test,Lazy Test,detailed_by_type_and_smell,0.844873221491296,False
+method,13,6,0,7,46.15384615384615,0.0,0.0,0.026014479622894222,-0.6173800836397475,Parameterized Test,Magic Number Test,detailed_by_type_and_smell,0.5913433833355943,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Print Statement,detailed_by_type_and_smell,1.0,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Resource Optimism,detailed_by_type_and_smell,0.9684390066567553,False
+method,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Sensitive Equality,detailed_by_type_and_smell,0.9684390066567553,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,13,1,0,12,7.6923076923076925,0.0,0.0,0.31731050786291415,-0.2773500981126145,Parameterized Test,Unknown Test,detailed_by_type_and_smell,0.9684390066567553,False
+method,13,0,0,13,0.0,0.0,,1.0,0.0,Parameterized Test,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,22,7,0,15,31.818181818181817,0.0,0.0,0.015764115299612396,-0.5147371916605017,Prebuilt Fixture,Assertion Roulette,detailed_by_type_and_smell,0.4380764672734392,False
+method,22,3,0,19,13.636363636363635,0.0,0.0,0.10247043485974941,-0.3481553119113957,Prebuilt Fixture,Conditional Test Logic,detailed_by_type_and_smell,0.844873221491296,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Default Test,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,22,1,0,21,4.545454545454546,0.0,0.0,0.31731050786291415,-0.21320071635561041,Prebuilt Fixture,Duplicate Assert,detailed_by_type_and_smell,0.9684390066567553,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Eager Test,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,22,3,0,19,13.636363636363635,0.0,0.0,0.10880943004054569,-0.3418817293789138,Prebuilt Fixture,Exception Catching Throwing,detailed_by_type_and_smell,0.844873221491296,False
+method,22,1,0,21,4.545454545454546,0.0,0.0,0.31731050786291415,-0.21320071635561041,Prebuilt Fixture,General Fixture,detailed_by_type_and_smell,0.9684390066567553,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Lazy Test,detailed_by_type_and_smell,1.0,False
+method,22,5,1,16,22.727272727272727,4.545454545454546,4.5,0.2059032107320683,-0.2696799449852968,Prebuilt Fixture,Magic Number Test,detailed_by_type_and_smell,0.9684390066567553,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Print Statement,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,22,0,1,21,0.0,4.545454545454546,0.0,0.31731050786291415,0.21320071635561041,Prebuilt Fixture,Resource Optimism,detailed_by_type_and_smell,0.9684390066567553,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Unknown Test,detailed_by_type_and_smell,1.0,False
+method,22,0,0,22,0.0,0.0,,1.0,0.0,Prebuilt Fixture,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,34,2,3,29,5.88235294117647,8.823529411764707,4.0,0.33628879040286896,0.16489999660104096,Split Test Method,Assertion Roulette,detailed_by_type_and_smell,1.0,False
+method,34,0,4,30,0.0,11.76470588235294,0.0,0.0633177868300456,0.3184648776492411,Split Test Method,Conditional Test Logic,detailed_by_type_and_smell,0.741357554709266,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Default Test,detailed_by_type_and_smell,1.0,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,34,15,0,19,44.11764705882353,0.0,0.0,0.00016244084518680078,-0.6467616667635547,Split Test Method,Duplicate Assert,detailed_by_type_and_smell,0.010721095782328851,True
+method,34,1,3,30,2.941176470588235,8.823529411764707,1.0,0.14412703481601533,0.2504897164340597,Split Test Method,Eager Test,detailed_by_type_and_smell,0.8951716726048291,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,34,3,6,25,8.823529411764707,17.647058823529413,13.5,0.2482130789899235,0.19802950859533497,Split Test Method,Exception Catching Throwing,detailed_by_type_and_smell,0.9684390066567553,False
+method,34,0,2,32,0.0,5.88235294117647,0.0,0.17971249487899976,0.23008949665421116,Split Test Method,General Fixture,detailed_by_type_and_smell,0.8951716726048291,False
+method,34,0,1,33,0.0,2.941176470588235,0.0,0.31731050786291415,0.17149858514250882,Split Test Method,IgnoredTest,detailed_by_type_and_smell,0.9684390066567553,False
+method,34,1,4,29,2.941176470588235,11.76470588235294,2.0,0.1380107375686596,0.2543735095345841,Split Test Method,Lazy Test,detailed_by_type_and_smell,0.8951716726048291,False
+method,34,1,30,3,2.941176470588235,88.23529411764706,7.5,1.834939237233573e-06,0.8181857783784454,Split Test Method,Magic Number Test,detailed_by_type_and_smell,0.00024221197931483164,True
+method,34,1,9,24,2.941176470588235,26.47058823529412,4.5,0.01293409326524844,0.42627325500755503,Split Test Method,Mystery Guest,detailed_by_type_and_smell,0.3794000691139543,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Print Statement,detailed_by_type_and_smell,1.0,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,34,0,3,31,0.0,8.823529411764707,0.0,0.08326451666355039,0.29704426289300234,Split Test Method,Sensitive Equality,detailed_by_type_and_smell,0.8141419407102705,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,34,0,1,33,0.0,2.941176470588235,0.0,0.31731050786291415,0.17149858514250882,Split Test Method,Unknown Test,detailed_by_type_and_smell,0.9684390066567553,False
+method,34,0,0,34,0.0,0.0,,1.0,0.0,Split Test Method,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Assertion Roulette,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Default Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Eager Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,General Fixture,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Lazy Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Magic Number Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Print Statement,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Unknown Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Test Helper,Verbose Test,detailed_by_type_and_smell,1.0,False
+method,5,2,0,3,40.0,0.0,0.0,0.17971249487899976,-0.6000000000000001,Verification Method,Assertion Roulette,detailed_by_type_and_smell,0.8951716726048291,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Conditional Test Logic,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Constructor Initialization,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Default Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Dependent Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Duplicate Assert,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Eager Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,EmptyTest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Exception Catching Throwing,detailed_by_type_and_smell,1.0,False
+method,5,0,1,4,0.0,20.0,0.0,0.31731050786291415,0.44721359549995787,Verification Method,General Fixture,detailed_by_type_and_smell,0.9684390066567553,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,IgnoredTest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Lazy Test,detailed_by_type_and_smell,1.0,False
+method,5,1,1,3,20.0,20.0,1.0,0.6547208460185769,0.20000000000000007,Verification Method,Magic Number Test,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Mystery Guest,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,NumberOfMethods,detailed_by_type_and_smell,1.0,False
+method,5,1,0,4,20.0,0.0,0.0,0.31731050786291415,-0.44721359549995787,Verification Method,Print Statement,detailed_by_type_and_smell,0.9684390066567553,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Redundant Assertion,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Resource Optimism,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Sensitive Equality,detailed_by_type_and_smell,1.0,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Sleepy Test,detailed_by_type_and_smell,1.0,False
+method,5,0,3,2,0.0,60.0,0.0,0.10880943004054569,0.7171371656006361,Verification Method,Unknown Test,detailed_by_type_and_smell,0.844873221491296,False
+method,5,0,0,5,0.0,0.0,,1.0,0.0,Verification Method,Verbose Test,detailed_by_type_and_smell,1.0,False
