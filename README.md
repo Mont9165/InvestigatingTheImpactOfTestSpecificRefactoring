@@ -9,9 +9,8 @@ This research consists of five main phases:
 
 1. **Data Collection**: Collecting test refactoring commits from open-source projects
 2. **Sampling**: Sampling and filtering relevant commits 
-3. **Annotation**: Manual annotation using RefactorHub
-4. **Manual Inspection**: Additional validation of refactoring data
-5. **Analysis**: Statistical analysis of test refactoring impact on test smells
+3. **Manual Inspection**: Manual inspection using RefactorHub
+4. **Analysis**: Statistical analysis of test refactoring impact on test smells
 
 ## Repository Structure
 
